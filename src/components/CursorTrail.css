@@ -1,0 +1,57 @@
+/* ── Hide native cursor ──────────────────────────────────────────────────── */
+html, html * {
+  cursor: none !important;
+}
+
+/* ── Trail SVG — fixed overlay, never blocks clicks ─────────────────────── */
+.cursor-trail {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* ── Spotlight glow blob ─────────────────────────────────────────────────── */
+/*
+  top/left stay at 0,0.
+  GSAP's x/y quickSetter handles positioning (already subtracts half-size).
+  No margin offsets here — they would conflict with GSAP transforms.
+*/
+.ct-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999997;
+  background: radial-gradient(
+    circle at center,
+    rgba(160, 210, 140, 0.14)  0%,
+    rgba(120, 180, 100, 0.08) 30%,
+    rgba( 80, 150,  70, 0.04) 55%,
+    transparent 72%
+  );
+  will-change: transform;
+}
+
+/* ── Visible centre dot — always shown ───────────────────────────────────── */
+.ct-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  background: rgba(200, 230, 190, 0.95);
+  box-shadow:
+    0 0  5px 2px rgba(160, 210, 140, 0.85),
+    0 0 12px 4px rgba(120, 180, 100, 0.45);
+  will-change: transform;
+}

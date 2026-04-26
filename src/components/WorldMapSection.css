@@ -1,0 +1,168 @@
+/* ── Section wrapper ─────────────────────────────────────────────────────── */
+.worldmap {
+  background: var(--dark-green);
+  /* top padding only — map goes edge-to-edge horizontally */
+  padding: 120px 0 0;
+  overflow: hidden;
+}
+
+/* Header keeps horizontal breathing room */
+.worldmap__header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 80px;
+  margin-bottom: 80px;
+}
+
+.worldmap__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.8vw, 68px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--cream);
+}
+
+.worldmap__heading em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+/* ── Map container — full bleed ─────────────────────────────────────────── */
+.worldmap__map-wrap {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+.worldmap__leaflet {
+  width: 100%;
+  height: 100%;
+  /* dark-green background so the map blends seamlessly */
+  background: #0d1f14 !important;
+}
+
+/* Force Leaflet container bg to dark green as well */
+.worldmap__leaflet .leaflet-container,
+.worldmap__leaflet.leaflet-container {
+  background: #0d1f14 !important;
+}
+
+/* No gray tiles bleed-through */
+.worldmap__leaflet .leaflet-tile-pane {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Leaflet pane backgrounds */
+.worldmap__leaflet .leaflet-map-pane,
+.worldmap__leaflet .leaflet-pane {
+  background: transparent;
+}
+
+/* ── Custom pin icon ─────────────────────────────────────────────────────── */
+.wm-pin-icon {
+  background: none !important;
+  border: none !important;
+  overflow: visible;
+}
+
+/* Pulse animation on the outer ring */
+.wm-pin-icon .pin-ring,
+.wm-pin-icon svg circle:last-child {
+  animation: wm-pulse 2.4s ease-in-out infinite;
+  transform-origin: 12px 12px;
+}
+
+@keyframes wm-pulse {
+  0%, 100% { r: 11; opacity: 0.15; }
+  50%       { r: 16; opacity: 0; }
+}
+
+/* ── Leaflet Popup chrome reset ──────────────────────────────────────────── */
+.wm-popup .leaflet-popup-content-wrapper {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.wm-popup .leaflet-popup-tip-container {
+  display: none !important;
+}
+
+.wm-popup .leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+/* ── Pin hover card ──────────────────────────────────────────────────────── */
+.wm-card {
+  background: rgba(10, 22, 13, 0.97);
+  border: 1px solid rgba(180, 200, 160, 0.18);
+  backdrop-filter: blur(14px);
+  padding: 20px 22px 22px;
+  width: 252px;
+  animation: wm-card-in 0.18s ease-out;
+}
+
+@keyframes wm-card-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.wm-card__cat {
+  display: block;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.wm-card__title {
+  font-family: var(--font-serif, serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cream, #f5f0e8);
+  line-height: 1.32;
+  margin: 0 0 10px;
+}
+
+.wm-card__country {
+  display: inline-block;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cream, #f5f0e8);
+  opacity: 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 3px 10px;
+  margin-bottom: 12px;
+}
+
+.wm-card__desc {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(245, 240, 232, 0.62);
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .worldmap {
+    padding-top: 70px;
+  }
+
+  .worldmap__header {
+    padding: 0 24px;
+  }
+
+  .worldmap__map-wrap {
+    height: 440px;
+  }
+}
