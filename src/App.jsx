@@ -14,8 +14,18 @@ export default function App() {
   return (
     <>
       <CursorTrail />
-      <HeroSection />
-      <IntroSection />
+      <div className="hero-intro-wrapper">
+        <div className="hero-bg">
+          <div className="hero-bg__sticky">
+            <video autoPlay muted loop playsInline preload="auto" className="hero-bg__video" aria-hidden="true">
+              <source src="/hero-bg.mp4" type="video/mp4" />
+            </video>
+            <div className="hero-bg__overlay" aria-hidden="true" />
+          </div>
+        </div>
+        <HeroSection />
+        <IntroSection />
+      </div>
       <ProjectsSection />
       <ExpertiseSection />
       <WorldMapSection />

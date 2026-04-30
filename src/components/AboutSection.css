@@ -41,7 +41,9 @@
   transition: opacity var(--transition-med);
 }
 
-.about__photo-frame:hover::before { opacity: 0.55; }
+.about__photo-frame:hover::before {
+  opacity: 0.55;
+}
 
 /* Subtle bottom-left accent line */
 .about__photo-frame::after {
@@ -90,10 +92,11 @@
 }
 
 .about__para {
-  font-size: clamp(14px, 1.4vw, 15px);
+  font-size: clamp(16px, 1.5vw, 18px);
   font-weight: 300;
   line-height: 1.85;
-  color: var(--cream-dim);
+  color: var(--cream);
+  opacity: 0.9;
 }
 
 /* --- CTA with sweep underline ----------------------------------------------- */
@@ -110,6 +113,8 @@
   width: fit-content;
   margin-top: 8px;
   padding-bottom: 5px;
+  /* Ensure accessible touch target height */
+  min-height: 44px;
   position: relative;
 }
 
@@ -125,16 +130,25 @@
   transition: transform var(--transition-med);
 }
 
-.about__cta:hover::after  { transform: scaleX(0); }
-.about__cta:hover         { color: var(--gold-light); }
-.about__cta:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.about__cta:hover::after {
+  transform: scaleX(0);
+}
+
+.about__cta:hover {
+  color: var(--gold-light);
+}
+
+.about__cta:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
 
 /* --- Stats Grid -------------------------------------------------------------- */
 .about__divider {
   width: 100%;
   height: 1px;
   background: var(--divider);
-  margin: 64px 0 40px;
+  margin: clamp(32px, 5vw, 64px) 0 clamp(24px, 3vw, 40px);
 }
 
 .about__stats {
@@ -179,6 +193,7 @@
   .about {
     padding: 80px 40px;
   }
+
   .about__inner {
     gap: 72px;
   }
@@ -188,25 +203,31 @@
   .about {
     padding: 72px 40px;
   }
+
   .about__inner {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+
   .about__photo-col {
     position: static;
     display: flex;
     justify-content: center;
   }
+
   .about__photo-frame {
     max-width: 360px;
   }
+
   .about__photo {
     max-width: 360px;
   }
+
   .about__stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 24px;
   }
+
   .about__stat:nth-child(3) {
     border-left: none;
     padding-left: 0;
@@ -214,28 +235,52 @@
 }
 
 @media (max-width: 600px) {
-  .about { padding: 56px 20px; }
+  .about {
+    padding: 56px 20px;
+  }
+
   .about__photo-frame::before,
-  .about__photo-frame::after { display: none; }
+  .about__photo-frame::after {
+    display: none;
+  }
+
   .about__photo-frame,
-  .about__photo { max-width: 100%; }
-  .about__heading { font-size: clamp(28px, 8vw, 44px); }
+  .about__photo {
+    max-width: 100%;
+  }
+
+  .about__heading {
+    font-size: clamp(28px, 8vw, 44px);
+  }
 }
 
 @media (max-width: 480px) {
-  .about { padding: 48px 16px; }
+  .about {
+    padding: 48px 16px;
+  }
+
   .about__stats {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .about__stat {
     border-left: none;
     padding-left: 0;
     border-bottom: 1px solid var(--divider);
     padding-bottom: 16px;
   }
+
   .about__stat:last-child {
     border-bottom: none;
     padding-bottom: 0;
+  }
+
+  .about__stat-num {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+
+  .about__para {
+    font-size: 15px;
   }
 }

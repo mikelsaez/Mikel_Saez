@@ -56,10 +56,11 @@
 }
 
 .impact__para {
-  font-size: clamp(13.5px, 1.4vw, 15px);
+  font-size: clamp(15.5px, 1.5vw, 17px);
   font-weight: 300;
   line-height: 1.85;
-  color: var(--cream-dim);
+  color: var(--cream);
+  opacity: 0.9;
 }
 
 /* ============================================================================
@@ -79,4 +80,11 @@
 @media (max-width: 480px) {
   .impact { padding: 48px 16px; }
   .impact::before { display: none; }
+}
+
+@media (max-width: 360px) {
+  .impact { padding: 40px 14px; }
+  .impact__heading { font-size: clamp(26px, 9vw, 38px); }
+  .impact__inner { gap: 20px; }
+  .impact__para { font-size: 14px; }
 }

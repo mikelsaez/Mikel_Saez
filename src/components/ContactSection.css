@@ -56,10 +56,11 @@
 }
 
 .contact__para {
-  font-size: clamp(13px, 1.4vw, 15px);
+  font-size: clamp(15px, 1.5vw, 17px);
   font-weight: 300;
   line-height: 1.8;
-  color: var(--cream-dim);
+  color: var(--cream);
+  opacity: 0.9;
 }
 
 .contact__buttons {
@@ -118,16 +119,17 @@
 .contact__footer {
   position: relative;
   z-index: 1;
-  border-top: 1px solid var(--divider);
+  border-top: 1px solid rgba(180, 170, 150, 0.24); /* Slightly lighter than --divider */
   padding: 22px 80px;
   text-align: center;
 }
 
 .contact__footer p {
   font-size: 12px;
+  font-weight: 400; /* Bolding as requested */
   letter-spacing: 0.1em;
   color: var(--cream-dim);
-  opacity: 0.5;
+  opacity: 0.65; /* Slightly increased opacity for better readability */
 }
 
 /* ============================================================================
@@ -150,4 +152,12 @@
   .contact__inner { padding: 64px 16px 48px; gap: 20px; }
   .contact__btn { max-width: 100%; padding: 14px 32px; }
   .contact__footer { padding: 16px; }
+}
+
+@media (max-width: 360px) {
+  .contact__inner { padding: 48px 14px 36px; gap: 16px; }
+  .contact__heading { font-size: clamp(26px, 9vw, 36px); }
+  .contact__para { font-size: 14px; }
+  .contact__btn { padding: 13px 24px; font-size: 10px; }
+  .contact__footer p { font-size: 11px; }
 }

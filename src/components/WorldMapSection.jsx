@@ -1,23 +1,23 @@
 import { useEffect, useRef, useState } from 'react'
-import { MapContainer, GeoJSON, Marker, Popup, useMap } from 'react-leaflet'
+import { MapContainer, GeoJSON, Marker, Tooltip, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import './WorldMapSection.css'
 
 // ─── Pin images ──────────────────────────────────────────────────────────────
-import imgMicrosoft    from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.14.23.png'
-import imgIberia       from '../assets/img/iberia_47510952881897_thumb.png'
-import imgVillaConchi  from '../assets/img/IMG_0181-scaled.jpg'
-import imgWineRoutes   from '../assets/img/Captura-de-pantalla-2026-03-18-a-las-23.00.16.png'
+import imgMicrosoft from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.14.23.png'
+import imgIberia from '../assets/img/iberia_47510952881897_thumb.png'
+import imgVillaConchi from '../assets/img/IMG_0181-scaled.jpg'
+import imgWineRoutes from '../assets/img/Captura-de-pantalla-2026-03-18-a-las-23.00.16.png'
 import imgGeneralAssembly from '../assets/img/199.jpeg'
-import imgMission300   from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-18.28.14-scaled.png'
-import imgWorldBank    from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-18.33.53.png'
-import imgVitoria      from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.27.00.png'
-import imgIDBHousing   from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.28.09.png'
-import imgU20          from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.30.14.png'
-import imgCOP16        from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.32.23.png'
-import imgVinexpo      from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-20.20.32.png'
-import imgUNWTO        from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-20.29.07.png'
+import imgMission300 from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-18.28.14-scaled.png'
+import imgWorldBank from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-18.33.53.png'
+import imgVitoria from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.27.00.png'
+import imgIDBHousing from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.28.09.png'
+import imgU20 from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.30.14.png'
+import imgCOP16 from '../assets/img/Captura-de-pantalla-2026-03-20-a-las-17.32.23.png'
+import imgVinexpo from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-20.20.32.png'
+import imgUNWTO from '../assets/img/Captura-de-pantalla-2026-03-30-a-las-20.29.07.png'
 
 // ─── Pin data ──────────────────────────────────────────────────────────────
 const pins = [
@@ -155,12 +155,12 @@ const pins = [
 
 // ─── Category colours ────────────────────────────────────────────────────────
 const catColor = {
-  ECOSYSTEM:   '#6a8ab8',
+  ECOSYSTEM: '#6a8ab8',
   TERRITORIES: '#8ab86a',
-  SEEDS:       '#c4a96a',
-  ROOTS:       '#6aacb8',
-  BLOOM:       '#d4a86a',
-  HARVEST:     '#b86a8a',
+  SEEDS: '#c4a96a',
+  ROOTS: '#6aacb8',
+  BLOOM: '#d4a86a',
+  HARVEST: '#b86a8a',
 }
 
 // ─── GeoJSON country style — glowing lines on dark green ────────────────────
@@ -239,69 +239,71 @@ export default function WorldMapSection() {
       </div>
 
       {/* Map — full bleed, no side gaps */}
-      <div className="worldmap__map-wrap">
-        <MapContainer
-          center={[10, 10]}
-          zoom={2}   /* overridden by FillWidth below */
-          /* ── Fully locked — no interaction at all ── */
-          dragging={false}
-          touchZoom={false}
-          doubleClickZoom={false}
-          scrollWheelZoom={false}
-          boxZoom={false}
-          keyboard={false}
-          zoomControl={false}
-          attributionControl={false}
-          className="worldmap__leaflet"
-          maxBounds={WORLD_BOUNDS}
-          maxBoundsViscosity={1.0}
-          worldCopyJump={false}
-        >
-          <FillWidth />
-          {/* GeoJSON country outlines — no tiles, no wrapping */}
-          {worldGeo && (
-            <GeoJSON
-              key="world"
-              data={worldGeo}
-              style={geoStyle}
-            />
-          )}
+      <div className="worldmap__clipper">
+        <div className="worldmap__map-wrap">
+          <MapContainer
+            center={[10, 10]}
+            zoom={2}   /* overridden by FillWidth below */
+            /* ── Fully locked — no interaction at all ── */
+            dragging={false}
+            touchZoom={false}
+            doubleClickZoom={false}
+            scrollWheelZoom={false}
+            boxZoom={false}
+            keyboard={false}
+            zoomControl={false}
+            attributionControl={false}
+            className="worldmap__leaflet"
+            maxBounds={WORLD_BOUNDS}
+            maxBoundsViscosity={1.0}
+            worldCopyJump={false}
+          >
+            <FillWidth />
+            {/* GeoJSON country outlines — no tiles, no wrapping */}
+            {worldGeo && (
+              <GeoJSON
+                key="world"
+                data={worldGeo}
+                style={geoStyle}
+              />
+            )}
 
-          {/* Location pins */}
-          {pins.map((pin) => {
-            const color = catColor[pin.cat] || '#c4a96a'
-            return (
-              <Marker
-                key={pin.id}
-                position={[pin.lat, pin.lng]}
-                icon={buildIcon(color)}
-              >
-                <Popup
-                  className="wm-popup"
-                  closeButton={false}
-                  autoPan={false}
-                  offset={[0, -8]}
+            {/* Location pins */}
+            {pins.map((pin) => {
+              const color = catColor[pin.cat] || '#c4a96a'
+              return (
+                <Marker
+                  key={pin.id}
+                  position={[pin.lat, pin.lng]}
+                  icon={buildIcon(color)}
                 >
-                  <div className="wm-card">
-                    {pin.img && (
-                      <div className="wm-card__img">
-                        <img src={pin.img} alt={pin.title} />
+                  <Tooltip
+                    className="wm-popup"
+                    direction="auto"
+                    offset={[0, -5]}
+                    opacity={1}
+                  >
+                    <div className="wm-card">
+                      {pin.img && (
+                        <div className="wm-card__img">
+                          <img src={pin.img} alt={pin.title} />
+                        </div>
+                      )}
+                      <div className="wm-card__body">
+                        <span className="wm-card__cat" style={{ color }}>
+                          {pin.cat}
+                        </span>
+                        <h4 className="wm-card__title">{pin.title}</h4>
+                        <span className="wm-card__country">{pin.country}</span>
+                        <p className="wm-card__desc">{pin.desc}</p>
                       </div>
-                    )}
-                    <div className="wm-card__body">
-                      <span className="wm-card__cat" style={{ color }}>
-                        {pin.cat}
-                      </span>
-                      <h4 className="wm-card__title">{pin.title}</h4>
-                      <span className="wm-card__country">{pin.country}</span>
-                      <p className="wm-card__desc">{pin.desc}</p>
                     </div>
-                  </div>
-                </Popup>
-              </Marker>
-            )
-          })}
-        </MapContainer>
+                  </Tooltip>
+                </Marker>
+              )
+            })}
+          </MapContainer>
+        </div>
       </div>
     </section>
   )

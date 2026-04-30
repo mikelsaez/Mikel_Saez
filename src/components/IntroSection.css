@@ -1,5 +1,5 @@
 .intro {
-  background: var(--black);
+  background: transparent;
   padding: 140px 80px;
 }
 
@@ -35,10 +35,11 @@
 
 .intro__para {
   font-family: var(--font-sans);
-  font-size: clamp(14px, 1.5vw, 16px);
+  font-size: clamp(16px, 1.6vw, 18px);
   font-weight: 300;
   line-height: 1.8;
-  color: var(--cream-dim);
+  color: var(--cream);
+  opacity: 0.9;
   max-width: 600px;
 }
 
@@ -46,5 +47,19 @@
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) { .intro { padding: 100px 40px; } }
-@media (max-width: 768px)  { .intro { padding: 72px 24px; } }
-@media (max-width: 480px)  { .intro { padding: 56px 16px; } }
+@media (max-width: 768px)  {
+  .intro { padding: 72px 24px; }
+  .intro__inner { gap: 24px; }
+  .intro__rule { height: 40px; }
+}
+@media (max-width: 480px)  {
+  .intro { padding: 56px 16px; }
+  .intro__rule { display: none; }
+  .intro__inner { gap: 20px; }
+  .intro__heading { font-size: clamp(26px, 8vw, 42px); }
+}
+@media (max-width: 360px)  {
+  .intro { padding: 44px 14px; }
+  .intro__heading { font-size: clamp(24px, 9vw, 36px); }
+  .intro__para { font-size: 14px; }
+}

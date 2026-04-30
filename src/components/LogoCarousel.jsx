@@ -16,31 +16,31 @@ import logo12 from '../assets/img/logo12 new.png'
 
 const slides = [
   [
-    { src: logo1, alt: 'Partner 1' },
+    { src: logo1, alt: 'Partner 1', className: 'logo--enlarge' },
     { src: logo2, alt: 'Partner 2' },
-    { src: logo3, alt: 'Partner 3' },
+    { src: logo3, alt: 'Partner 3', className: 'logo--enlarge' },
     { src: logo4, alt: 'Partner 4' },
   ],
   [
-    { src: logo5, alt: 'Partner 5' },
-    { src: logo6, alt: 'Partner 6' },
+    { src: logo5, alt: 'Partner 5', className: 'logo--shrink' },
+    { src: logo6, alt: 'Partner 6', className: 'logo--shrink' },
     { src: logo7, alt: 'Partner 7' },
-    { src: logo8, alt: 'Partner 8' },
+    { src: logo8, alt: 'Partner 8', className: 'logo--shrink' },
   ],
   [
     { src: logo9, alt: 'Partner 9' },
-    { src: logo10, alt: 'Partner 10' },
+    { src: logo10, alt: 'Partner 10', className: 'logo--enlarge-xl' },
     { src: logo11, alt: 'Partner 11' },
-    { src: logo12, alt: 'Partner 12' },
+    { src: logo12, alt: 'Partner 12', className: 'logo--enlarge-xxl' },
   ]
 ]
 
 const AUTO_INTERVAL = 4500
 
 export default function LogoCarousel() {
-  const [current,   setCurrent]   = useState(0)
-  const [fading,    setFading]    = useState(false)
-  const [paused,    setPaused]    = useState(false)
+  const [current, setCurrent] = useState(0)
+  const [fading, setFading] = useState(false)
+  const [paused, setPaused] = useState(false)
   const timerRef = useRef(null)
 
   const goTo = (idx) => {
@@ -83,7 +83,7 @@ export default function LogoCarousel() {
       >
         {slides[current].map((logo, i) => (
           <div className="logos__item" key={i}>
-            <img src={logo.src} alt={logo.alt} loading="lazy" />
+            <img src={logo.src} alt={logo.alt} loading="lazy" className={logo.className} />
           </div>
         ))}
       </div>

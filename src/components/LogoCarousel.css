@@ -9,7 +9,7 @@
 .logos__header {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   margin-bottom: 48px;
 }
 
@@ -65,13 +65,47 @@
   transform: scale(1.08);
 }
 
+.logos__item img.logo--enlarge {
+  transform: scale(1.69);
+}
+
+.logos__item img.logo--enlarge:hover {
+  transform: scale(1.79);
+}
+
+.logos__item img.logo--enlarge-xl {
+  transform: scale(2.05);
+}
+
+.logos__item img.logo--enlarge-xl:hover {
+  transform: scale(2.15);
+}
+
+.logos__item img.logo--enlarge-xxl {
+  transform: scale(1.69);
+}
+
+.logos__item img.logo--enlarge-xxl:hover {
+  transform: scale(1.79);
+}
+
+.logos__item img.logo--shrink {
+  transform: scale(0.85);
+}
+
+.logos__item img.logo--shrink:hover {
+  transform: scale(0.95);
+}
+
 /* --- Controls -------------------------------------------------------------- */
 .logos__controls {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
-  padding-right: 80px; /* Offset to prevent overlap with the fixed tree */
+  padding-right: 80px;
+  /* Offset to prevent overlap with the fixed tree */
+  flex-wrap: wrap;
 }
 
 /* Dot indicators */
@@ -135,19 +169,77 @@
    RESPONSIVE
    ============================================================================ */
 @media (max-width: 1024px) {
-  .logos { padding: 72px 40px 90px; }
-  .logos__item { width: 180px; }
+  .logos {
+    padding: 72px 40px 90px;
+  }
+
+  .logos__item {
+    width: 180px;
+  }
 }
 
 @media (max-width: 768px) {
-  .logos { padding: 56px 24px 72px; }
-  .logos__item { width: 140px; }
-  .logos__track { gap: 28px; min-height: 100px; }
-  .logos__controls { justify-content: center; padding-right: 0; }
+  .logos {
+    padding: 56px 24px 72px;
+  }
+
+  .logos__item {
+    width: 140px;
+  }
+
+  .logos__track {
+    gap: 28px;
+    min-height: 100px;
+  }
+
+  .logos__controls {
+    justify-content: center;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 480px) {
-  .logos { padding: 44px 16px 56px; }
-  .logos__item { width: 110px; }
-  .logos__track { gap: 20px; }
+  .logos {
+    padding: 44px 16px 56px;
+  }
+
+  .logos__item {
+    width: 100px;
+  }
+
+  .logos__track {
+    gap: 16px;
+    min-height: 80px;
+    padding-bottom: 32px;
+  }
+
+  /* Tone down large scale modifiers so logos don't overflow on mobile */
+  .logos__item img.logo--enlarge {
+    transform: scale(1.3);
+  }
+  .logos__item img.logo--enlarge:hover {
+    transform: scale(1.4);
+  }
+
+  .logos__item img.logo--enlarge-xl {
+    transform: scale(1.5);
+  }
+  .logos__item img.logo--enlarge-xl:hover {
+    transform: scale(1.6);
+  }
+
+  .logos__item img.logo--enlarge-xxl {
+    transform: scale(1.3);
+  }
+  .logos__item img.logo--enlarge-xxl:hover {
+    transform: scale(1.4);
+  }
+
+  .logos__heading {
+    font-size: clamp(28px, 8vw, 42px);
+  }
+
+  .logos__header {
+    margin-bottom: 32px;
+  }
 }

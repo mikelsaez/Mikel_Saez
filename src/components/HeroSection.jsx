@@ -50,14 +50,6 @@ export default function HeroSection() {
 
   return (
     <section className="hero" id="hero" aria-label="Hero — Mikel Saez de Vicuña">
-      <div className="hero__video-wrap">
-        <video autoPlay muted loop playsInline preload="auto" className="hero__video" aria-hidden="true">
-          <source src="/hero-bg.mp4" type="video/mp4" />
-        </video>
-      </div>
-
-      <div className="hero__overlay" aria-hidden="true" />
-
       {/* ── Desktop nav ───────────────────────────────────────────────────── */}
       <nav className="hero__nav" role="navigation" aria-label="Main navigation">
         <a className="hero__nav-link" href="#expertise">WORK</a>

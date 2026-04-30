@@ -75,12 +75,10 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    105deg,
-    transparent 30%,
-    rgba(196, 169, 106, 0.04) 50%,
-    transparent 70%
-  );
+  background: linear-gradient(105deg,
+      transparent 30%,
+      rgba(196, 169, 106, 0.04) 50%,
+      transparent 70%);
   background-size: 200% 100%;
   opacity: 0;
   transition: opacity var(--transition-med);
@@ -91,8 +89,13 @@
   box-shadow: 0 4px 40px rgba(196, 169, 106, 0.06);
 }
 
-.expertise__card:hover::before { transform: scaleX(1); }
-.expertise__card:hover::after  { opacity: 1; }
+.expertise__card:hover::before {
+  transform: scaleX(1);
+}
+
+.expertise__card:hover::after {
+  opacity: 1;
+}
 
 .expertise__card-top {
   display: flex;
@@ -121,29 +124,32 @@
 
 .expertise__card-tag {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: clamp(10px, 1.2vw, 12px);
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--cream-dim);
-  opacity: 0.65;
+  color: var(--cream);
+  opacity: 0.85;
 }
 
 .expertise__card-title {
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: clamp(20px, 2vw, 26px);
   font-weight: 600;
   line-height: 1.25;
   color: var(--cream);
   transition: color var(--transition-fast);
 }
 
-.expertise__card:hover .expertise__card-title { color: var(--gold-light); }
+.expertise__card:hover .expertise__card-title {
+  color: var(--gold-light);
+}
 
 .expertise__card-desc {
-  font-size: 13px;
+  font-size: clamp(14px, 1.4vw, 16px);
   font-weight: 300;
   line-height: 1.75;
-  color: var(--cream-dim);
+  color: var(--cream);
+  opacity: 0.9;
   flex: 1;
 }
 
@@ -156,10 +162,10 @@
 }
 
 .expertise__card-tags li {
-  font-size: 11.5px;
+  font-size: clamp(12px, 1.2vw, 14px);
   font-weight: 300;
-  color: var(--cream-dim);
-  opacity: 0.65;
+  color: var(--cream);
+  opacity: 0.85;
   line-height: 1.5;
 }
 
@@ -182,26 +188,68 @@
    RESPONSIVE
    ============================================================================ */
 @media (max-width: 1024px) {
-  .expertise { padding: 72px 40px 90px; }
-  .expertise__grid { grid-template-columns: repeat(2, 1fr); }
+  .expertise {
+    padding: 72px 40px 90px;
+  }
+
+  .expertise__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expertise__card {
+    padding: 36px 28px;
+  }
+}
+
+/* Tablet portrait — keep 2 cols but tighten up */
+@media (max-width: 768px) {
+  .expertise {
+    padding: 60px 24px 80px;
+  }
+
+  .expertise__card {
+    padding: 28px 20px;
+  }
+
+  .expertise__card-title {
+    font-size: clamp(18px, 4.5vw, 24px);
+  }
 }
 
 @media (max-width: 640px) {
-  .expertise { padding: 56px 20px 72px; }
+  .expertise {
+    padding: 56px 20px 72px;
+  }
+
   .expertise__grid {
     grid-template-columns: 1fr;
     border-left: none;
   }
+
   .expertise__card {
     border-right: none;
     padding: 32px 20px;
   }
+
   .expertise__heading {
     font-size: clamp(30px, 8vw, 48px);
   }
 }
 
 @media (max-width: 480px) {
-  .expertise { padding: 48px 16px 64px; }
-  .expertise__card { padding: 28px 16px; }
+  .expertise {
+    padding: 48px 16px 64px;
+  }
+
+  .expertise__card {
+    padding: 24px 14px;
+  }
+
+  .expertise__card-title {
+    font-size: clamp(17px, 5vw, 22px);
+  }
+
+  .expertise__card-desc {
+    font-size: 13px;
+  }
 }

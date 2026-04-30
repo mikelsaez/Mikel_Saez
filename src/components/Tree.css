@@ -8,7 +8,7 @@
   transition: opacity 0.3s ease, color 0.3s ease;
   transform: scale(0.7);
   transform-origin: bottom right;
-  color: #315138; /* Brighter thematic green so it's visible */
+  color: #a68f56; /* Dim golden */
 }
 
 .tree-wrapper:hover {
@@ -22,6 +22,13 @@
     bottom: -18px;
     transform: scale(0.5);
     pointer-events: none;
+  }
+}
+
+/* Completely hide the decorative tree on very small phones */
+@media (max-width: 480px) {
+  .tree-wrapper {
+    display: none;
   }
 }
 

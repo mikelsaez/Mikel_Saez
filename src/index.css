@@ -217,6 +217,10 @@ button {
   .section { padding: 48px 16px; }
 }
 
+@media (max-width: 360px) {
+  .section { padding: 40px 12px; }
+}
+
 /* ============================================
    REDUCED MOTION ACCESSIBILITY
    ============================================ */
@@ -227,4 +231,49 @@ button {
     transition-duration: 0.01ms !important;
   }
   html { scroll-behavior: auto; }
+}
+
+/* ============================================
+   HERO + INTRO BACKGROUND WRAPPER
+   ============================================ */
+.hero-intro-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-bg__sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.32;
+}
+
+.hero-bg__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55)  0%,
+    rgba(0,0,0,0.38) 50%,
+    rgba(0,0,0,0.82) 100%
+  );
+  pointer-events: none;
 }

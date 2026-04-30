@@ -28,6 +28,11 @@
 }
 
 /* ── Map container — square = full world always visible ──────────────────── */
+.worldmap__clipper {
+  overflow: hidden;
+  width: 100%;
+}
+
 .worldmap__map-wrap {
   position: relative;
   width: 100%;
@@ -35,6 +40,10 @@
      aspect-ratio 1:1 ensures the full world (top→bottom) is always visible
      with no black bars, matching the target design. */
   aspect-ratio: 1 / 1;
+
+  /* Hard crop values requested by user */
+  margin-top: -250px;
+  margin-bottom: -350px;
 }
 
 .worldmap__leaflet {
@@ -77,25 +86,43 @@
 }
 
 @keyframes wm-pulse {
-  0%, 100% { r: 11; opacity: 0.15; }
-  50%       { r: 16; opacity: 0; }
+
+  0%,
+  100% {
+    r: 11;
+    opacity: 0.15;
+  }
+
+  50% {
+    r: 16;
+    opacity: 0;
+  }
 }
 
-/* ── Leaflet Popup chrome reset ──────────────────────────────────────────── */
-.wm-popup .leaflet-popup-content-wrapper {
+/* ── Leaflet Tooltip chrome reset ────────────────────────────────────────── */
+.worldmap__leaflet .leaflet-tooltip-pane {
+  z-index: 999999 !important;
+}
+
+.worldmap__leaflet .leaflet-marker-pane {
+  z-index: 999998 !important;
+}
+
+.wm-popup.leaflet-tooltip {
   background: transparent !important;
+  border: none !important;
   box-shadow: none !important;
-  border-radius: 0 !important;
   padding: 0 !important;
-}
-
-.wm-popup .leaflet-popup-tip-container {
-  display: none !important;
-}
-
-.wm-popup .leaflet-popup-content {
   margin: 0 !important;
-  width: auto !important;
+  opacity: 1 !important;
+  white-space: normal !important;
+  /* Extremely important so desc text wraps */
+}
+
+/* Hide the little triangle pointer of the tooltip */
+.wm-popup.leaflet-tooltip::before,
+.wm-popup.leaflet-tooltip::after {
+  display: none !important;
 }
 
 /* ── Pin hover card ──────────────────────────────────────────────────────── */
@@ -127,8 +154,15 @@
 }
 
 @keyframes wm-card-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .wm-card__cat {
@@ -176,6 +210,7 @@
   .worldmap {
     padding-top: 80px;
   }
+
   .worldmap__header {
     padding: 0 48px;
     margin-bottom: 60px;
@@ -186,19 +221,23 @@
   .worldmap {
     padding-top: 60px;
   }
+
   .worldmap__header {
     padding: 0 24px;
     margin-bottom: 40px;
     gap: 16px;
   }
+
   /* Make map a taller rectangle on small screens so pins are readable */
   .worldmap__map-wrap {
     aspect-ratio: 4 / 3;
   }
+
   /* Smaller popup card on mobile */
   .wm-card {
     width: 220px;
   }
+
   .wm-card__img {
     height: 110px;
   }
@@ -208,15 +247,19 @@
   .worldmap__header {
     padding: 0 20px;
   }
+
   .worldmap__map-wrap {
     aspect-ratio: 3 / 2;
   }
+
   .wm-card {
     width: 180px;
   }
+
   .wm-card__img {
     height: 90px;
   }
+
   .wm-card__body {
     padding: 12px 14px 14px;
   }
