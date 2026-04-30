@@ -1,3 +1,6 @@
+/* ============================================================================
+   EXPERTISE SECTION
+   ============================================================================ */
 .expertise {
   background: var(--black);
   padding: 100px 80px 120px;
@@ -32,23 +35,13 @@
   margin: 56px 0 0;
 }
 
-/* --- Card Grid: 3 top + 2 bottom --- */
+/* --- Card Grid: 3 columns × 2 rows ----------------------------------------- */
 .expertise__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
   gap: 0;
   border-left: 1px solid var(--divider);
 }
-
-/* bottom row 2 cards span 1.5 cols each */
-.expertise__card:nth-child(4),
-.expertise__card:nth-child(5) {
-  grid-column: span 1;
-}
-
-.expertise__card:nth-child(4) { grid-column: 1 / 2; }
-.expertise__card:nth-child(5) { grid-column: 2 / 4; }
 
 .expertise__card {
   border-right: 1px solid var(--divider);
@@ -58,13 +51,48 @@
   flex-direction: column;
   gap: 16px;
   position: relative;
-  transition: background 0.3s;
-  cursor: default;
+  overflow: hidden;
+  transition: background var(--transition-med), box-shadow var(--transition-med);
+  cursor: pointer;
+}
+
+/* Top-edge gold sweep on hover */
+.expertise__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--transition-slow);
+}
+
+/* Subtle shimmer sweep */
+.expertise__card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(196, 169, 106, 0.04) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity var(--transition-med);
 }
 
 .expertise__card:hover {
-  background: rgba(255,255,255,0.025);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 4px 40px rgba(196, 169, 106, 0.06);
 }
+
+.expertise__card:hover::before { transform: scaleX(1); }
+.expertise__card:hover::after  { opacity: 1; }
 
 .expertise__card-top {
   display: flex;
@@ -82,7 +110,13 @@
 
 .expertise__card-icon {
   color: var(--gold);
-  opacity: 0.75;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast), transform var(--transition-med);
+}
+
+.expertise__card:hover .expertise__card-icon {
+  opacity: 1;
+  transform: translateY(-4px);
 }
 
 .expertise__card-tag {
@@ -100,11 +134,10 @@
   font-weight: 600;
   line-height: 1.25;
   color: var(--cream);
+  transition: color var(--transition-fast);
 }
 
-.expertise__card:hover .expertise__card-title {
-  color: var(--gold-light);
-}
+.expertise__card:hover .expertise__card-title { color: var(--gold-light); }
 
 .expertise__card-desc {
   font-size: 13px;
@@ -133,14 +166,42 @@
 .expertise__card-arrow {
   font-size: 18px;
   color: var(--cream-dim);
-  opacity: 0.5;
+  opacity: 0.45;
   align-self: flex-end;
   margin-top: auto;
-  transition: opacity 0.25s, transform 0.25s;
+  transition: opacity var(--transition-fast), transform var(--transition-med), color var(--transition-fast);
 }
 
 .expertise__card:hover .expertise__card-arrow {
   opacity: 1;
-  transform: translateX(4px);
+  transform: translateX(6px);
   color: var(--gold);
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 1024px) {
+  .expertise { padding: 72px 40px 90px; }
+  .expertise__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .expertise { padding: 56px 20px 72px; }
+  .expertise__grid {
+    grid-template-columns: 1fr;
+    border-left: none;
+  }
+  .expertise__card {
+    border-right: none;
+    padding: 32px 20px;
+  }
+  .expertise__heading {
+    font-size: clamp(30px, 8vw, 48px);
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise { padding: 48px 16px 64px; }
+  .expertise__card { padding: 28px 16px; }
 }

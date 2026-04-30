@@ -1,11 +1,37 @@
+/* ============================================================================
+   CONTACT SECTION
+   ============================================================================ */
 .contact {
   background: var(--dark-green);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative radial glow bloom behind content */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(196, 169, 106, 0.07) 0%,
+    rgba(196, 169, 106, 0.03) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 .contact__inner {
   flex: 1;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +56,7 @@
 }
 
 .contact__para {
-  font-size: 14.5px;
+  font-size: clamp(13px, 1.4vw, 15px);
   font-weight: 300;
   line-height: 1.8;
   color: var(--cream-dim);
@@ -44,6 +70,7 @@
   margin-top: 8px;
 }
 
+/* Button with left-to-right fill sweep */
 .contact__btn {
   display: inline-flex;
   align-items: center;
@@ -57,16 +84,40 @@
   text-transform: uppercase;
   color: var(--cream);
   min-width: 160px;
-  transition: background 0.28s, color 0.28s, border-color 0.28s;
+  position: relative;
+  overflow: hidden;
+  transition: color var(--transition-med), border-color var(--transition-med);
+  z-index: 0;
+}
+
+/* The fill that sweeps in from left */
+.contact__btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--cream);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--transition-med);
+  z-index: -1;
 }
 
 .contact__btn:hover {
-  background: var(--cream);
   color: var(--dark-green);
   border-color: var(--cream);
 }
 
+.contact__btn:hover::before { transform: scaleX(1); }
+
+.contact__btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Footer bar */
 .contact__footer {
+  position: relative;
+  z-index: 1;
   border-top: 1px solid var(--divider);
   padding: 22px 80px;
   text-align: center;
@@ -77,4 +128,26 @@
   letter-spacing: 0.1em;
   color: var(--cream-dim);
   opacity: 0.5;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 1024px) {
+  .contact__inner { padding: 100px 48px 80px; }
+  .contact__footer { padding: 20px 48px; }
+}
+
+@media (max-width: 768px) {
+  .contact__inner { padding: 80px 24px 64px; gap: 24px; }
+  .contact__buttons { flex-direction: column; align-items: center; }
+  .contact__btn { width: 100%; max-width: 280px; }
+  .contact__footer { padding: 18px 24px; }
+  .contact__heading { font-size: clamp(32px, 8vw, 56px); }
+}
+
+@media (max-width: 480px) {
+  .contact__inner { padding: 64px 16px 48px; gap: 20px; }
+  .contact__btn { max-width: 100%; padding: 14px 32px; }
+  .contact__footer { padding: 16px; }
 }

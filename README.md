@@ -14,8 +14,7 @@ A premium, production-ready personal portfolio website built with **React + Vite
 
 | Feature | Details |
 |---|---|
-| **Multilingual (i18n)** | English · Spanish · Basque via `react-i18next` |
-| **SEO-friendly routing** | Language-based URLs: `/en` `/es` `/eu` |
+| **Multilingual** | English · Spanish · Basque via Google Translate integration |
 | **Interactive World Map** | Real GeoJSON world map with Leaflet, glowing country outlines, clickable location pins |
 | **Custom Cursor Trail** | Gold/cream glowing cursor trail + spotlight glow effect |
 | **GSAP Animations** | Scroll-triggered entrance animations on every section |
@@ -31,9 +30,7 @@ A premium, production-ready personal portfolio website built with **React + Vite
 
 - **React 19** — UI framework
 - **Vite 8** — Build tool and dev server
-- **react-i18next + i18next** — Internationalization
-- **i18next-browser-languagedetector** — Auto-detects user language from URL / localStorage / browser
-- **React Router v7** — Client-side routing with `/:lang` segments
+- **Google Translate API** — Seamless, non-intrusive website translation
 - **GSAP 3** — Scroll animations and cursor trail ticker
 - **Leaflet + react-leaflet** — Real interactive world map with GeoJSON
 - **Vanilla CSS** — No utility framework, full design control
@@ -47,10 +44,7 @@ mikel-portfolio/
 ├── public/
 │   └── hero-bg.mp4                  # Background video
 ├── src/
-│   ├── locales/
-│   │   ├── en.json                  # English translations
-│   │   ├── es.json                  # Spanish translations
-│   │   └── eu.json                  # Basque translations
+
 │   ├── components/
 │   │   ├── HeroSection.jsx/css      # Hero + Navbar + Language switcher
 │   │   ├── IntroSection.jsx/css     # Intro statement
@@ -63,9 +57,7 @@ mikel-portfolio/
 │   │   ├── ContactSection.jsx/css   # Contact + footer
 │   │   └── CursorTrail.jsx/css      # Custom cursor effect
 │   ├── assets/
-│   │   └── Hover/                   # Original hover effect reference
-│   ├── i18n.js                      # i18next configuration
-│   ├── App.jsx                      # Router + language sync
+│   ├── App.jsx                      # Main application component
 │   └── main.jsx                     # Entry point
 ├── index.html
 ├── vite.config.js
@@ -76,17 +68,9 @@ mikel-portfolio/
 
 ## 🌍 Internationalization
 
-The site supports three languages with manual translations (no auto-translate):
+The site features seamless, non-intrusive Google Translate integration. The default language is English, and it automatically translates to Spanish and Basque through the custom-styled navigation switcher. 
 
-| Language | Code | URL |
-|---|---|---|
-| English | `en` | `/en` |
-| Spanish | `es` | `/es` |
-| Basque  | `eu` | `/eu` |
-
-**Language persistence:** Selected language is saved in `localStorage` (`i18n_lang`) and restored on page reload.
-
-**Switching languages:** Click `EN | ES | EU` in the top-right navbar. The URL updates and all content translates instantly without a page reload.
+**Switching languages:** Click `EN | ES | EU` in the top-right navbar. Content is translated instantly using Google Translate, while the default Google Translate UI, banners, and tooltips are hidden to maintain the site's premium aesthetic.
 
 ---
 
@@ -121,7 +105,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173/en](http://localhost:5173/en) in your browser.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### Build for Production
 
@@ -145,15 +129,7 @@ npm run preview
 
 ---
 
-## 📝 Adding or Editing Translations
 
-1. Open `src/locales/en.json`, `es.json`, or `eu.json`
-2. Add your key-value pair under the appropriate namespace
-3. Use the key in any component: `const { t } = useTranslation()` → `t('your.key')`
-
-Missing keys fall back to **English** automatically.
-
----
 
 ## 📄 License
 

@@ -1,13 +1,38 @@
+/* ============================================================================
+   IMPACT SECTION
+   ============================================================================ */
 .impact {
   background: var(--dark-green);
   padding: 120px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Large decorative watermark numeral behind content */
+.impact::before {
+  content: '∞';
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-serif);
+  font-size: clamp(200px, 24vw, 380px);
+  font-weight: 300;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(196, 169, 106, 0.08);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 
 .impact__inner {
-  max-width: 780px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 .impact__heading {
@@ -24,9 +49,34 @@
   color: var(--gold);
 }
 
+.impact__paras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 56px;
+}
+
 .impact__para {
-  font-size: 14.5px;
+  font-size: clamp(13.5px, 1.4vw, 15px);
   font-weight: 300;
   line-height: 1.85;
   color: var(--cream-dim);
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 1024px) {
+  .impact { padding: 80px 40px; }
+  .impact__paras { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+  .impact { padding: 60px 24px; }
+  .impact::before { right: -5%; font-size: clamp(120px, 30vw, 200px); opacity: 0.4; }
+  .impact__heading { font-size: clamp(30px, 8vw, 52px); }
+}
+
+@media (max-width: 480px) {
+  .impact { padding: 48px 16px; }
+  .impact::before { display: none; }
 }

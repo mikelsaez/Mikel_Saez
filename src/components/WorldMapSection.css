@@ -1,9 +1,7 @@
 /* ── Section wrapper ─────────────────────────────────────────────────────── */
 .worldmap {
   background: var(--dark-green);
-  /* top padding only — map goes edge-to-edge horizontally */
   padding: 120px 0 0;
-  overflow: hidden;
 }
 
 /* Header keeps horizontal breathing room */
@@ -29,11 +27,14 @@
   color: var(--gold);
 }
 
-/* ── Map container — full bleed ─────────────────────────────────────────── */
+/* ── Map container — square = full world always visible ──────────────────── */
 .worldmap__map-wrap {
   position: relative;
   width: 100%;
-  height: 800px;
+  /* Web Mercator world projection is a perfect square at any zoom level.
+     aspect-ratio 1:1 ensures the full world (top→bottom) is always visible
+     with no black bars, matching the target design. */
+  aspect-ratio: 1 / 1;
 }
 
 .worldmap__leaflet {
@@ -102,9 +103,27 @@
   background: rgba(10, 22, 13, 0.97);
   border: 1px solid rgba(180, 200, 160, 0.18);
   backdrop-filter: blur(14px);
-  padding: 20px 22px 22px;
-  width: 252px;
+  width: 280px;
+  overflow: hidden;
   animation: wm-card-in 0.18s ease-out;
+}
+
+.wm-card__img {
+  width: 100%;
+  height: 148px;
+  overflow: hidden;
+}
+
+.wm-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.88) saturate(0.9);
+}
+
+.wm-card__body {
+  padding: 18px 20px 20px;
 }
 
 @keyframes wm-card-in {
@@ -152,17 +171,53 @@
   margin: 0;
 }
 
-/* ── Responsive ─────────────────────────────────────────────────────────── */
+/* ── Responsive ────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .worldmap {
+    padding-top: 80px;
+  }
+  .worldmap__header {
+    padding: 0 48px;
+    margin-bottom: 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .worldmap {
-    padding-top: 70px;
+    padding-top: 60px;
   }
-
   .worldmap__header {
     padding: 0 24px;
+    margin-bottom: 40px;
+    gap: 16px;
   }
-
+  /* Make map a taller rectangle on small screens so pins are readable */
   .worldmap__map-wrap {
-    height: 440px;
+    aspect-ratio: 4 / 3;
+  }
+  /* Smaller popup card on mobile */
+  .wm-card {
+    width: 220px;
+  }
+  .wm-card__img {
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .worldmap__header {
+    padding: 0 20px;
+  }
+  .worldmap__map-wrap {
+    aspect-ratio: 3 / 2;
+  }
+  .wm-card {
+    width: 180px;
+  }
+  .wm-card__img {
+    height: 90px;
+  }
+  .wm-card__body {
+    padding: 12px 14px 14px;
   }
 }

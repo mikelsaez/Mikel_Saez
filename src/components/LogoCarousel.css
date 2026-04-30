@@ -1,8 +1,34 @@
+/* ============================================================================
+   LOGO CAROUSEL
+   ============================================================================ */
 .logos {
   background: var(--black);
   padding: 80px 80px 100px;
 }
 
+.logos__header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.logos__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--cream);
+  max-width: 820px;
+}
+
+.logos__heading em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+/* --- Logo track with fade transition --------------------------------------- */
 .logos__track {
   display: flex;
   align-items: center;
@@ -10,43 +36,74 @@
   gap: 48px;
   flex-wrap: wrap;
   min-height: 120px;
-  padding: 20px 0 40px;
+  padding: 20px 0 48px;
+  transition: opacity 0.38s var(--ease-in-out), transform 0.38s var(--ease-in-out);
+}
+
+.logos__track--fading {
+  opacity: 0;
+  transform: translateY(8px);
 }
 
 .logos__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
+  width: 220px;
 }
 
 .logos__item img {
   max-width: 100%;
-  max-height: 80px;
+  max-height: 100px;
   object-fit: contain;
-  filter: grayscale(1) brightness(1.4) opacity(0.75);
-  transition: filter 0.3s;
+  filter: grayscale(1) brightness(1.8) opacity(0.85);
+  transition: filter var(--transition-slow), transform var(--transition-med);
 }
 
 .logos__item img:hover {
-  filter: grayscale(0) brightness(1.1) opacity(1);
+  filter: grayscale(0) brightness(1) opacity(1);
+  transform: scale(1.08);
 }
 
+/* --- Controls -------------------------------------------------------------- */
 .logos__controls {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 16px;
+  padding-right: 80px; /* Offset to prevent overlap with the fixed tree */
 }
 
-.logos__counter {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  color: var(--cream-dim);
+/* Dot indicators */
+.logos__dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logos__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cream-dim);
+  opacity: 0.3;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+
+.logos__dot--active {
+  background: var(--gold);
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+.logos__dot:hover:not(.logos__dot--active) {
   opacity: 0.6;
 }
 
+/* Arrow buttons */
 .logos__prev,
 .logos__next {
   width: 40px;
@@ -58,11 +115,39 @@
   justify-content: center;
   font-size: 16px;
   color: var(--cream);
-  transition: background 0.25s, color 0.25s;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .logos__prev:hover,
 .logos__next:hover {
   background: var(--cream);
   color: var(--black);
+  border-color: var(--cream);
+}
+
+.logos__prev:focus-visible,
+.logos__next:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+@media (max-width: 1024px) {
+  .logos { padding: 72px 40px 90px; }
+  .logos__item { width: 180px; }
+}
+
+@media (max-width: 768px) {
+  .logos { padding: 56px 24px 72px; }
+  .logos__item { width: 140px; }
+  .logos__track { gap: 28px; min-height: 100px; }
+  .logos__controls { justify-content: center; padding-right: 0; }
+}
+
+@media (max-width: 480px) {
+  .logos { padding: 44px 16px 56px; }
+  .logos__item { width: 110px; }
+  .logos__track { gap: 20px; }
 }

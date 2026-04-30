@@ -15,7 +15,7 @@
 
 .intro__heading {
   font-family: var(--font-serif);
-  font-size: clamp(38px, 4.8vw, 68px);
+  font-size: clamp(34px, 4.8vw, 68px);
   font-weight: 600;
   line-height: 1.12;
   color: var(--cream);
@@ -35,9 +35,16 @@
 
 .intro__para {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
   font-weight: 300;
   line-height: 1.8;
   color: var(--cream-dim);
   max-width: 600px;
 }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) { .intro { padding: 100px 40px; } }
+@media (max-width: 768px)  { .intro { padding: 72px 24px; } }
+@media (max-width: 480px)  { .intro { padding: 56px 16px; } }
