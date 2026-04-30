@@ -228,9 +228,13 @@
     gap: 16px;
   }
 
-  /* Make map a taller rectangle on small screens so pins are readable */
+  /* Make map a taller rectangle on small screens so pins are readable.
+     Also reset the desktop crop margins — they are too large relative to
+     a mobile viewport and cause the section to consume too much space. */
   .worldmap__map-wrap {
     aspect-ratio: 4 / 3;
+    margin-top: -60px;
+    margin-bottom: -80px;
   }
 
   /* Smaller popup card on mobile */
@@ -250,6 +254,8 @@
 
   .worldmap__map-wrap {
     aspect-ratio: 3 / 2;
+    margin-top: -30px;
+    margin-bottom: -40px;
   }
 
   .wm-card {
