@@ -205,6 +205,35 @@
   margin: 0;
 }
 
+/* ── Loading overlay ──────────────────────────────────────────────── */
+.wm-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(13, 31, 20, 0.72);
+  pointer-events: none;
+}
+
+.wm-loading__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold, #c4a96a);
+  animation: wm-dot-pulse 1.2s ease-in-out infinite;
+}
+
+.wm-loading__dot:nth-child(2) { animation-delay: 0.2s; }
+.wm-loading__dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes wm-dot-pulse {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+  40%           { transform: scale(1);   opacity: 1;   }
+}
+
 /* ── Responsive ────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .worldmap {
