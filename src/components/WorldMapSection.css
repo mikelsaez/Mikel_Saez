@@ -288,14 +288,37 @@
   }
 
   .wm-card {
-    width: 180px;
+    width: 120px;
   }
 
   .wm-card__img {
-    height: 90px;
+    display: none;
   }
 
   .wm-card__body {
-    padding: 12px 14px 14px;
+    padding: 8px 10px 10px;
+  }
+
+  .wm-card__cat {
+    font-size: 7px;
+    margin-bottom: 4px;
+    letter-spacing: 0.15em;
+  }
+
+  .wm-card__title {
+    font-size: 10px;
+    margin-bottom: 4px;
+    line-height: 1.25;
+  }
+
+  .wm-card__country {
+    font-size: 7px;
+    padding: 2px 4px;
+    margin-bottom: 6px;
+  }
+
+  .wm-card__desc {
+    font-size: 9px;
+    line-height: 1.35;
   }
 }

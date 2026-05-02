@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './AboutSection.css'
+import profileImg from '../image.png'
 
 const paras = [
   'The Basque Country has a strong sense of place. Mountains, forests and coastlines are not just scenery, but part of daily life and identity. That early connection to territory shaped how I see the world: local roots matter, but ideas travel.',
@@ -41,7 +42,7 @@ export default function AboutSection() {
           <div className="about__photo-frame">
             <img
               className="about__photo"
-              src="https://saezdevicuna.eus/wp-content/uploads/2026/03/image.png"
+              src={profileImg}
               alt="Mikel Saez de Vicuña Blanco"
               loading="lazy"
             />
