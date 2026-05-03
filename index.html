@@ -23,6 +23,8 @@
       /* Hide Google Translate top bar */
       body > .skiptranslate        { display: none !important; }
     </style>
+    <!-- Netlify Identity Widget for CMS Email Invites -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <!-- Google Translate element (hidden) -->
@@ -58,5 +60,16 @@
       };
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: mikelsaez/Mikel_Saez
+  name: git-gateway
   branch: main
-  base_url: /api
 
 media_folder: "public/img"
 public_folder: "/img"
