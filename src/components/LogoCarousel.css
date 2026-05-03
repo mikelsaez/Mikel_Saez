@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: center;
   gap: 48px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   min-height: 120px;
   padding: 20px 0 48px;
   transition: opacity 0.38s var(--ease-in-out), transform 0.38s var(--ease-in-out);
@@ -50,6 +50,8 @@
   align-items: center;
   justify-content: center;
   width: 220px;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .logos__item img {
