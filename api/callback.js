@@ -23,16 +23,17 @@ export default async function handler(req, res) {
     // The specific postMessage format Decap CMS expects to close the popup securely
     const script = `
       <script>
-        (function() {
-          function receiveMessage(e) {
-            window.opener.postMessage(
-              'authorization:github:success:{"token":"${token}","provider":"github"}',
-              e.origin
-            );
-          }
-          window.addEventListener("message", receiveMessage, false);
-          window.opener.postMessage("authorizing:github", "*");
-        })();
+        const authData = {
+          token: "${token}",
+          provider: "github"
+        };
+        // Send the token back to Decap CMS
+        window.opener.postMessage(
+          'authorization:github:success:' + JSON.stringify(authData),
+          "*"
+        );
+        // Close the popup
+        window.close();
       </script>
     `;
 
