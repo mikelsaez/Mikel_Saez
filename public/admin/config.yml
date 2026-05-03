@@ -2,7 +2,7 @@ backend:
   name: github
   repo: mikelsaez/Mikel_Saez
   branch: main
-  base_url: https://www.saezdevicuna.eus/api
+  base_url: /api
 
 media_folder: "public/img"
 public_folder: "/img"
