@@ -62,6 +62,10 @@ export default async function handler(req, res) {
         'authorization:github:success:' + JSON.stringify(authData),
         "*"
       );
+      // Close the popup after a brief delay to ensure the message is received
+      setTimeout(function() {
+        window.close();
+      }, 500);
     } catch (err) {
       document.body.innerHTML += '<p style="color:red">Error sending message: ' + err.message + '</p>';
     }
