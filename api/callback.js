@@ -27,19 +27,33 @@ export default async function handler(req, res) {
           token: "${token}",
           provider: "github"
         };
+        
+        // Show success message in the popup for debugging
+        document.body.innerHTML = '<div style="font-family:sans-serif;padding:20px;">' +
+          '<h3>Authentication Successful!</h3>' +
+          '<p>Token received ending in: ...' + "${token}".slice(-4) + '</p>' +
+          '<p>Sending back to Decap CMS...</p></div>';
+
         // Send the token back to Decap CMS
-        window.opener.postMessage(
-          'authorization:github:success:' + JSON.stringify(authData),
-          "*"
-        );
-        // Close the popup
-        window.close();
+        try {
+          window.opener.postMessage(
+            'authorization:github:success:' + JSON.stringify(authData),
+            "*"
+          );
+        } catch (err) {
+          document.body.innerHTML += '<p style="color:red">Error sending message: ' + err.message + '</p>';
+        }
+        
+        // Delay closing so we can see the result, or close immediately if everything is perfect
+        setTimeout(function() {
+          window.close();
+        }, 1500);
       </script>
     `;
 
     res.setHeader('Content-Type', 'text/html');
     res.send(script);
   } catch (error) {
-    res.status(500).send(error.message);
+    res.status(500).send('<h3>OAuth Exchange Error</h3><p>' + error.message + '</p>');
   }
 }
