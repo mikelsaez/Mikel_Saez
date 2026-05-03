@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import './HeroSection.css'
+import contentData from '../data/content.json'
+
+const content = contentData.hero
 
 const LANGS = ['EN', 'ES', 'EU']
 const NAV_LINKS = [
@@ -124,12 +127,10 @@ export default function HeroSection() {
 
       {/* ── Main content ──────────────────────────────────────────────────── */}
       <div className="hero__content">
-        <p className="hero__subtitle">TURNING COMPLEX AGENDAS INTO LIVING INITIATIVES</p>
-        <h1 className="hero__heading">
-          From local roots to <em>global<br />impact</em>
-        </h1>
+        <p className="hero__subtitle">{content.subtitle}</p>
+        <h1 className="hero__heading" dangerouslySetInnerHTML={{ __html: content.heading }} />
         <a className="hero__discover" href="#intro" aria-label="Discover more — scroll down">
-          <span>DISCOVER</span>
+          <span>{content.discoverText}</span>
           <span className="hero__discover-line" aria-hidden="true" />
         </a>
       </div>
@@ -137,16 +138,16 @@ export default function HeroSection() {
       {/* ── Stat footer ───────────────────────────────────────────────────── */}
       <div className="hero__footer" aria-label="Quick statistics">
         <div className="hero__stat">
-          <span className="hero__stat-label">BASED IN</span>
-          <span className="hero__stat-value"><em>Basque Country</em></span>
+          <span className="hero__stat-label">{content.stats[0].label}</span>
+          <span className="hero__stat-value" dangerouslySetInnerHTML={{ __html: content.stats[0].value }} />
         </div>
         <div className="hero__stat hero__stat--center">
-          <span className="hero__stat-label">ACTIVE SINCE</span>
-          <span className="hero__stat-value">2012</span>
+          <span className="hero__stat-label">{content.stats[1].label}</span>
+          <span className="hero__stat-value" dangerouslySetInnerHTML={{ __html: content.stats[1].value }} />
         </div>
         <div className="hero__stat hero__stat--right">
-          <span className="hero__stat-label">PROJECTS</span>
-          <span className="hero__stat-value">55+</span>
+          <span className="hero__stat-label">{content.stats[2].label}</span>
+          <span className="hero__stat-value" dangerouslySetInnerHTML={{ __html: content.stats[2].value }} />
         </div>
       </div>
     </section>

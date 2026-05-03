@@ -2,6 +2,9 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './ImpactSection.css'
+import contentData from '../data/content.json'
+
+const content = contentData.impact
 
 export default function ImpactSection() {
   const ref = useRef(null)
@@ -23,17 +26,12 @@ export default function ImpactSection() {
   return (
     <section className="impact" ref={ref} aria-label="Impact overview">
       <div className="impact__inner">
-        <span className="label anim">IMPACT</span>
-        <h2 className="impact__heading anim">
-          Ideas that <em>took root</em>
-        </h2>
+        <span className="label anim">{content.tag}</span>
+        <h2 className="impact__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
         <div className="impact__paras">
-          <p className="impact__para anim">
-            Over the past decade I have worked across continents, sectors and institutions helping ideas grow into initiatives with real impact.
-          </p>
-          <p className="impact__para anim">
-            From international platforms and global events to urban sustainability programs and institutional transformation projects, my role has focused on connecting strategy, communication and partnerships. Many of these initiatives have brought together public institutions, private sector actors and civil society organizations to translate complex agendas into collaborative action.
-          </p>
+          {content.paragraphs.map((p, i) => (
+            <p className="impact__para anim" key={i}>{p}</p>
+          ))}
         </div>
       </div>
     </section>

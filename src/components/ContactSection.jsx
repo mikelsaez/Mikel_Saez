@@ -2,6 +2,9 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './ContactSection.css'
+import contentData from '../data/content.json'
+
+const content = contentData.contact
 
 export default function ContactSection() {
   const ref = useRef(null)
@@ -23,34 +26,29 @@ export default function ContactSection() {
   return (
     <section className="contact" id="contact" ref={ref}>
       <div className="contact__inner">
-        <h2 className="contact__heading anim">
-          Let's cultivate <em>something<br />meaningful</em>
-        </h2>
-        <p className="contact__para anim">
-          Open to collaboration on international initiatives, communication<br />
-          strategy and sustainability projects.
-        </p>
+        <h2 className="contact__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
+        <p className="contact__para anim" dangerouslySetInnerHTML={{ __html: content.paragraph }} />
         <div className="contact__buttons anim">
           <a
             className="contact__btn"
-            href="mailto:hello@mikelsaez.com"
+            href={content.emailUrl}
             aria-label="Send an email"
           >
-            EMAIL
+            {content.emailLabel}
           </a>
           <a
             className="contact__btn"
-            href="https://www.linkedin.com/in/mikelvicuna/"
+            href={content.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit LinkedIn profile (opens in new tab)"
           >
-            LINKEDIN
+            {content.linkedinLabel}
           </a>
         </div>
       </div>
       <footer className="contact__footer">
-        <p>© 2026 Mikel Saez de Vicuna. All rights reserved.</p>
+        <p>{content.footerText}</p>
       </footer>
     </section>
   )

@@ -1,0 +1,366 @@
+{
+  "contact": {
+    "heading": "Let's cultivate <em>something<br />meaningful</em>",
+    "paragraph": "Open to collaboration on international initiatives, communication<br />strategy and sustainability projects.",
+    "emailLabel": "EMAIL",
+    "emailUrl": "mailto:hello@mikelsaez.com",
+    "linkedinLabel": "LINKEDIN",
+    "linkedinUrl": "https://www.linkedin.com/in/mikelvicuna/",
+    "footerText": "© 2026 Mikel Saez de Vicuna. All rights reserved."
+  },
+  "impact": {
+    "tag": "IMPACT",
+    "heading": "Ideas that <em>took root</em>",
+    "paragraphs": [
+      "Over the past decade I have worked across continents, sectors and institutions helping ideas grow into initiatives with real impact.",
+      "From international platforms and global events to urban sustainability programs and institutional transformation projects, my role has focused on connecting strategy, communication and partnerships. Many of these initiatives have brought together public institutions, private sector actors and civil society organizations to translate complex agendas into collaborative action."
+    ]
+  },
+  "worldMap": {
+    "tag": "ROUTES",
+    "heading": "Cultivating ideas that <em>travel across borders</em>",
+    "hardcodedPins": [
+      {
+        "title": "Microsoft Mkt & Operations Europa HQ",
+        "cat": "SEEDS",
+        "country": "EUROPE",
+        "lat": 52.37,
+        "lng": 4.9,
+        "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.14.23.png",
+        "desc": "Marketing and Operations support to Europe HQ team, in NATO and EU Institutions stakeholders coordination events."
+      },
+      {
+        "title": "Iberia Airlines – Inflight Wine & Dining Experience",
+        "cat": "SEEDS",
+        "country": "SPAIN",
+        "lat": 41.2,
+        "lng": -4.8,
+        "img": "/img/iberia_47510952881897_thumb.png",
+        "desc": "Strategic communication and branding coordination for pioneering wines serving in all business class routes."
+      },
+      {
+        "title": "Mercedes Benz Fashion Week & Golf Trophy",
+        "cat": "SEEDS",
+        "country": "SPAIN",
+        "lat": 38.9,
+        "lng": -2.2,
+        "img": "/img/IMG_0181-scaled.jpg",
+        "desc": "Strategic communication and branding support for Madrid Fashion Week and Golf Trophy Tournament."
+      },
+      {
+        "title": "Wine Routes of the World – UN Tourism",
+        "cat": "ROOTS",
+        "country": "GLOBAL",
+        "lat": 48.85,
+        "lng": 2.35,
+        "img": "/img/Captura-de-pantalla-2026-03-18-a-las-23.00.16.png",
+        "desc": "Publication design, content curation, international platforms and partnerships across institutions, sectors and regions."
+      },
+      {
+        "title": "UN Tourism General Assembly",
+        "cat": "ROOTS",
+        "country": "RUSSIA",
+        "lat": 55.75,
+        "lng": 37.6,
+        "img": "/img/199.jpeg",
+        "desc": "Liason with UN Tourism organization supporting with Spanish Fine Wines Institute project."
+      },
+      {
+        "title": "Mission 300 – Africa Electrification Initiative",
+        "cat": "ROOTS",
+        "country": "AFRICA",
+        "lat": 0,
+        "lng": 25,
+        "img": "/img/Captura-de-pantalla-2026-03-30-a-las-18.28.14-scaled.png",
+        "desc": "Supporting the coordination of Community of Practice, knowledge products, webinars sessions and workshops platform."
+      },
+      {
+        "title": "World Bank – Change Management",
+        "cat": "BLOOM",
+        "country": "USA",
+        "lat": 38.9,
+        "lng": -77,
+        "img": "/img/Captura-de-pantalla-2026-03-30-a-las-18.33.53.png",
+        "desc": "Supporting organizations teams worldwide in transformation, enabling change adoption, processes, new ways of working and institutional innovation."
+      },
+      {
+        "title": "Vitoria-Gasteiz 2030 Urban Innovation Project",
+        "cat": "TERRITORIES",
+        "country": "BASQUE COUNTRY",
+        "lat": 42.85,
+        "lng": -2.68,
+        "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.27.00.png",
+        "desc": "Academic projects focused on cities, local identity, sustainable development and 2030 Agenda territorial strategies."
+      },
+      {
+        "title": "IDB Regional Housing Forum",
+        "cat": "TERRITORIES",
+        "country": "MEXICO",
+        "lat": 19.43,
+        "lng": -99.13,
+        "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.28.09.png",
+        "desc": "Support the organization of the high level event, focused on housing market, regional development, urban and sustainable territorial strategies."
+      },
+      {
+        "title": "U20 Mayors Summit",
+        "cat": "TERRITORIES",
+        "country": "BRAZIL",
+        "lat": -15.78,
+        "lng": -47.93,
+        "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.30.14.png",
+        "desc": "During Brazil G20 presidency, Latin American Mayors Network Summit, focused on cities, regional development."
+      },
+      {
+        "title": "COP16 & COP30 – Amazon Cities Network",
+        "cat": "ECOSYSTEM",
+        "country": "COLOMBIA",
+        "lat": 3.86,
+        "lng": -77.04,
+        "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.32.23.png",
+        "desc": "Community of Practice and communication initiatives supporting climate transition and sustainability agendas for Amazonian cities."
+      },
+      {
+        "title": "VINEXPO Shanghai & Hong Kong",
+        "cat": "TERRITORIES",
+        "country": "ASIA",
+        "lat": 31.23,
+        "lng": 121.47,
+        "img": "/img/Captura-de-pantalla-2026-03-30-a-las-20.20.32.png",
+        "desc": "Trade show stand design and construction with coordinated brand presence and sales campaigns to grow market share in Asia."
+      },
+      {
+        "title": "4th UNWTO Global Conference on Wine Tourism",
+        "cat": "ROOTS",
+        "country": "CHILE",
+        "lat": -34.6,
+        "lng": -71.2,
+        "img": "/img/Captura-de-pantalla-2026-03-30-a-las-20.29.07.png",
+        "desc": "Conducted workshop during UNWTO Global Conference on Wine Tourism in Valle de Colchagua, Chile."
+      }
+    ]
+  },
+  "partners": {
+    "tag": "PARTNERS",
+    "heading": "Organizations I have <em>worked with</em>",
+    "logos": [
+      {
+        "image": "/img/logo1 new.png",
+        "alt": "Partner 1",
+        "className": "logo--enlarge"
+      },
+      {
+        "image": "/img/logo2 new.png",
+        "alt": "Partner 2",
+        "className": ""
+      },
+      {
+        "image": "/img/logo3 new.png",
+        "alt": "Partner 3",
+        "className": "logo--enlarge"
+      },
+      {
+        "image": "/img/logo4 new.png",
+        "alt": "Partner 4",
+        "className": ""
+      },
+      {
+        "image": "/img/logo5 new.png",
+        "alt": "Partner 5",
+        "className": "logo--shrink"
+      },
+      {
+        "image": "/img/logo6 new.png",
+        "alt": "Partner 6",
+        "className": "logo--shrink"
+      },
+      {
+        "image": "/img/logo7 new.png",
+        "alt": "Partner 7",
+        "className": ""
+      },
+      {
+        "image": "/img/logo8 new.png",
+        "alt": "Partner 8",
+        "className": "logo--shrink"
+      },
+      {
+        "image": "/img/logo9 new.png",
+        "alt": "Partner 9",
+        "className": ""
+      },
+      {
+        "image": "/img/logo10 new.png",
+        "alt": "Partner 10",
+        "className": "logo--enlarge-xl"
+      },
+      {
+        "image": "/img/logo11 new.png",
+        "alt": "Partner 11",
+        "className": ""
+      },
+      {
+        "image": "/img/logo12 new.png",
+        "alt": "Partner 12",
+        "className": "logo--enlarge-xxl"
+      }
+    ]
+  },
+  "intro": {
+    "heading": "Cultivating <em>Ideas</em> That Grow<br />Into Impact",
+    "paragraph": "Reimagining complex ideas into initiatives that connect institutions, people and places.<br />From global agendas to tangible action."
+  },
+  "about": {
+    "tag": "ABOUT",
+    "heading": "From Local Roots to <em>Global Impact </em>",
+    "image": "/img/image.png",
+    "paragraphs": [
+      "The Basque Country has a strong sense of place. Mountains, forests and coastlines are not just scenery, but part of daily life and identity. That early connection to territory shaped how I see the world: local roots matter, but ideas travel.",
+      "Curiosity about that wider world led me to study communication and international relations, exploring how narratives, institutions and cultures interact across borders.",
+      "My career began in the private sector coordinating international initiatives and partnerships across Europe and global markets. Over time my work moved closer to sustainability, cities and international cooperation, leading to collaborations with organizations such as the Inter-American Development Bank and later the World Bank Group.",
+      "Today my work focuses on helping institutions translate complex agendas into initiatives that people can understand, support and grow."
+    ],
+    "ctaText": "LET'S COLLABORATE →",
+    "stats": [
+      {
+        "num": "18+",
+        "label": "COUNTRIES"
+      },
+      {
+        "num": "60+",
+        "label": "PROJECTS LED"
+      },
+      {
+        "num": "12",
+        "label": "YEARS ACTIVE"
+      },
+      {
+        "num": "UN",
+        "label": "COLLABORATOR"
+      }
+    ]
+  },
+  "expertise": {
+    "tag": "EXPERTISE",
+    "heading": "Ideas grow where <em>collaboration takes root</em>",
+    "cards": [
+      {
+        "num": "01",
+        "tag": "ECOSYSTEM",
+        "title": "Sustainability & Environmental Initiatives",
+        "desc": "Where sustainability meets action. Initiatives and narratives that support climate action, environmental protection, and long‑term sustainability agendas, connecting strategy with delivery.",
+        "tags": [
+          "COP16 Cali – Knowledge Platform",
+          "COP30 Belém – Amazonian Cities Network"
+        ]
+      },
+      {
+        "num": "02",
+        "tag": "TERRITORIES",
+        "title": "Urban/Rural Development & Tourism",
+        "desc": "Place shapes strategy. Work that links urban futures, rural systems, regional identity, tourism, and territorial development into coherent pathways.",
+        "tags": [
+          "Vitoria-Gasteiz Urban Innovation 2030 Agenda",
+          "IDB Regional Housing Forum (Mexico)",
+          "IDB – U20 Brazil during G20, Mayors Summit"
+        ]
+      },
+      {
+        "num": "03",
+        "tag": "SEEDS",
+        "title": "Strategic Communication & Branding",
+        "desc": "Ideas take shape and direction is set. Crafting narratives, positioning, and messaging that turn complex global agendas into clarity, purpose, and local momentum.",
+        "tags": [
+          "Microsoft Mkt & Operations – Europe HQ",
+          "Iberia Airlines – Proudly Serving ARAEX Wines",
+          "Mercedes Benz Trophy – Villa Conchi Cava"
+        ]
+      },
+      {
+        "num": "04",
+        "tag": "ROOTS",
+        "title": "Community, Partnerships & Platforms",
+        "desc": "Where collaboration takes hold. Designing partnerships and convening platforms that align institutions, sectors, and regions around shared goals and action.",
+        "tags": [
+          "Wine Routes of the World, Publication – UN Tourism",
+          "Spanish Fine Wines Institute – ICEX",
+          "OECD Webinars"
+        ]
+      },
+      {
+        "num": "05",
+        "tag": "BLOOM",
+        "title": "Institutional Transformation & Innovation",
+        "desc": "Change becomes visible. Supporting organizations through transformation, new ways of working, and innovation, turning strategy into adoption and momentum.",
+        "tags": [
+          "World Bank Workplace Standards – Change Management",
+          "Mission 300 – COMESA & WB Partnership Community of Practice"
+        ]
+      },
+      {
+        "num": "06",
+        "tag": "HARVEST",
+        "title": "Impact Measurement & Learning",
+        "desc": "Where results become evidence. Measurement, evaluation, and knowledge approaches that capture outcomes, strengthen decision‑making, and improve what works over time.",
+        "tags": [
+          "Evaluation & Learning Frameworks",
+          "Results-Based Management Systems",
+          "Knowledge Management Platforms"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "tag": "PROJECTS IN GROWTH",
+    "heading": "Ideas need <em>fertile ground</em><br />to grow",
+    "paragraph": "Every initiative begins as an idea. Some remain concepts. Others take root, connect people and grow into real change. I help institutions turn complex ideas into initiatives that connect places, people, policies and reimagine territories through innovation.",
+    "stats": [
+      {
+        "value": 24,
+        "display": "24",
+        "label": "ACTIVE PROJECTS",
+        "decimals": 0,
+        "suffix": ""
+      },
+      {
+        "value": 18,
+        "display": "18",
+        "label": "COUNTRIES",
+        "decimals": 0,
+        "suffix": ""
+      },
+      {
+        "value": 12,
+        "display": "12",
+        "label": "YEARS ACTIVE",
+        "decimals": 0,
+        "suffix": ""
+      },
+      {
+        "value": 4.2,
+        "display": "4.2M",
+        "label": "HECTARES",
+        "decimals": 1,
+        "suffix": "M"
+      }
+    ]
+  },
+  "hero": {
+    "subtitle": "TURNING COMPLEX AGENDAS INTO LIVING INITIATIVES",
+    "heading": "From local roots to <em>global<br />impact</em>",
+    "discoverText": "DISCOVER",
+    "stats": [
+      {
+        "label": "BASED IN",
+        "value": "<em>Basque Country</em>"
+      },
+      {
+        "label": "ACTIVE SINCE",
+        "value": "2012"
+      },
+      {
+        "label": "PROJECTS",
+        "value": "55+"
+      }
+    ]
+  }
+}

@@ -2,6 +2,9 @@ import './IntroSection.css'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import contentData from '../data/content.json'
+
+const content = contentData.intro
 
 export default function IntroSection() {
   const ref = useRef(null)
@@ -21,14 +24,9 @@ export default function IntroSection() {
   return (
     <section className="intro" id="intro" ref={ref}>
       <div className="intro__inner">
-        <h2 className="intro__heading anim">
-          Cultivating <em>Ideas</em> That Grow<br />Into Impact
-        </h2>
+        <h2 className="intro__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
         <div className="intro__rule anim" />
-        <p className="intro__para anim">
-          Reimagining complex ideas into initiatives that connect institutions, people and places.<br />
-          From global agendas to tangible action.
-        </p>
+        <p className="intro__para anim" dangerouslySetInnerHTML={{ __html: content.paragraph }} />
       </div>
     </section>
   )

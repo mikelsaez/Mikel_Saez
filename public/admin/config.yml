@@ -1,0 +1,101 @@
+backend:
+  name: github
+  repo: mikelsaez/Mikel_Saez
+  branch: main
+  base_url: https://decap-cms-oauth-vercel.vercel.app
+
+media_folder: "public/img"
+public_folder: "/img"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Website Content"
+        name: "content"
+        file: "src/data/content.json"
+        description: "Main content for the website"
+        fields:
+          - {label: "Hero Section", name: "hero", widget: "object", fields: [
+              {label: "Subtitle", name: "subtitle", widget: "string"},
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Discover Text", name: "discoverText", widget: "string"},
+              {label: "Stats", name: "stats", widget: "list", fields: [
+                {label: "Label", name: "label", widget: "string"},
+                {label: "Value", name: "value", widget: "string"}
+              ]}
+            ]}
+          - {label: "Intro Section", name: "intro", widget: "object", fields: [
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Paragraph", name: "paragraph", widget: "text"}
+            ]}
+          - {label: "Projects Section", name: "projects", widget: "object", fields: [
+              {label: "Tag", name: "tag", widget: "string"},
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Paragraph", name: "paragraph", widget: "text"},
+              {label: "Stats", name: "stats", widget: "list", fields: [
+                {label: "Value", name: "value", widget: "number", value_type: "float"},
+                {label: "Display", name: "display", widget: "string"},
+                {label: "Label", name: "label", widget: "string"},
+                {label: "Decimals", name: "decimals", widget: "number", value_type: "int"},
+                {label: "Suffix", name: "suffix", widget: "string", required: false}
+              ]}
+            ]}
+          - {label: "About Section", name: "about", widget: "object", fields: [
+              {label: "Tag", name: "tag", widget: "string"},
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Profile Image", name: "image", widget: "image"},
+              {label: "Paragraphs", name: "paragraphs", widget: "list", field: {label: "Paragraph", name: "paragraph", widget: "text"}},
+              {label: "CTA Text", name: "ctaText", widget: "string"},
+              {label: "Stats", name: "stats", widget: "list", fields: [
+                {label: "Number", name: "num", widget: "string"},
+                {label: "Label", name: "label", widget: "string"}
+              ]}
+            ]}
+          - {label: "Expertise Section", name: "expertise", widget: "object", fields: [
+              {label: "Tag", name: "tag", widget: "string"},
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Cards", name: "cards", widget: "list", fields: [
+                {label: "Number", name: "num", widget: "string"},
+                {label: "Tag", name: "tag", widget: "string"},
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Description", name: "desc", widget: "text"},
+                {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+              ]}
+            ]}
+          - {label: "Impact Section", name: "impact", widget: "object", fields: [
+              {label: "Tag", name: "tag", widget: "string"},
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Paragraphs", name: "paragraphs", widget: "list", field: {label: "Paragraph", name: "paragraph", widget: "text"}}
+            ]}
+          - {label: "World Map Section", name: "worldMap", widget: "object", fields: [
+              {label: "Tag", name: "tag", widget: "string"},
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Hardcoded Pins", name: "hardcodedPins", widget: "list", fields: [
+                {label: "Title", name: "title", widget: "string"},
+                {label: "Category", name: "cat", widget: "string"},
+                {label: "Country", name: "country", widget: "string"},
+                {label: "Latitude", name: "lat", widget: "number", value_type: "float"},
+                {label: "Longitude", name: "lng", widget: "number", value_type: "float"},
+                {label: "Image", name: "img", widget: "image", required: false},
+                {label: "Description", name: "desc", widget: "text"}
+              ]}
+            ]}
+          - {label: "Partners Section", name: "partners", widget: "object", fields: [
+              {label: "Tag", name: "tag", widget: "string"},
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Logos", name: "logos", widget: "list", fields: [
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Alt Text", name: "alt", widget: "string"},
+                {label: "Class Name", name: "className", widget: "string", required: false}
+              ]}
+            ]}
+          - {label: "Contact Section", name: "contact", widget: "object", fields: [
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Paragraph", name: "paragraph", widget: "text"},
+              {label: "Email Label", name: "emailLabel", widget: "string"},
+              {label: "Email Link", name: "emailUrl", widget: "string"},
+              {label: "LinkedIn Label", name: "linkedinLabel", widget: "string"},
+              {label: "LinkedIn Link", name: "linkedinUrl", widget: "string"},
+              {label: "Footer Text", name: "footerText", widget: "string"}
+            ]}

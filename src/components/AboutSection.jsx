@@ -2,14 +2,10 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './AboutSection.css'
-import profileImg from '../image.png'
+import contentData from '../data/content.json'
 
-const paras = [
-  'The Basque Country has a strong sense of place. Mountains, forests and coastlines are not just scenery, but part of daily life and identity. That early connection to territory shaped how I see the world: local roots matter, but ideas travel.',
-  'Curiosity about that wider world led me to study communication and international relations, exploring how narratives, institutions and cultures interact across borders.',
-  'My career began in the private sector coordinating international initiatives and partnerships across Europe and global markets. Over time my work moved closer to sustainability, cities and international cooperation, leading to collaborations with organizations such as the Inter-American Development Bank and later the World Bank Group.',
-  'Today my work focuses on helping institutions translate complex agendas into initiatives that people can understand, support and grow.',
-]
+const content = contentData.about
+const paras = content.paragraphs
 
 export default function AboutSection() {
   const ref = useRef(null)
@@ -42,7 +38,7 @@ export default function AboutSection() {
           <div className="about__photo-frame">
             <img
               className="about__photo"
-              src={profileImg}
+              src={content.image}
               alt="Mikel Saez de Vicuña Blanco"
               loading="lazy"
             />
@@ -50,36 +46,24 @@ export default function AboutSection() {
         </div>
 
         <div className="about__content">
-          <span className="label anim">ABOUT</span>
-          <h2 className="about__heading anim">
-            From Local Roots to <em>Global Impact</em>
-          </h2>
+          <span className="label anim">{content.tag}</span>
+          <h2 className="about__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
           {paras.map((p, i) => (
             <p className="about__para anim" key={i}>{p}</p>
           ))}
           <a className="about__cta anim" href="#contact" aria-label="Contact — let's collaborate">
-            LET'S COLLABORATE →
+            {content.ctaText}
           </a>
 
           <div className="about__divider anim"></div>
           
           <div className="about__stats">
-            <div className="about__stat anim">
-              <span className="about__stat-num">18+</span>
-              <span className="about__stat-label">COUNTRIES</span>
-            </div>
-            <div className="about__stat anim">
-              <span className="about__stat-num">60+</span>
-              <span className="about__stat-label">PROJECTS LED</span>
-            </div>
-            <div className="about__stat anim">
-              <span className="about__stat-num">12</span>
-              <span className="about__stat-label">YEARS ACTIVE</span>
-            </div>
-            <div className="about__stat anim">
-              <span className="about__stat-num">UN</span>
-              <span className="about__stat-label">COLLABORATOR</span>
-            </div>
+            {content.stats.map((stat, i) => (
+              <div className="about__stat anim" key={i}>
+                <span className="about__stat-num">{stat.num}</span>
+                <span className="about__stat-label">{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

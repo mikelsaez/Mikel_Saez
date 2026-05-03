@@ -2,13 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './ProjectsSection.css'
+import contentData from '../data/content.json'
 
-const stats = [
-  { value: 24,    display: '24',   label: 'ACTIVE PROJECTS', decimals: 0 },
-  { value: 18,    display: '18',   label: 'COUNTRIES',       decimals: 0 },
-  { value: 12,    display: '12',   label: 'YEARS ACTIVE',    decimals: 0 },
-  { value: 4.2,   display: '4.2M', label: 'HECTARES',        decimals: 1, suffix: 'M' },
-]
+const content = contentData.projects
+const stats = content.stats
 
 export default function ProjectsSection() {
   const ref      = useRef(null)
@@ -54,15 +51,9 @@ export default function ProjectsSection() {
   return (
     <section className="projects" id="projects" ref={ref}>
       <div className="projects__top">
-        <span className="label anim">PROJECTS IN GROWTH</span>
-        <h2 className="projects__heading anim">
-          Ideas need <em>fertile ground</em><br />to grow
-        </h2>
-        <p className="projects__para anim">
-          Every initiative begins as an idea. Some remain concepts. Others take root, connect
-          people and grow into real change. I help institutions turn complex ideas into initiatives
-          that connect places, people, policies and reimagine territories through innovation.
-        </p>
+        <span className="label anim">{content.tag}</span>
+        <h2 className="projects__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
+        <p className="projects__para anim">{content.paragraph}</p>
       </div>
 
       <div className="projects__divider anim" />
