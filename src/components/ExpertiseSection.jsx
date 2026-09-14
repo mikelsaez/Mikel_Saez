@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './ExpertiseSection.css'
-import contentData from '../data/content.json'
-
-const content = contentData.expertise
+import RichText from './RichText'
+import useLocale from '../i18n/useLocale'
 
 const ICONS = {
   'ECOSYSTEM': (
@@ -59,15 +57,17 @@ const ICONS = {
   )
 }
 
-const cards = content.cards.map(card => ({
-  ...card,
-  icon: ICONS[card.tag]
-}))
-
-export default function ExpertiseSection() {
+export default function ExpertiseSection({ selectedCategory, onSelectCategory }) {
   const ref = useRef(null)
+  const { content: localizedContent } = useLocale()
+  const { expertise: content, ui } = localizedContent
+  const cards = content.cards.map((card) => ({
+    ...card,
+    icon: ICONS[card.category],
+  }))
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
     const el = ref.current
     const ctx = gsap.context(() => {
       gsap.fromTo(el.querySelectorAll('.expertise__card'),
@@ -84,44 +84,49 @@ export default function ExpertiseSection() {
     return () => ctx.revert()
   }, [])
 
-  const handleCardClick = () => {
-    const mapSection = document.getElementById('world-map');
+  const handleCardClick = (category) => {
+    onSelectCategory(category)
+    const mapSection = document.getElementById('world-map')
     if (mapSection) {
-      mapSection.scrollIntoView({ behavior: 'smooth' });
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      mapSection.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
     }
-  };
+  }
 
   return (
     <section className="expertise" id="expertise" ref={ref}>
       <div className="expertise__header">
         <span className="label anim">{content.tag}</span>
-        <h2 className="expertise__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
+        <RichText as="h2" className="expertise__heading anim">{content.heading}</RichText>
       </div>
 
       <div className="expertise__divider" />
 
       <div className="expertise__grid">
         {cards.map((card) => (
-          <div 
-            className="expertise__card" 
-            key={card.num} 
-            onClick={handleCardClick}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => { if(e.key === 'Enter') handleCardClick(); }}
+          <article
+            className={`expertise__card ${selectedCategory === card.category ? 'expertise__card--active' : ''}`}
+            key={card.num}
           >
             <div className="expertise__card-top">
               <span className="expertise__card-num">{card.num}</span>
               <div className="expertise__card-icon">{card.icon}</div>
             </div>
-            <span className="expertise__card-tag">{card.tag}</span>
+            <span className="expertise__card-tag">{ui.categories[card.category]}</span>
             <h3 className="expertise__card-title">{card.title}</h3>
             <p className="expertise__card-desc">{card.desc}</p>
             <ul className="expertise__card-tags">
               {card.tags.map((t) => <li key={t}>— {t}</li>)}
             </ul>
-            <span className="expertise__card-arrow">→</span>
-          </div>
+            <span className="expertise__card-arrow" aria-hidden="true">→</span>
+            <button
+              type="button"
+              className="expertise__card-action"
+              onClick={() => handleCardClick(card.category)}
+              aria-pressed={selectedCategory === card.category}
+              aria-label={ui.viewCategoryProjects.replace('{category}', ui.categories[card.category])}
+            />
+          </article>
         ))}
       </div>
     </section>

@@ -1,0 +1,114 @@
+{
+  "aboutImage": "/img/image.png",
+  "contact": {
+    "emailUrl": "mailto:mikel.szdevicuna@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/mikelvicuna/"
+  },
+  "projectPins": [
+    {
+      "key": "microsoft-europe",
+      "category": "SEEDS",
+      "lat": 52.37,
+      "lng": 4.9,
+      "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.14.23.png"
+    },
+    {
+      "key": "iberia-inflight",
+      "category": "SEEDS",
+      "lat": 41.2,
+      "lng": -4.8,
+      "img": "/img/iberia_47510952881897_thumb.png"
+    },
+    {
+      "key": "mercedes-events",
+      "category": "SEEDS",
+      "lat": 38.9,
+      "lng": -2.2,
+      "img": "/img/IMG_0181-scaled.jpg"
+    },
+    {
+      "key": "wine-routes-world",
+      "category": "ROOTS",
+      "lat": 48.85,
+      "lng": 2.35,
+      "img": "/img/Captura-de-pantalla-2026-03-18-a-las-23.00.16.png"
+    },
+    {
+      "key": "un-tourism-assembly",
+      "category": "ROOTS",
+      "lat": 55.75,
+      "lng": 37.6,
+      "img": "/img/199.jpeg"
+    },
+    {
+      "key": "mission-300",
+      "category": "ROOTS",
+      "lat": 0,
+      "lng": 25,
+      "img": "/img/Captura-de-pantalla-2026-03-30-a-las-18.28.14-scaled.png"
+    },
+    {
+      "key": "world-bank-change",
+      "category": "BLOOM",
+      "lat": 38.9,
+      "lng": -77,
+      "img": "/img/Captura-de-pantalla-2026-03-30-a-las-18.33.53.png"
+    },
+    {
+      "key": "vitoria-2030",
+      "category": "TERRITORIES",
+      "lat": 42.85,
+      "lng": -2.68,
+      "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.27.00.png"
+    },
+    {
+      "key": "idb-housing-forum",
+      "category": "TERRITORIES",
+      "lat": 19.43,
+      "lng": -99.13,
+      "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.28.09.png"
+    },
+    {
+      "key": "u20-mayors-summit",
+      "category": "TERRITORIES",
+      "lat": -15.78,
+      "lng": -47.93,
+      "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.30.14.png"
+    },
+    {
+      "key": "amazon-cities",
+      "category": "ECOSYSTEM",
+      "lat": 3.86,
+      "lng": -77.04,
+      "img": "/img/Captura-de-pantalla-2026-03-20-a-las-17.32.23.png"
+    },
+    {
+      "key": "vinexpo-asia",
+      "category": "TERRITORIES",
+      "lat": 31.23,
+      "lng": 121.47,
+      "img": "/img/Captura-de-pantalla-2026-03-30-a-las-20.20.32.png"
+    },
+    {
+      "key": "unwto-wine-tourism",
+      "category": "ROOTS",
+      "lat": -34.6,
+      "lng": -71.2,
+      "img": "/img/Captura-de-pantalla-2026-03-30-a-las-20.29.07.png"
+    }
+  ],
+  "partnerLogos": [
+    { "image": "/img/logo1 new.png", "alt": "Inter-American Development Bank", "className": "logo--enlarge" },
+    { "image": "/img/logo2 new.png", "alt": "UN Tourism", "className": "" },
+    { "image": "/img/logo3 new.png", "alt": "World Bank Group", "className": "logo--enlarge" },
+    { "image": "/img/logo4 new.png", "alt": "UN-Habitat", "className": "" },
+    { "image": "/img/logo5 new.png", "alt": "COMESA", "className": "logo--shrink" },
+    { "image": "/img/logo6 new.png", "alt": "OECD", "className": "logo--shrink" },
+    { "image": "/img/logo7 new.png", "alt": "Vitoria-Gasteiz Green Capital", "className": "" },
+    { "image": "/img/logo8 new.png", "alt": "Basque Government", "className": "logo--shrink" },
+    { "image": "/img/logo9 new.png", "alt": "Spanish Network for Sustainable Development", "className": "" },
+    { "image": "/img/logo10 new.png", "alt": "Iberia", "className": "logo--enlarge-xl" },
+    { "image": "/img/logo11 new.png", "alt": "Microsoft", "className": "" },
+    { "image": "/img/logo12 new.png", "alt": "ICEX Spain Trade and Investment", "className": "logo--enlarge-xxl" }
+  ]
+}

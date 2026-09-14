@@ -1,15 +1,16 @@
 import './IntroSection.css'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import contentData from '../data/content.json'
-
-const content = contentData.intro
+import RichText from './RichText'
+import useLocale from '../i18n/useLocale'
 
 export default function IntroSection() {
   const ref = useRef(null)
+  const { content: localizedContent } = useLocale()
+  const content = localizedContent.intro
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
     const el = ref.current
     const ctx = gsap.context(() => {
       gsap.fromTo(el.querySelectorAll('.anim'),
@@ -24,9 +25,9 @@ export default function IntroSection() {
   return (
     <section className="intro" id="intro" ref={ref}>
       <div className="intro__inner">
-        <h2 className="intro__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
+        <RichText as="h2" className="intro__heading anim">{content.heading}</RichText>
         <div className="intro__rule anim" />
-        <p className="intro__para anim" dangerouslySetInnerHTML={{ __html: content.paragraph }} />
+        <RichText as="p" className="intro__para anim">{content.paragraph}</RichText>
       </div>
     </section>
   )

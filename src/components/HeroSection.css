@@ -163,6 +163,12 @@
   transform-origin: center center;
 }
 
+.hero__hamburger:focus-visible,
+.hero__mobile-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+
 /* Animate to X when open */
 .hero__hamburger--open span:nth-child(1) {
   transform: translateY(6.5px) rotate(45deg);
@@ -200,6 +206,12 @@
 
 .hero__mobile-menu--open {
   transform: translateX(0);
+  animation: hero-drawer-in 0.42s var(--ease-out) both;
+}
+
+@keyframes hero-drawer-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
 
 .hero__mobile-nav {
@@ -254,6 +266,8 @@
   z-index: 140;
   backdrop-filter: blur(2px);
   animation: fadeInOnly 0.3s ease forwards;
+  width: 100%;
+  height: 100%;
 }
 
 /* --- Main content ------------------------------------------------------------ */

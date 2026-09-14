@@ -54,6 +54,9 @@
   overflow: hidden;
   transition: background var(--transition-med), box-shadow var(--transition-med);
   cursor: pointer;
+  width: 100%;
+  color: inherit;
+  text-align: left;
 }
 
 /* Top-edge gold sweep on hover */
@@ -84,12 +87,30 @@
   transition: opacity var(--transition-med);
 }
 
-.expertise__card:hover {
+.expertise__card:hover,
+.expertise__card--active {
   background: rgba(255, 255, 255, 0.03);
   box-shadow: 0 4px 40px rgba(196, 169, 106, 0.06);
 }
 
-.expertise__card:hover::before {
+.expertise__card:focus-within {
+  outline: 2px solid var(--gold);
+  outline-offset: -4px;
+  z-index: 1;
+}
+
+.expertise__card-action {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.expertise__card:hover::before,
+.expertise__card--active::before {
   transform: scaleX(1);
 }
 

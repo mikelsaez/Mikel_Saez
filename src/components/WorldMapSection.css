@@ -27,6 +27,61 @@
   color: var(--gold);
 }
 
+.worldmap__intro {
+  max-width: 680px;
+  color: var(--cream-dim);
+  font-size: clamp(14px, 1.3vw, 17px);
+  line-height: 1.7;
+}
+
+.worldmap__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.worldmap__filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 13px;
+  border: 1px solid var(--divider-strong);
+  color: var(--cream-dim);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.worldmap__filter:hover,
+.worldmap__filter--active {
+  border-color: var(--gold);
+  background: rgba(196, 169, 106, 0.09);
+  color: var(--cream);
+}
+
+.worldmap__filter:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.worldmap__filter-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.worldmap__result-count {
+  color: var(--cream-dim);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* ── Map container — square = full world always visible ──────────────────── */
 .worldmap__clipper {
   overflow: hidden;
@@ -106,6 +161,24 @@
 
 .worldmap__leaflet .leaflet-marker-pane {
   z-index: 999998 !important;
+}
+
+.worldmap__leaflet .leaflet-marker-icon:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+.worldmap__leaflet .leaflet-control-zoom a {
+  background: rgba(9, 12, 10, 0.92);
+  border-color: var(--divider-strong);
+  color: var(--cream);
+}
+
+.worldmap__leaflet .leaflet-control-zoom a:hover,
+.worldmap__leaflet .leaflet-control-zoom a:focus-visible {
+  background: var(--cream);
+  color: var(--black);
 }
 
 .wm-popup.leaflet-tooltip {
@@ -229,6 +302,16 @@
 .wm-loading__dot:nth-child(2) { animation-delay: 0.2s; }
 .wm-loading__dot:nth-child(3) { animation-delay: 0.4s; }
 
+.wm-error {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  color: var(--cream-dim);
+  text-align: center;
+}
+
 @keyframes wm-dot-pulse {
   0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
   40%           { transform: scale(1);   opacity: 1;   }
@@ -255,6 +338,26 @@
     padding: 0 24px;
     margin-bottom: 40px;
     gap: 16px;
+  }
+
+  .worldmap__filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 2px 2px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(196, 169, 106, 0.55) transparent;
+  }
+
+  .worldmap__filters::-webkit-scrollbar { height: 3px; }
+  .worldmap__filters::-webkit-scrollbar-button { display: none; }
+  .worldmap__filters::-webkit-scrollbar-track { background: transparent; }
+  .worldmap__filters::-webkit-scrollbar-thumb {
+    background: rgba(196, 169, 106, 0.55);
+    border-radius: 999px;
+  }
+
+  .worldmap__filter {
+    flex: 0 0 auto;
   }
 
   /* Make map a taller rectangle on small screens so pins are readable.

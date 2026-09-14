@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://saezdevicuna.eus/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saezdevicuna.eus/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://saezdevicuna.eus/es/" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://saezdevicuna.eus/eu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saezdevicuna.eus/en/" />
+  </url>
+  <url>
+    <loc>https://saezdevicuna.eus/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saezdevicuna.eus/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://saezdevicuna.eus/es/" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://saezdevicuna.eus/eu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saezdevicuna.eus/en/" />
+  </url>
+  <url>
+    <loc>https://saezdevicuna.eus/eu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://saezdevicuna.eus/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://saezdevicuna.eus/es/" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://saezdevicuna.eus/eu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saezdevicuna.eus/en/" />
+  </url>
+</urlset>

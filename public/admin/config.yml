@@ -2,98 +2,327 @@ backend:
   name: git-gateway
   branch: main
 
+site_url: "https://saezdevicuna.eus"
+display_url: "https://saezdevicuna.eus"
+publish_mode: editorial_workflow
+show_preview_links: true
+
 media_folder: "public/img"
 public_folder: "/img"
 
+i18n:
+  structure: single_file
+  locales: [en, es, eu]
+  default_locale: en
+
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "localized_content"
+    label: "Website translations"
+    description: "Edit English, Spanish and Basque copy side by side. Every language must be complete before publishing."
+    i18n: true
+    editor:
+      preview: false
     files:
-      - label: "Website Content"
+      - label: "Website copy"
         name: "content"
         file: "src/data/content.json"
-        description: "Main content for the website"
+        delete: false
+        i18n: true
         fields:
-          - {label: "Hero Section", name: "hero", widget: "object", fields: [
-              {label: "Subtitle", name: "subtitle", widget: "string"},
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Discover Text", name: "discoverText", widget: "string"},
-              {label: "Stats", name: "stats", widget: "list", fields: [
-                {label: "Label", name: "label", widget: "string"},
-                {label: "Value", name: "value", widget: "string"}
-              ]}
-            ]}
-          - {label: "Intro Section", name: "intro", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Paragraph", name: "paragraph", widget: "text"}
-            ]}
-          - {label: "Projects Section", name: "projects", widget: "object", fields: [
-              {label: "Tag", name: "tag", widget: "string"},
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Paragraph", name: "paragraph", widget: "text"},
-              {label: "Stats", name: "stats", widget: "list", fields: [
-                {label: "Value", name: "value", widget: "number", value_type: "float"},
-                {label: "Display", name: "display", widget: "string"},
-                {label: "Label", name: "label", widget: "string"},
-                {label: "Decimals", name: "decimals", widget: "number", value_type: "int"},
-                {label: "Suffix", name: "suffix", widget: "string", required: false}
-              ]}
-            ]}
-          - {label: "About Section", name: "about", widget: "object", fields: [
-              {label: "Tag", name: "tag", widget: "string"},
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Profile Image", name: "image", widget: "image"},
-              {label: "Paragraphs", name: "paragraphs", widget: "list", field: {label: "Paragraph", name: "paragraph", widget: "text"}},
-              {label: "CTA Text", name: "ctaText", widget: "string"},
-              {label: "Stats", name: "stats", widget: "list", fields: [
-                {label: "Number", name: "num", widget: "string"},
-                {label: "Label", name: "label", widget: "string"}
-              ]}
-            ]}
-          - {label: "Expertise Section", name: "expertise", widget: "object", fields: [
-              {label: "Tag", name: "tag", widget: "string"},
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Cards", name: "cards", widget: "list", fields: [
-                {label: "Number", name: "num", widget: "string"},
-                {label: "Tag", name: "tag", widget: "string"},
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Description", name: "desc", widget: "text"},
-                {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
-              ]}
-            ]}
-          - {label: "Impact Section", name: "impact", widget: "object", fields: [
-              {label: "Tag", name: "tag", widget: "string"},
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Paragraphs", name: "paragraphs", widget: "list", field: {label: "Paragraph", name: "paragraph", widget: "text"}}
-            ]}
-          - {label: "World Map Section", name: "worldMap", widget: "object", fields: [
-              {label: "Tag", name: "tag", widget: "string"},
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Hardcoded Pins", name: "hardcodedPins", widget: "list", fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Category", name: "cat", widget: "string"},
-                {label: "Country", name: "country", widget: "string"},
-                {label: "Latitude", name: "lat", widget: "number", value_type: "float"},
-                {label: "Longitude", name: "lng", widget: "number", value_type: "float"},
-                {label: "Image", name: "img", widget: "image", required: false},
-                {label: "Description", name: "desc", widget: "text"}
-              ]}
-            ]}
-          - {label: "Partners Section", name: "partners", widget: "object", fields: [
-              {label: "Tag", name: "tag", widget: "string"},
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Logos", name: "logos", widget: "list", fields: [
-                {label: "Image", name: "image", widget: "image"},
-                {label: "Alt Text", name: "alt", widget: "string"},
-                {label: "Class Name", name: "className", widget: "string", required: false}
-              ]}
-            ]}
-          - {label: "Contact Section", name: "contact", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: "string"},
-              {label: "Paragraph", name: "paragraph", widget: "text"},
-              {label: "Email Label", name: "emailLabel", widget: "string"},
-              {label: "Email Link", name: "emailUrl", widget: "string"},
-              {label: "LinkedIn Label", name: "linkedinLabel", widget: "string"},
-              {label: "LinkedIn Link", name: "linkedinUrl", widget: "string"},
-              {label: "Footer Text", name: "footerText", widget: "string"}
-            ]}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Page title", name: "title", widget: "string", i18n: true }
+              - { label: "Meta description", name: "description", widget: "text", i18n: true }
+
+          - label: "Interface labels"
+            name: "ui"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Skip to content", name: "skipToContent", widget: "string", i18n: true }
+              - label: "Navigation"
+                name: "nav"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Work", name: "work", widget: "string", i18n: true }
+                  - { label: "Map", name: "map", widget: "string", i18n: true }
+                  - { label: "About", name: "about", widget: "string", i18n: true }
+                  - { label: "Contact", name: "contact", widget: "string", i18n: true }
+              - { label: "Main navigation label", name: "mainNavigation", widget: "string", i18n: true }
+              - { label: "Language selection label", name: "languageSelection", widget: "string", i18n: true }
+              - label: "Language names"
+                name: "languageNames"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "English", name: "en", widget: "string", i18n: true }
+                  - { label: "Spanish", name: "es", widget: "string", i18n: true }
+                  - { label: "Basque", name: "eu", widget: "string", i18n: true }
+              - { label: "Switch language label", name: "switchLanguage", widget: "string", i18n: true, hint: "Keep {language} in the text." }
+              - { label: "Open menu", name: "openMenu", widget: "string", i18n: true }
+              - { label: "Close menu", name: "closeMenu", widget: "string", i18n: true }
+              - { label: "Navigation menu label", name: "navigationMenu", widget: "string", i18n: true }
+              - { label: "Hero accessibility label", name: "heroLabel", widget: "string", i18n: true }
+              - { label: "Discover more label", name: "discoverMore", widget: "string", i18n: true }
+              - { label: "Quick statistics label", name: "quickStatistics", widget: "string", i18n: true }
+              - { label: "View category projects", name: "viewCategoryProjects", widget: "string", i18n: true, hint: "Keep {category} in the text." }
+              - { label: "Project filters label", name: "projectFilters", widget: "string", i18n: true }
+              - { label: "All projects", name: "allProjects", widget: "string", i18n: true }
+              - { label: "Multiple project count", name: "projectCount", widget: "string", i18n: true, hint: "Keep {count} in the text." }
+              - { label: "Single project count", name: "projectCountOne", widget: "string", i18n: true }
+              - { label: "No projects message", name: "noProjects", widget: "string", i18n: true }
+              - { label: "Map loading message", name: "mapLoading", widget: "string", i18n: true }
+              - { label: "Map unavailable message", name: "mapUnavailable", widget: "string", i18n: true }
+              - { label: "Project map label", name: "projectMap", widget: "string", i18n: true }
+              - { label: "Map marker label", name: "mapMarkerLabel", widget: "string", i18n: true, hint: "Keep {title} and {country} in the text." }
+              - { label: "Project list label", name: "projectList", widget: "string", i18n: true }
+              - { label: "Partner logos label", name: "partnerLogos", widget: "string", i18n: true }
+              - { label: "Carousel controls label", name: "carouselControls", widget: "string", i18n: true }
+              - { label: "Previous slide", name: "previousSlide", widget: "string", i18n: true }
+              - { label: "Next slide", name: "nextSlide", widget: "string", i18n: true }
+              - { label: "Slide indicators label", name: "slideIndicators", widget: "string", i18n: true }
+              - { label: "Slide position", name: "slideOf", widget: "string", i18n: true, hint: "Keep {current} and {total} in the text." }
+              - label: "Category labels"
+                name: "categories"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Ecosystem", name: "ECOSYSTEM", widget: "string", i18n: true }
+                  - { label: "Territories", name: "TERRITORIES", widget: "string", i18n: true }
+                  - { label: "Seeds", name: "SEEDS", widget: "string", i18n: true }
+                  - { label: "Roots", name: "ROOTS", widget: "string", i18n: true }
+                  - { label: "Bloom", name: "BLOOM", widget: "string", i18n: true }
+                  - { label: "Harvest", name: "HARVEST", widget: "string", i18n: true }
+
+          - label: "Hero section"
+            name: "hero"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - { label: "Discover text", name: "discoverText", widget: "string", i18n: true }
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                i18n: true
+                allow_add: false
+                allow_remove: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - { label: "Paragraph", name: "paragraph", widget: "text", i18n: true, hint: "Only <br /> markup is allowed." }
+
+          - label: "Projects overview"
+            name: "projects"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Tag", name: "tag", widget: "string", i18n: true }
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - { label: "Paragraph", name: "paragraph", widget: "text", i18n: true }
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                i18n: true
+                allow_add: false
+                allow_remove: false
+                fields:
+                  - { label: "Numeric value", name: "value", widget: "number", value_type: "float" }
+                  - { label: "Display value", name: "display", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Decimals", name: "decimals", widget: "number", value_type: "int", min: 0, max: 2 }
+                  - { label: "Suffix", name: "suffix", widget: "string", required: false }
+
+          - label: "Expertise portfolio"
+            name: "expertise"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Tag", name: "tag", widget: "string", i18n: true }
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - label: "Expertise cards"
+                name: "cards"
+                widget: "list"
+                i18n: true
+                allow_add: false
+                allow_remove: false
+                collapsed: true
+                summary: "{{fields.num}} — {{fields.title}}"
+                fields:
+                  - { label: "Number", name: "num", widget: "string" }
+                  - label: "Category"
+                    name: "category"
+                    widget: "select"
+                    options: ["ECOSYSTEM", "TERRITORIES", "SEEDS", "ROOTS", "BLOOM", "HARVEST"]
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Project examples", name: "tags", widget: "list", field: { label: "Example", name: "example", widget: "string" } }
+
+          - label: "Project map"
+            name: "worldMap"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Tag", name: "tag", widget: "string", i18n: true }
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - { label: "Introduction", name: "intro", widget: "text", i18n: true }
+              - label: "Project translations"
+                name: "pins"
+                widget: "list"
+                i18n: true
+                allow_add: true
+                allow_remove: false
+                collapsed: true
+                summary: "{{fields.title}} — {{fields.country}}"
+                hint: "The key must match a project in Shared settings. Add every project in all three languages."
+                fields:
+                  - { label: "Project key", name: "key", widget: "string", pattern: ["^[a-z0-9-]+$", "Use lowercase letters, numbers and hyphens only."] }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Country/region", name: "country", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "About section"
+            name: "about"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Tag", name: "tag", widget: "string", i18n: true }
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - { label: "Portrait alt text", name: "imageAlt", widget: "string", i18n: true }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", i18n: true, field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "CTA text", name: "ctaText", widget: "string", i18n: true }
+              - { label: "CTA accessibility label", name: "ctaAriaLabel", widget: "string", i18n: true }
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                i18n: true
+                allow_add: false
+                allow_remove: false
+                fields:
+                  - { label: "Value", name: "num", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+
+          - label: "Impact section"
+            name: "impact"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Tag", name: "tag", widget: "string", i18n: true }
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - { label: "Accessibility label", name: "ariaLabel", widget: "string", i18n: true }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", i18n: true, field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+
+          - label: "Partners section"
+            name: "partners"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Tag", name: "tag", widget: "string", i18n: true }
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+
+          - label: "Contact section"
+            name: "contact"
+            widget: "object"
+            i18n: true
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
+              - { label: "Paragraph", name: "paragraph", widget: "text", i18n: true, hint: "Only <br /> markup is allowed." }
+              - { label: "Email label", name: "emailLabel", widget: "string", i18n: true }
+              - { label: "Email accessibility label", name: "emailAriaLabel", widget: "string", i18n: true }
+              - { label: "LinkedIn label", name: "linkedinLabel", widget: "string", i18n: true }
+              - { label: "LinkedIn accessibility label", name: "linkedinAriaLabel", widget: "string", i18n: true }
+              - { label: "Footer text", name: "footerText", widget: "string", i18n: true }
+
+  - name: "shared_settings"
+    label: "Shared settings"
+    description: "Media, links, coordinates and category assignments shared by all languages."
+    editor:
+      preview: false
+    files:
+      - label: "Shared site settings"
+        name: "shared"
+        file: "src/data/shared.json"
+        delete: false
+        fields:
+          - label: "About portrait"
+            name: "aboutImage"
+            widget: "image"
+            choose_url: false
+            media_library:
+              config:
+                max_file_size: 5242880
+          - label: "Contact links"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email link", name: "emailUrl", widget: "string", pattern: ["^mailto:.+@.+\\..+$", "Use a complete mailto: email link."] }
+              - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string", pattern: ["^https://(www\\.)?linkedin\\.com/.+", "Use a complete LinkedIn HTTPS URL."] }
+          - label: "Project locations"
+            name: "projectPins"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.key}} — {{fields.category}}"
+            hint: "After adding a project here, add the same key to Project translations in EN, ES and EU."
+            fields:
+              - { label: "Project key", name: "key", widget: "string", pattern: ["^[a-z0-9-]+$", "Use lowercase letters, numbers and hyphens only."] }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["ECOSYSTEM", "TERRITORIES", "SEEDS", "ROOTS", "BLOOM", "HARVEST"]
+              - { label: "Latitude", name: "lat", widget: "number", value_type: "float", min: -90, max: 90 }
+              - { label: "Longitude", name: "lng", widget: "number", value_type: "float", min: -180, max: 180 }
+              - label: "Project image"
+                name: "img"
+                widget: "image"
+                required: false
+                choose_url: false
+                media_library:
+                  config:
+                    max_file_size: 5242880
+          - label: "Partner logos"
+            name: "partnerLogos"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.alt}}"
+            fields:
+              - label: "Logo"
+                name: "image"
+                widget: "image"
+                choose_url: false
+                media_library:
+                  config:
+                    max_file_size: 5242880
+              - { label: "Organization name (alt text)", name: "alt", widget: "string" }
+              - label: "Display size"
+                name: "className"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "Standard", value: "" }
+                  - { label: "Large", value: "logo--enlarge" }
+                  - { label: "Extra large", value: "logo--enlarge-xl" }
+                  - { label: "Extra extra large", value: "logo--enlarge-xxl" }
+                  - { label: "Small", value: "logo--shrink" }

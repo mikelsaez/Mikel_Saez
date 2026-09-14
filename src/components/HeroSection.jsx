@@ -1,86 +1,109 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './HeroSection.css'
-import contentData from '../data/content.json'
+import RichText from './RichText'
+import useLocale from '../i18n/useLocale'
+import { LOCALES } from '../i18n/locales'
 
-const content = contentData.hero
-
-const LANGS = ['EN', 'ES', 'EU']
-const NAV_LINKS = [
-  { label: 'WORK',    href: '#expertise' },
-  { label: 'MAP',     href: '#world-map' },
-  { label: 'ABOUT',   href: '#about' },
-  { label: 'CONTACT', href: '#contact' },
+const NAV_ITEMS = [
+  { key: 'work', href: '#expertise' },
+  { key: 'map', href: '#world-map' },
+  { key: 'about', href: '#about' },
+  { key: 'contact', href: '#contact' },
 ]
 
-/** Maps our display code to the BCP-47 code Google Translate expects */
-const LANG_CODES = { EN: 'en', ES: 'es', EU: 'eu' }
-
-function switchLang(code) {
-  const langCode = LANG_CODES[code]
-  if (typeof window.switchLanguage === 'function') {
-    window.switchLanguage(langCode)
-  } else {
-    setTimeout(() => {
-      if (typeof window.switchLanguage === 'function') window.switchLanguage(langCode)
-    }, 800)
-  }
+function getFocusableElements(container) {
+  return [...container.querySelectorAll('a[href], button:not([disabled])')]
 }
 
 export default function HeroSection() {
-  const [activeLang, setActiveLang]   = useState('EN')
-  const [menuOpen,   setMenuOpen]     = useState(false)
+  const { content: localizedContent, locale, setLocale } = useLocale()
+  const { hero: content, ui } = localizedContent
+  const [menuOpen, setMenuOpen] = useState(false)
   const menuRef = useRef(null)
+  const triggerRef = useRef(null)
 
-  const handleLangSwitch = (code) => {
-    setActiveLang(code)
-    switchLang(code)
-  }
-
-  // Close menu on Escape
   useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') setMenuOpen(false) }
-    document.addEventListener('keydown', onKey)
-    return () => document.removeEventListener('keydown', onKey)
-  }, [])
+    if (!menuOpen) return undefined
 
-  // Lock body scroll when menu is open
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    const menu = menuRef.current
+    const trigger = triggerRef.current
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    getFocusableElements(menu)[0]?.focus()
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        setMenuOpen(false)
+        return
+      }
+
+      if (event.key !== 'Tab') return
+
+      const focusable = getFocusableElements(menu)
+      const first = focusable[0]
+      const last = focusable.at(-1)
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last?.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first?.focus()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = previousOverflow
+      trigger?.focus()
+    }
   }, [menuOpen])
 
+  const switchLanguageLabel = (language) => ui.switchLanguage.replace('{language}', language)
   const closeMenu = () => setMenuOpen(false)
+  const handleLanguageChange = (code) => {
+    setLocale(code)
+    closeMenu()
+  }
+
+  const renderLanguageSwitcher = (className) => (
+    <div className={className} role="group" aria-label={ui.languageSelection}>
+      {LOCALES.map(({ code, shortLabel }, index) => (
+        <span key={code}>
+          <button
+            className={`hero__lang-btn ${locale === code ? 'hero__lang-btn--active' : ''}`}
+            onClick={() => handleLanguageChange(code)}
+            aria-pressed={locale === code}
+            aria-label={switchLanguageLabel(ui.languageNames[code])}
+            lang={code}
+          >
+            {shortLabel}
+          </button>
+          {index < LOCALES.length - 1 && (
+            <span className="hero__lang-sep" aria-hidden="true">|</span>
+          )}
+        </span>
+      ))}
+    </div>
+  )
 
   return (
-    <section className="hero" id="hero" aria-label="Hero — Mikel Saez de Vicuña">
-      {/* ── Desktop nav ───────────────────────────────────────────────────── */}
-      <nav className="hero__nav" role="navigation" aria-label="Main navigation">
-        <a className="hero__nav-link" href="#expertise">WORK</a>
-        <a className="hero__nav-link" href="#world-map">MAP</a>
-        <a className="hero__nav-link" href="#about">ABOUT</a>
-        <a className="hero__nav-link" href="#contact">CONTACT</a>
+    <section className="hero" id="hero" aria-label={ui.heroLabel}>
+      <nav className="hero__nav" aria-label={ui.mainNavigation}>
+        {NAV_ITEMS.map(({ key, href }) => (
+          <a className="hero__nav-link" href={href} key={key}>{ui.nav[key]}</a>
+        ))}
 
-        <div className="hero__lang-switcher" role="group" aria-label="Language selection">
-          {LANGS.map((code, i) => (
-            <span key={code}>
-              <button
-                className={`hero__lang-btn ${activeLang === code ? 'hero__lang-btn--active' : ''}`}
-                onClick={() => handleLangSwitch(code)}
-                aria-pressed={activeLang === code}
-                aria-label={`Switch language to ${code}`}
-              >
-                {code}
-              </button>
-              {i < LANGS.length - 1 && <span className="hero__lang-sep" aria-hidden="true">|</span>}
-            </span>
-          ))}
-        </div>
+        {renderLanguageSwitcher('hero__lang-switcher')}
 
-        {/* Hamburger — only visible on mobile */}
         <button
+          ref={triggerRef}
           className={`hero__hamburger ${menuOpen ? 'hero__hamburger--open' : ''}`}
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? ui.closeMenu : ui.openMenu}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
         >
@@ -88,67 +111,53 @@ export default function HeroSection() {
         </button>
       </nav>
 
-      {/* ── Mobile drawer ─────────────────────────────────────────────────── */}
-      <div
-        id="mobile-menu"
-        ref={menuRef}
-        className={`hero__mobile-menu ${menuOpen ? 'hero__mobile-menu--open' : ''}`}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Navigation menu"
-      >
-        <nav className="hero__mobile-nav">
-          {NAV_LINKS.map(({ label, href }) => (
-            <a key={label} className="hero__mobile-link" href={href} onClick={closeMenu}>
-              {label}
-            </a>
-          ))}
-        </nav>
-        <div className="hero__mobile-lang" role="group" aria-label="Language selection">
-          {LANGS.map((code, i) => (
-            <span key={code}>
-              <button
-                className={`hero__lang-btn ${activeLang === code ? 'hero__lang-btn--active' : ''}`}
-                onClick={() => { handleLangSwitch(code); closeMenu() }}
-                aria-pressed={activeLang === code}
-              >
-                {code}
-              </button>
-              {i < LANGS.length - 1 && <span className="hero__lang-sep" aria-hidden="true">|</span>}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Backdrop — click to close */}
       {menuOpen && (
-        <div className="hero__backdrop" aria-hidden="true" onClick={closeMenu} />
+        <>
+          <div
+            id="mobile-menu"
+            ref={menuRef}
+            className="hero__mobile-menu hero__mobile-menu--open"
+            role="dialog"
+            aria-modal="true"
+            aria-label={ui.navigationMenu}
+          >
+            <nav className="hero__mobile-nav" aria-label={ui.mainNavigation}>
+              {NAV_ITEMS.map(({ key, href }) => (
+                <a key={key} className="hero__mobile-link" href={href} onClick={closeMenu}>
+                  {ui.nav[key]}
+                </a>
+              ))}
+            </nav>
+            {renderLanguageSwitcher('hero__mobile-lang')}
+          </div>
+          <button
+            className="hero__backdrop"
+            onClick={closeMenu}
+            aria-label={ui.closeMenu}
+            tabIndex={-1}
+          />
+        </>
       )}
 
-      {/* ── Main content ──────────────────────────────────────────────────── */}
       <div className="hero__content">
         <p className="hero__subtitle">{content.subtitle}</p>
-        <h1 className="hero__heading" dangerouslySetInnerHTML={{ __html: content.heading }} />
-        <a className="hero__discover" href="#intro" aria-label="Discover more — scroll down">
+        <RichText as="h1" className="hero__heading">{content.heading}</RichText>
+        <a className="hero__discover" href="#intro" aria-label={ui.discoverMore}>
           <span>{content.discoverText}</span>
           <span className="hero__discover-line" aria-hidden="true" />
         </a>
       </div>
 
-      {/* ── Stat footer ───────────────────────────────────────────────────── */}
-      <div className="hero__footer" aria-label="Quick statistics">
-        <div className="hero__stat">
-          <span className="hero__stat-label">{content.stats[0].label}</span>
-          <span className="hero__stat-value" dangerouslySetInnerHTML={{ __html: content.stats[0].value }} />
-        </div>
-        <div className="hero__stat hero__stat--center">
-          <span className="hero__stat-label">{content.stats[1].label}</span>
-          <span className="hero__stat-value" dangerouslySetInnerHTML={{ __html: content.stats[1].value }} />
-        </div>
-        <div className="hero__stat hero__stat--right">
-          <span className="hero__stat-label">{content.stats[2].label}</span>
-          <span className="hero__stat-value" dangerouslySetInnerHTML={{ __html: content.stats[2].value }} />
-        </div>
+      <div className="hero__footer" aria-label={ui.quickStatistics}>
+        {content.stats.map((stat, index) => (
+          <div
+            className={`hero__stat ${index === 1 ? 'hero__stat--center' : ''} ${index === 2 ? 'hero__stat--right' : ''}`}
+            key={stat.label}
+          >
+            <span className="hero__stat-label">{stat.label}</span>
+            <RichText as="span" className="hero__stat-value">{stat.value}</RichText>
+          </div>
+        ))}
       </div>
     </section>
   )

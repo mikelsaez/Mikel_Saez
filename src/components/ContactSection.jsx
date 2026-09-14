@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './ContactSection.css'
-import contentData from '../data/content.json'
-
-const content = contentData.contact
+import RichText from './RichText'
+import useLocale from '../i18n/useLocale'
 
 export default function ContactSection() {
   const ref = useRef(null)
+  const { content: localizedContent } = useLocale()
+  const content = localizedContent.contact
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
     const el = ref.current
     const ctx = gsap.context(() => {
       gsap.fromTo(el.querySelectorAll('.anim'),
@@ -26,13 +27,13 @@ export default function ContactSection() {
   return (
     <section className="contact" id="contact" ref={ref}>
       <div className="contact__inner">
-        <h2 className="contact__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
-        <p className="contact__para anim" dangerouslySetInnerHTML={{ __html: content.paragraph }} />
+        <RichText as="h2" className="contact__heading anim">{content.heading}</RichText>
+        <RichText as="p" className="contact__para anim">{content.paragraph}</RichText>
         <div className="contact__buttons anim">
           <a
             className="contact__btn"
             href={content.emailUrl}
-            aria-label="Send an email"
+            aria-label={content.emailAriaLabel}
           >
             {content.emailLabel}
           </a>
@@ -41,7 +42,7 @@ export default function ContactSection() {
             href={content.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit LinkedIn profile (opens in new tab)"
+            aria-label={content.linkedinAriaLabel}
           >
             {content.linkedinLabel}
           </a>

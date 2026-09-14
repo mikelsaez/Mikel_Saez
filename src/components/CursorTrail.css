@@ -1,8 +1,7 @@
 /* ── Hide native cursor (pointer devices only) ──────────────────────────── */
-@media (pointer: fine) {
-  html, html * {
-    cursor: none !important;
-  }
+.custom-cursor,
+.custom-cursor * {
+  cursor: none !important;
 }
 
 /* ── Trail SVG — fixed overlay, never blocks clicks ─────────────────────── */
@@ -59,7 +58,7 @@
 }
 
 /* ── Hide entirely on touch / coarse pointer (mobile / tablet) ───────────── */
-@media (pointer: coarse) {
+@media (pointer: coarse), (hover: none), (prefers-reduced-motion: reduce) {
   .cursor-trail,
   .ct-glow,
   .ct-dot {

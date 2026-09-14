@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './Tree.css';
 
 export default function Tree() {
@@ -65,7 +65,7 @@ export default function Tree() {
   };
 
   return (
-    <div className="tree-wrapper">
+    <div className="tree-wrapper" aria-hidden="true">
       <svg 
         id="exampleTree" 
         className={treeClass} 

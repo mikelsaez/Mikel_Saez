@@ -1,18 +1,18 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './ProjectsSection.css'
-import contentData from '../data/content.json'
-
-const content = contentData.projects
-const stats = content.stats
+import RichText from './RichText'
+import useLocale from '../i18n/useLocale'
 
 export default function ProjectsSection() {
   const ref      = useRef(null)
   const numRefs  = useRef([])
-  const [counts, setCounts] = useState(stats.map(() => 0))
+  const { content: localizedContent } = useLocale()
+  const content = localizedContent.projects
+  const stats = content.stats
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
     const el = ref.current
     const ctx = gsap.context(() => {
       // ── Heading + paragraph reveal ────────────────────────────────────────
@@ -25,7 +25,6 @@ export default function ProjectsSection() {
       )
 
       // ── Stat count-up ─────────────────────────────────────────────────────
-      const proxy = { value: 0 }
       stats.forEach((stat, i) => {
         const obj = { v: 0 }
         gsap.to(obj, {
@@ -46,13 +45,13 @@ export default function ProjectsSection() {
       })
     }, el)
     return () => ctx.revert()
-  }, [])
+  }, [stats])
 
   return (
     <section className="projects" id="projects" ref={ref}>
       <div className="projects__top">
         <span className="label anim">{content.tag}</span>
-        <h2 className="projects__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
+        <RichText as="h2" className="projects__heading anim">{content.heading}</RichText>
         <p className="projects__para anim">{content.paragraph}</p>
       </div>
 
@@ -65,7 +64,7 @@ export default function ProjectsSection() {
             <span
               className="projects__stat-value"
               ref={el => (numRefs.current[i] = el)}
-              aria-label={`${display} ${label.toLowerCase()}`}
+              aria-label={`${display} ${label}`}
             >
               {display}
             </span>

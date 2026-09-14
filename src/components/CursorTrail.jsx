@@ -1,14 +1,27 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import './CursorTrail.css'
 
 export default function CursorTrail() {
+  const [enabled, setEnabled] = useState(() => (
+    window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches
+    && navigator.maxTouchPoints === 0
+  ))
   const glowRef  = useRef(null)
   const dotRef   = useRef(null)
   const path1Ref = useRef(null)
   const path2Ref = useRef(null)
 
   useEffect(() => {
+    const query = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)')
+    const update = () => setEnabled(query.matches && navigator.maxTouchPoints === 0)
+    query.addEventListener('change', update)
+    return () => query.removeEventListener('change', update)
+  }, [])
+
+  useEffect(() => {
+    if (!enabled) return undefined
+
     const NP     = 28
     const ptdata = []
     let   idleTimer
@@ -17,6 +30,7 @@ export default function CursorTrail() {
     const dot  = dotRef.current
     const p1   = path1Ref.current
     const p2   = path2Ref.current
+    document.documentElement.classList.add('custom-cursor')
 
     // ── quickSetters: fastest way to move elements on mousemove ─────────────
     // GSAP manages x/y & scale separately so they compose correctly in the
@@ -72,26 +86,28 @@ export default function CursorTrail() {
     }
 
     document.addEventListener('mousemove', onMove)
-    gsap.ticker.fps(60)
     gsap.ticker.add(shrink)
 
     return () => {
       document.removeEventListener('mousemove', onMove)
       gsap.ticker.remove(shrink)
       clearTimeout(idleTimer)
+      document.documentElement.classList.remove('custom-cursor')
     }
-  }, [])
+  }, [enabled])
+
+  if (!enabled) return null
 
   return (
     <>
       {/* Soft spotlight glow blob */}
-      <div ref={glowRef} className="ct-glow" />
+      <div ref={glowRef} className="ct-glow" aria-hidden="true" />
 
       {/* Visible centre dot — always present */}
-      <div ref={dotRef} className="ct-dot" />
+      <div ref={dotRef} className="ct-dot" aria-hidden="true" />
 
       {/* Light trail SVG */}
-      <svg className="cursor-trail" xmlns="http://www.w3.org/2000/svg">
+      <svg className="cursor-trail" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
           <filter id="ct-glow-f" x="-80%" y="-80%" width="260%" height="260%">
             <feGaussianBlur stdDeviation="9" result="blur" />

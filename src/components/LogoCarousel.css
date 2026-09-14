@@ -38,6 +38,12 @@
   min-height: 120px;
   padding: 20px 0 48px;
   transition: opacity 0.38s var(--ease-in-out), transform 0.38s var(--ease-in-out);
+  animation: logos-track-in 0.38s var(--ease-in-out) both;
+}
+
+@keyframes logos-track-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .logos__track--fading {
@@ -162,7 +168,8 @@
 }
 
 .logos__prev:focus-visible,
-.logos__next:focus-visible {
+.logos__next:focus-visible,
+.logos__dot:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }

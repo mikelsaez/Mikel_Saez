@@ -1,16 +1,17 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './AboutSection.css'
-import contentData from '../data/content.json'
-
-const content = contentData.about
-const paras = content.paragraphs
+import RichText from './RichText'
+import useLocale from '../i18n/useLocale'
 
 export default function AboutSection() {
   const ref = useRef(null)
+  const { content: localizedContent } = useLocale()
+  const content = localizedContent.about
+  const paras = content.paragraphs
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
     const el = ref.current
     const ctx = gsap.context(() => {
       gsap.fromTo(el.querySelectorAll('.anim'),
@@ -39,7 +40,7 @@ export default function AboutSection() {
             <img
               className="about__photo"
               src={content.image}
-              alt="Mikel Saez de Vicuña Blanco"
+              alt={content.imageAlt}
               loading="lazy"
             />
           </div>
@@ -47,11 +48,11 @@ export default function AboutSection() {
 
         <div className="about__content">
           <span className="label anim">{content.tag}</span>
-          <h2 className="about__heading anim" dangerouslySetInnerHTML={{ __html: content.heading }} />
+          <RichText as="h2" className="about__heading anim">{content.heading}</RichText>
           {paras.map((p, i) => (
             <p className="about__para anim" key={i}>{p}</p>
           ))}
-          <a className="about__cta anim" href="#contact" aria-label="Contact — let's collaborate">
+          <a className="about__cta anim" href="#contact" aria-label={content.ctaAriaLabel}>
             {content.ctaText}
           </a>
 

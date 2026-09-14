@@ -55,6 +55,45 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000000;
+  padding: 10px 16px;
+  border: 1px solid var(--gold);
+  background: var(--black);
+  color: var(--cream);
+  transform: translateY(-160%);
+  transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.map-fallback {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  background: var(--dark-green);
+  color: var(--cream-dim);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 img, video {
   display: block;
   max-width: 100%;
@@ -227,10 +266,17 @@ button {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
   html { scroll-behavior: auto; }
+
+  .hero-bg__sticky {
+    background: #090c0a url('/hero-poster.webp') center / cover no-repeat;
+  }
+
+  .hero-bg__video { display: none; }
 }
 
 /* ============================================

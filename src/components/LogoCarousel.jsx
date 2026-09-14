@@ -1,99 +1,103 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './LogoCarousel.css'
+import RichText from './RichText'
+import useLocale from '../i18n/useLocale'
 
-import contentData from '../data/content.json'
-
-const content = contentData.partners
-
-const chunkSize = 4;
-const slides = [];
-for (let i = 0; i < content.logos.length; i += chunkSize) {
-  slides.push(content.logos.slice(i, i + chunkSize).map(logo => ({
-    src: logo.image,
-    alt: logo.alt,
-    className: logo.className || ''
-  })));
-}
-if (slides.length === 0) slides.push([])
-
+const CHUNK_SIZE = 4
 const AUTO_INTERVAL = 4500
 
-export default function LogoCarousel() {
-  const [current, setCurrent] = useState(0)
-  const [fading, setFading] = useState(false)
-  const [paused, setPaused] = useState(false)
-  const timerRef = useRef(null)
-
-  const goTo = (idx) => {
-    if (fading) return
-    setFading(true)
-    setTimeout(() => {
-      setCurrent(idx)
-      setFading(false)
-    }, 380)
+function chunkLogos(logos) {
+  const slides = []
+  for (let index = 0; index < logos.length; index += CHUNK_SIZE) {
+    slides.push(logos.slice(index, index + CHUNK_SIZE))
   }
+  return slides.length ? slides : [[]]
+}
 
-  const next = () => goTo((current + 1) % slides.length)
-  const prev = () => goTo((current - 1 + slides.length) % slides.length)
+export default function LogoCarousel() {
+  const { content: localizedContent } = useLocale()
+  const { partners: content, ui } = localizedContent
+  const slides = useMemo(() => chunkLogos(content.logos), [content.logos])
+  const [current, setCurrent] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  )
 
-  // Auto-play
   useEffect(() => {
-    if (paused) return
-    timerRef.current = setInterval(next, AUTO_INTERVAL)
-    return () => clearInterval(timerRef.current)
-  }, [current, paused]) // eslint-disable-line react-hooks/exhaustive-deps
+    const query = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const handleChange = ({ matches }) => setReducedMotion(matches)
+    query.addEventListener('change', handleChange)
+    return () => query.removeEventListener('change', handleChange)
+  }, [])
+
+  useEffect(() => {
+    if (paused || reducedMotion || slides.length <= 1) return undefined
+    const timer = window.setInterval(
+      () => setCurrent((index) => (index + 1) % slides.length),
+      AUTO_INTERVAL,
+    )
+    return () => window.clearInterval(timer)
+  }, [paused, reducedMotion, slides.length])
+
+  const safeCurrent = current % slides.length
+  const next = () => setCurrent((index) => (index + 1) % slides.length)
+  const previous = () => setCurrent((index) => (index - 1 + slides.length) % slides.length)
 
   return (
     <section
       className="logos"
-      aria-label="Partner logos"
+      aria-label={ui.partnerLogos}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false)
+      }}
     >
       <div className="logos__header">
         <span className="label">{content.tag}</span>
-        <h2 className="logos__heading" dangerouslySetInnerHTML={{ __html: content.heading }} />
+        <RichText as="h2" className="logos__heading">{content.heading}</RichText>
       </div>
 
       <div
-        className={`logos__track ${fading ? 'logos__track--fading' : ''}`}
-        aria-live="polite"
+        className="logos__track"
+        key={safeCurrent}
+        aria-live={paused ? 'polite' : 'off'}
         aria-atomic="true"
       >
-        {slides[current].map((logo, i) => (
-          <div className="logos__item" key={i}>
-            <img src={logo.src} alt={logo.alt} loading="lazy" className={logo.className} />
+        {slides[safeCurrent].map((logo) => (
+          <div className="logos__item" key={logo.image}>
+            <img
+              src={logo.image}
+              alt={logo.alt}
+              loading="lazy"
+              className={logo.className || ''}
+            />
           </div>
         ))}
       </div>
 
-      <div className="logos__controls" role="group" aria-label="Carousel controls">
-        <button
-          className="logos__prev"
-          onClick={prev}
-          aria-label="Previous slide"
-        >
+      <div className="logos__controls" role="group" aria-label={ui.carouselControls}>
+        <button className="logos__prev" onClick={previous} aria-label={ui.previousSlide}>
           ←
         </button>
 
-        <div className="logos__dots" role="tablist" aria-label="Slide indicators">
-          {slides.map((_, i) => (
+        <div className="logos__dots" role="group" aria-label={ui.slideIndicators}>
+          {slides.map((_, index) => (
             <button
-              key={i}
-              role="tab"
-              aria-selected={i === current}
-              aria-label={`Slide ${i + 1} of ${slides.length}`}
-              className={`logos__dot ${i === current ? 'logos__dot--active' : ''}`}
-              onClick={() => goTo(i)}
+              key={index}
+              aria-current={index === safeCurrent ? 'true' : undefined}
+              aria-label={ui.slideOf
+                .replace('{current}', index + 1)
+                .replace('{total}', slides.length)}
+              className={`logos__dot ${index === safeCurrent ? 'logos__dot--active' : ''}`}
+              onClick={() => setCurrent(index)}
             />
           ))}
         </div>
 
-        <button
-          className="logos__next"
-          onClick={next}
-          aria-label="Next slide"
-        >
+        <button className="logos__next" onClick={next} aria-label={ui.nextSlide}>
           →
         </button>
       </div>
