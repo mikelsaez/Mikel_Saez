@@ -2,6 +2,11 @@ backend:
   name: git-gateway
   branch: main
 
+# Used only when the CMS is opened from localhost or 127.0.0.1.
+# Production continues to authenticate through Git Gateway.
+local_backend:
+  url: http://127.0.0.1:8081/api/v1
+
 site_url: "https://saezdevicuna.eus"
 display_url: "https://saezdevicuna.eus"
 publish_mode: editorial_workflow

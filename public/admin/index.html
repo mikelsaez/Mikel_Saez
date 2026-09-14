@@ -3,14 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
     <title>Saez de Vicuña — Content Manager</title>
     <!-- Force Decap CMS to look for config.yml in the absolute /admin/ path -->
     <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.16.2/dist/decap-cms.js"></script>
+    <script>
+      const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
+      // The local file-system backend does not support Editorial Workflow.
+      // Override it only on localhost; production keeps the configured workflow.
+      if (isLocal) {
+        window.initCMS({ config: { publish_mode: 'simple' } });
+      } else {
+        window.initCMS();
+      }
+    </script>
   </body>
 </html>

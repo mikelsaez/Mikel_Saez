@@ -8,6 +8,7 @@ import YAML from 'yaml'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const configSource = await readFile(path.join(root, 'public/admin/config.yml'), 'utf8')
 const config = YAML.parse(configSource)
+const adminSource = await readFile(path.join(root, 'public/admin/index.html'), 'utf8')
 const content = JSON.parse(await readFile(path.join(root, 'src/data/content.json'), 'utf8'))
 const shared = JSON.parse(await readFile(path.join(root, 'src/data/shared.json'), 'utf8'))
 
@@ -51,6 +52,14 @@ test('Decap config parses and targets the production Git Gateway branch', () => 
   assert.equal(config.site_url, 'https://saezdevicuna.eus')
   assert.equal(config.publish_mode, 'editorial_workflow')
   assert.equal(config.show_preview_links, true)
+})
+
+test('Decap local backend is loopback-only and disables Editorial Workflow only on localhost', () => {
+  assert.equal(config.local_backend.url, 'http://127.0.0.1:8081/api/v1')
+  assert.match(adminSource, /window\.CMS_MANUAL_INIT = true/)
+  assert.match(adminSource, /\['localhost', '127\.0\.0\.1'\]/)
+  assert.match(adminSource, /window\.initCMS\(\{ config: \{ publish_mode: 'simple' \} \}\)/)
+  assert.match(adminSource, /else\s*\{\s*window\.initCMS\(\)/)
 })
 
 test('Decap single-file localization is enabled for English, Spanish and Basque', () => {

@@ -10,6 +10,24 @@ This guide covers routine content maintenance for the Mikel Saez de Vicuña port
 
 Credentials and shared passwords must never be committed to the repository or pasted into content fields.
 
+## Test the public site and backoffice locally
+
+From the repository root, install the locked dependencies once and start both local services:
+
+```bash
+npm ci
+npm run dev:local
+```
+
+Open these addresses:
+
+- Public site: `http://localhost:5173/en/`, `http://localhost:5173/es/` and `http://localhost:5173/eu/`
+- Backoffice: `http://localhost:5173/admin/`
+
+Select **Login** in the local backoffice. Local mode requires no Netlify credentials and the proxy is reachable only from the same computer. Because Decap's local file-system backend supports only simple publishing, the production editorial workflow is disabled only on localhost.
+
+A local save immediately updates the corresponding repository files instead of creating a draft. Review `git diff`, check all three public routes and run `npm run check` before keeping an edit. Press `Ctrl+C` in the service terminal to stop both the site and CMS proxy.
+
 ## Edit translated website copy
 
 1. Open **Website translations**.

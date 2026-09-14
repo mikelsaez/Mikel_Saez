@@ -33,10 +33,16 @@ Requirements: Node.js 20.19+ or 22.12+ and npm 10 or newer.
 
 ```bash
 npm ci
-npm run dev
+npm run dev:local
 ```
 
-The development server prints its local URL, normally `http://localhost:5173/en/`.
+This starts both services and keeps them in one terminal:
+
+- Public site: `http://localhost:5173/en/` (`/es/` and `/eu/` are also available)
+- Backoffice: `http://localhost:5173/admin/`
+- Local CMS proxy: `http://127.0.0.1:8081/api/v1`
+
+The local proxy is bound to the loopback interface and requires no Netlify credentials. Local CMS saves write directly to `src/data/content.json`, `src/data/shared.json` and `public/img`; they do not use the production editorial workflow. Press `Ctrl+C` once to stop both services. Use `npm run dev` when only the public Vite server is needed.
 
 ## Quality commands
 
@@ -46,6 +52,7 @@ npm run lint    # ESLint
 npm run check   # complete lint + test + production-build gate
 npm run build   # tested production build in dist/
 npm run preview # preview the production build
+npm run dev:local # public site + editable local CMS
 ```
 
 `npm run build` generates locale-specific HTML files in `dist/en/`, `dist/es/` and `dist/eu/` after the Vite build.
@@ -103,6 +110,7 @@ public/
   _redirects             SPA route fallback
 scripts/
   build-locales.mjs      Locale-specific static HTML generation
+  dev-local.mjs          One-command local public site + CMS runner
 src/
   components/            Page sections and interactions
   data/content.json      Three-language content
