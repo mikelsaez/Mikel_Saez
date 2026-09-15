@@ -1,107 +1,21 @@
 {
   "en": {
-    "seo": {
-      "title": "Mikel Saez de Vicuña | Strategy, communication and global impact",
-      "description": "Mikel Saez de Vicuña turns complex agendas into collaborative initiatives across strategic communication, sustainability and institutional transformation."
+    "contact": {
+      "heading": "Let's cultivate <em>something<br />meaningful</em>",
+      "paragraph": "Open to collaboration on international initiatives, communication<br />strategy and sustainability projects.",
+      "emailLabel": "EMAIL",
+      "emailAriaLabel": "Send Mikel an email",
+      "linkedinLabel": "LINKEDIN",
+      "linkedinAriaLabel": "Visit Mikel's LinkedIn profile in a new tab",
+      "footerText": "© 2026 Mikel Saez de Vicuña. All rights reserved."
     },
-    "ui": {
-      "skipToContent": "Skip to main content",
-      "nav": { "work": "WORK", "map": "MAP", "about": "ABOUT", "contact": "CONTACT" },
-      "mainNavigation": "Main navigation",
-      "languageSelection": "Language selection",
-      "languageNames": { "en": "English", "es": "Spanish", "eu": "Basque" },
-      "switchLanguage": "Switch language to {language}",
-      "openMenu": "Open menu",
-      "closeMenu": "Close menu",
-      "navigationMenu": "Navigation menu",
-      "heroLabel": "Introduction to Mikel Saez de Vicuña",
-      "discoverMore": "Discover more",
-      "quickStatistics": "Quick statistics",
-      "viewCategoryProjects": "View {category} projects on the map",
-      "projectFilters": "Filter projects by field",
-      "allProjects": "ALL PROJECTS",
-      "projectCount": "{count} projects shown",
-      "projectCountOne": "1 project shown",
-      "noProjects": "No projects are available in this field yet.",
-      "mapLoading": "Loading project map",
-      "mapUnavailable": "The project map is temporarily unavailable. Please try again later.",
-      "projectMap": "International project map",
-      "mapMarkerLabel": "{title}, {country}. Open project details",
-      "projectList": "Projects currently shown on the map",
-      "partnerLogos": "Partner organization logos",
-      "carouselControls": "Logo carousel controls",
-      "previousSlide": "Previous slide",
-      "nextSlide": "Next slide",
-      "slideIndicators": "Slide indicators",
-      "slideOf": "Slide {current} of {total}",
-      "categories": {
-        "ECOSYSTEM": "ECOSYSTEM",
-        "TERRITORIES": "TERRITORIES",
-        "SEEDS": "SEEDS",
-        "ROOTS": "ROOTS",
-        "BLOOM": "BLOOM",
-        "HARVEST": "HARVEST"
-      }
-    },
-    "hero": {
-      "subtitle": "TURNING COMPLEX AGENDAS INTO LIVING INITIATIVES",
-      "heading": "From local roots to <em>global<br />impact</em>",
-      "discoverText": "DISCOVER",
-      "stats": [
-        { "label": "BASED IN", "value": "<em>Basque Country</em>" },
-        { "label": "ACTIVE SINCE", "value": "2012" },
-        { "label": "PROJECTS", "value": "55+" }
-      ]
-    },
-    "intro": {
-      "heading": "Cultivating <em>ideas</em> that grow<br />into impact",
-      "paragraph": "Reimagining complex ideas as initiatives that connect institutions, people and places.<br />From global agendas to tangible action."
-    },
-    "projects": {
-      "tag": "PROJECTS IN GROWTH",
-      "heading": "Ideas need <em>fertile ground</em><br />to grow",
-      "paragraph": "Every initiative begins as an idea. Some remain concepts; others take root, connect people and grow into real change. I help institutions turn complex ideas into initiatives that connect places, people and policies, reimagining territories through innovation.",
-      "stats": [
-        { "value": 3, "display": "3", "label": "ACTIVE PROJECTS", "decimals": 0, "suffix": "" },
-        { "value": 18, "display": "18", "label": "COUNTRIES", "decimals": 0, "suffix": "" },
-        { "value": 12, "display": "12", "label": "YEARS ACTIVE", "decimals": 0, "suffix": "" },
-        { "value": 4.2, "display": "4.2M", "label": "HECTARES", "decimals": 1, "suffix": "M" }
-      ]
-    },
-    "expertise": {
-      "tag": "EXPERTISE",
-      "heading": "Ideas grow where <em>collaboration takes root</em>",
-      "cards": [
-        {
-          "num": "01", "category": "ECOSYSTEM", "title": "Sustainability & Environmental Initiatives",
-          "desc": "Where sustainability meets action. Initiatives and narratives that support climate action, environmental protection and long-term sustainability agendas, connecting strategy with delivery.",
-          "tags": ["COP16 Cali – Knowledge Platform", "COP30 Belém – Amazonian Cities Network"]
-        },
-        {
-          "num": "02", "category": "TERRITORIES", "title": "Urban/Rural Development & Tourism",
-          "desc": "Place shapes strategy. Work that links urban futures, rural systems, regional identity, tourism and territorial development into coherent pathways.",
-          "tags": ["Vitoria-Gasteiz Urban Innovation 2030 Agenda", "IDB Regional Housing Forum – Mexico", "IDB – U20 Brazil Mayors Summit during G20"]
-        },
-        {
-          "num": "03", "category": "SEEDS", "title": "Strategic Communication & Branding",
-          "desc": "Ideas take shape and direction is set. Crafting narratives, positioning and messaging that turn complex global agendas into clarity, purpose and local momentum.",
-          "tags": ["Microsoft Marketing & Operations – Europe HQ", "Iberia Airlines – ARAEX wines experience", "Mercedes-Benz Trophy – Villa Conchi Cava"]
-        },
-        {
-          "num": "04", "category": "ROOTS", "title": "Community, Partnerships & Platforms",
-          "desc": "Where collaboration takes hold. Designing partnerships and convening platforms that align institutions, sectors and regions around shared goals and action.",
-          "tags": ["Wine Routes of the World publication – UN Tourism", "Spanish Fine Wines Institute – ICEX", "OECD webinars"]
-        },
-        {
-          "num": "05", "category": "BLOOM", "title": "Institutional Transformation & Innovation",
-          "desc": "Change becomes visible. Supporting organizations through transformation, new ways of working and innovation, turning strategy into adoption and momentum.",
-          "tags": ["World Bank workplace standards – Change Management", "Mission 300 – COMESA & World Bank Community of Practice"]
-        },
-        {
-          "num": "06", "category": "HARVEST", "title": "Impact Measurement & Learning",
-          "desc": "Where results become evidence. Measurement, evaluation and knowledge approaches that capture outcomes, strengthen decision-making and improve what works over time.",
-          "tags": ["Evaluation & learning frameworks", "Results-based management systems", "Knowledge management platforms"]
-        }
+    "impact": {
+      "tag": "IMPACT",
+      "heading": "Ideas that <em>took root</em>",
+      "ariaLabel": "Impact overview",
+      "paragraphs": [
+        "Over the past decade, I have worked across continents, sectors and institutions, helping ideas grow into initiatives with real impact.",
+        "From international platforms and global events to urban sustainability programs and institutional transformation projects, my role has focused on connecting strategy, communication and partnerships. Many of these initiatives have brought together public institutions, private-sector actors and civil-society organizations to translate complex agendas into collaborative action."
       ]
     },
     "worldMap": {
@@ -109,20 +23,93 @@
       "heading": "Cultivating ideas that <em>travel across borders</em>",
       "intro": "Choose a field to explore the projects and partnerships behind each route.",
       "pins": [
-        { "key": "microsoft-europe", "title": "Microsoft Marketing & Operations – Europe HQ", "country": "EUROPE", "desc": "Marketing and operations support for the European headquarters team, including stakeholder coordination events with NATO and EU institutions." },
-        { "key": "iberia-inflight", "title": "Iberia Airlines – Inflight Wine & Dining Experience", "country": "SPAIN", "desc": "Strategic communication and brand coordination for a pioneering wine experience across all business-class routes." },
-        { "key": "mercedes-events", "title": "Mercedes-Benz Fashion Week & Golf Trophy", "country": "SPAIN", "desc": "Strategic communication and brand support for Madrid Fashion Week and the Mercedes-Benz Golf Trophy." },
-        { "key": "wine-routes-world", "title": "Wine Routes of the World – UN Tourism", "country": "GLOBAL", "desc": "Publication design, content curation and international partnerships spanning institutions, sectors and regions." },
-        { "key": "un-tourism-assembly", "title": "UN Tourism General Assembly", "country": "RUSSIA", "desc": "Liaison with UN Tourism, supporting the Spanish Fine Wines Institute project." },
-        { "key": "mission-300", "title": "Mission 300 – Africa Electrification Initiative", "country": "AFRICA", "desc": "Support for the Community of Practice, knowledge products, webinars, workshops and its collaboration platform." },
-        { "key": "world-bank-change", "title": "World Bank – Change Management", "country": "UNITED STATES", "desc": "Supporting teams worldwide through transformation, change adoption, improved processes, new ways of working and institutional innovation." },
-        { "key": "vitoria-2030", "title": "Vitoria-Gasteiz 2030 Urban Innovation Project", "country": "BASQUE COUNTRY", "desc": "Academic projects focused on cities, local identity, sustainable development and territorial strategies for the 2030 Agenda." },
-        { "key": "idb-housing-forum", "title": "IDB Regional Housing Forum", "country": "MEXICO", "desc": "Support for a high-level event focused on housing markets, regional development and sustainable urban and territorial strategies." },
-        { "key": "u20-mayors-summit", "title": "U20 Mayors Summit", "country": "BRAZIL", "desc": "Support for the Latin American Mayors Network Summit during Brazil's G20 presidency, focused on cities and regional development." },
-        { "key": "amazon-cities", "title": "COP16 & COP30 – Amazon Cities Network", "country": "COLOMBIA", "desc": "Community of Practice and communication initiatives supporting climate transition and sustainability agendas for Amazonian cities." },
-        { "key": "vinexpo-asia", "title": "VINEXPO Shanghai & Hong Kong", "country": "ASIA", "desc": "Trade-show stand design and construction, with coordinated brand presence and sales campaigns to grow market share in Asia." },
-        { "key": "unwto-wine-tourism", "title": "4th UNWTO Global Conference on Wine Tourism", "country": "CHILE", "desc": "Workshop delivered at the UNWTO Global Conference on Wine Tourism in Chile's Colchagua Valley." }
+        {
+          "key": "microsoft-europe",
+          "title": "Microsoft Marketing & Operations – Europe HQ",
+          "country": "EUROPE",
+          "desc": "Marketing and operations support for the European headquarters team, including stakeholder coordination events with NATO and EU institutions."
+        },
+        {
+          "key": "iberia-inflight",
+          "title": "Iberia Airlines – Inflight Wine & Dining Experience",
+          "country": "SPAIN",
+          "desc": "Strategic communication and brand coordination for a pioneering wine experience across all business-class routes."
+        },
+        {
+          "key": "mercedes-events",
+          "title": "Mercedes-Benz Fashion Week & Golf Trophy",
+          "country": "SPAIN",
+          "desc": "Strategic communication and brand support for Madrid Fashion Week and the Mercedes-Benz Golf Trophy."
+        },
+        {
+          "key": "wine-routes-world",
+          "title": "Wine Routes of the World – UN Tourism",
+          "country": "GLOBAL",
+          "desc": "Publication design, content curation and international partnerships spanning institutions, sectors and regions."
+        },
+        {
+          "key": "un-tourism-assembly",
+          "title": "UN Tourism General Assembly",
+          "country": "RUSSIA",
+          "desc": "Liaison with UN Tourism, supporting the Spanish Fine Wines Institute project."
+        },
+        {
+          "key": "mission-300",
+          "title": "Mission 300 – Africa Electrification Initiative",
+          "country": "AFRICA",
+          "desc": "Support for the Community of Practice, knowledge products, webinars, workshops and its collaboration platform."
+        },
+        {
+          "key": "world-bank-change",
+          "title": "World Bank – Change Management",
+          "country": "UNITED STATES",
+          "desc": "Supporting teams worldwide through transformation, change adoption, improved processes, new ways of working and institutional innovation."
+        },
+        {
+          "key": "vitoria-2030",
+          "title": "Vitoria-Gasteiz 2030 Urban Innovation Project",
+          "country": "BASQUE COUNTRY",
+          "desc": "Academic projects focused on cities, local identity, sustainable development and territorial strategies for the 2030 Agenda."
+        },
+        {
+          "key": "idb-housing-forum",
+          "title": "IDB Regional Housing Forum",
+          "country": "MEXICO",
+          "desc": "Support for a high-level event focused on housing markets, regional development and sustainable urban and territorial strategies."
+        },
+        {
+          "key": "u20-mayors-summit",
+          "title": "U20 Mayors Summit",
+          "country": "BRAZIL",
+          "desc": "Support for the Latin American Mayors Network Summit during Brazil's G20 presidency, focused on cities and regional development."
+        },
+        {
+          "key": "amazon-cities",
+          "title": "COP16 & COP30 – Amazon Cities Network",
+          "country": "COLOMBIA",
+          "desc": "Community of Practice and communication initiatives supporting climate transition and sustainability agendas for Amazonian cities."
+        },
+        {
+          "key": "vinexpo-asia",
+          "title": "VINEXPO Shanghai & Hong Kong",
+          "country": "ASIA",
+          "desc": "Trade-show stand design and construction, with coordinated brand presence and sales campaigns to grow market share in Asia."
+        },
+        {
+          "key": "unwto-wine-tourism",
+          "title": "4th UNWTO Global Conference on Wine Tourism",
+          "country": "CHILE",
+          "desc": "Workshop delivered at the UNWTO Global Conference on Wine Tourism in Chile's Colchagua Valley."
+        }
       ]
+    },
+    "partners": {
+      "tag": "PARTNERS",
+      "heading": "Organizations I have <em>worked with</em>"
+    },
+    "intro": {
+      "heading": "Cultivating <em>ideas</em> that grow<br />into impact",
+      "paragraph": "Reimagining complex ideas as initiatives that connect institutions, people and places.<br />From global agendas to tangible action."
     },
     "about": {
       "tag": "ABOUT",
@@ -137,135 +124,218 @@
       "ctaText": "LET'S COLLABORATE →",
       "ctaAriaLabel": "Contact Mikel to collaborate",
       "stats": [
-        { "num": "18+", "label": "COUNTRIES" },
-        { "num": "60+", "label": "PROJECTS LED" },
-        { "num": "12", "label": "YEARS ACTIVE" },
-        { "num": "UN", "label": "COLLABORATOR" }
-      ]
-    },
-    "impact": {
-      "tag": "IMPACT",
-      "heading": "Ideas that <em>took root</em>",
-      "ariaLabel": "Impact overview",
-      "paragraphs": [
-        "Over the past decade, I have worked across continents, sectors and institutions, helping ideas grow into initiatives with real impact.",
-        "From international platforms and global events to urban sustainability programs and institutional transformation projects, my role has focused on connecting strategy, communication and partnerships. Many of these initiatives have brought together public institutions, private-sector actors and civil-society organizations to translate complex agendas into collaborative action."
-      ]
-    },
-    "partners": { "tag": "PARTNERS", "heading": "Organizations I have <em>worked with</em>" },
-    "contact": {
-      "heading": "Let's cultivate <em>something<br />meaningful</em>",
-      "paragraph": "Open to collaboration on international initiatives, communication<br />strategy and sustainability projects.",
-      "emailLabel": "EMAIL",
-      "emailAriaLabel": "Send Mikel an email",
-      "linkedinLabel": "LINKEDIN",
-      "linkedinAriaLabel": "Visit Mikel's LinkedIn profile in a new tab",
-      "footerText": "© 2026 Mikel Saez de Vicuña. All rights reserved."
-    }
-  },
-  "es": {
-    "seo": {
-      "title": "Mikel Saez de Vicuña | Estrategia, comunicación e impacto global",
-      "description": "Mikel Saez de Vicuña convierte agendas complejas en iniciativas colaborativas de comunicación estratégica, sostenibilidad y transformación institucional."
-    },
-    "ui": {
-      "skipToContent": "Saltar al contenido principal",
-      "nav": { "work": "TRABAJO", "map": "MAPA", "about": "SOBRE MÍ", "contact": "CONTACTO" },
-      "mainNavigation": "Navegación principal",
-      "languageSelection": "Selección de idioma",
-      "languageNames": { "en": "inglés", "es": "español", "eu": "euskera" },
-      "switchLanguage": "Cambiar el idioma a {language}",
-      "openMenu": "Abrir el menú",
-      "closeMenu": "Cerrar el menú",
-      "navigationMenu": "Menú de navegación",
-      "heroLabel": "Presentación de Mikel Saez de Vicuña",
-      "discoverMore": "Descubrir más",
-      "quickStatistics": "Datos destacados",
-      "viewCategoryProjects": "Ver los proyectos de {category} en el mapa",
-      "projectFilters": "Filtrar proyectos por ámbito",
-      "allProjects": "TODOS LOS PROYECTOS",
-      "projectCount": "{count} proyectos mostrados",
-      "projectCountOne": "1 proyecto mostrado",
-      "noProjects": "Todavía no hay proyectos disponibles en este ámbito.",
-      "mapLoading": "Cargando el mapa de proyectos",
-      "mapUnavailable": "El mapa de proyectos no está disponible temporalmente. Inténtalo de nuevo más tarde.",
-      "projectMap": "Mapa de proyectos internacionales",
-      "mapMarkerLabel": "{title}, {country}. Abrir detalles del proyecto",
-      "projectList": "Proyectos mostrados actualmente en el mapa",
-      "partnerLogos": "Logotipos de organizaciones colaboradoras",
-      "carouselControls": "Controles del carrusel de logotipos",
-      "previousSlide": "Diapositiva anterior",
-      "nextSlide": "Diapositiva siguiente",
-      "slideIndicators": "Indicadores de diapositivas",
-      "slideOf": "Diapositiva {current} de {total}",
-      "categories": {
-        "ECOSYSTEM": "ECOSISTEMA",
-        "TERRITORIES": "TERRITORIOS",
-        "SEEDS": "SEMILLAS",
-        "ROOTS": "RAÍCES",
-        "BLOOM": "FLORACIÓN",
-        "HARVEST": "COSECHA"
-      }
-    },
-    "hero": {
-      "subtitle": "CONVERTIR AGENDAS COMPLEJAS EN INICIATIVAS VIVAS",
-      "heading": "De las raíces locales al <em>impacto<br />global</em>",
-      "discoverText": "DESCUBRIR",
-      "stats": [
-        { "label": "CON BASE EN", "value": "<em>País Vasco</em>" },
-        { "label": "ACTIVO DESDE", "value": "2012" },
-        { "label": "PROYECTOS", "value": "55+" }
-      ]
-    },
-    "intro": {
-      "heading": "Cultivar <em>ideas</em> que se convierten<br />en impacto",
-      "paragraph": "Reimagino ideas complejas como iniciativas que conectan instituciones, personas y lugares.<br />De las agendas globales a la acción tangible."
-    },
-    "projects": {
-      "tag": "PROYECTOS EN CRECIMIENTO",
-      "heading": "Las ideas necesitan <em>terreno fértil</em><br />para crecer",
-      "paragraph": "Toda iniciativa comienza como una idea. Algunas permanecen como conceptos; otras echan raíces, conectan a las personas y se convierten en un cambio real. Ayudo a las instituciones a transformar ideas complejas en iniciativas que conectan lugares, personas y políticas, reimaginando los territorios mediante la innovación.",
-      "stats": [
-        { "value": 3, "display": "3", "label": "PROYECTOS ACTIVOS", "decimals": 0, "suffix": "" },
-        { "value": 18, "display": "18", "label": "PAÍSES", "decimals": 0, "suffix": "" },
-        { "value": 12, "display": "12", "label": "AÑOS DE ACTIVIDAD", "decimals": 0, "suffix": "" },
-        { "value": 4.2, "display": "4,2 M", "label": "HECTÁREAS", "decimals": 1, "suffix": " M" }
+        {
+          "num": "18+",
+          "label": "COUNTRIES"
+        },
+        {
+          "num": "60+",
+          "label": "PROJECTS LED"
+        },
+        {
+          "num": "12",
+          "label": "YEARS ACTIVE"
+        },
+        {
+          "num": "UN",
+          "label": "COLLABORATOR"
+        }
       ]
     },
     "expertise": {
-      "tag": "ÁREAS DE EXPERIENCIA",
-      "heading": "Las ideas crecen donde <em>arraiga la colaboración</em>",
+      "tag": "EXPERTISE",
+      "heading": "Ideas grow where <em>collaboration takes root</em>",
       "cards": [
         {
-          "num": "01", "category": "ECOSYSTEM", "title": "Sostenibilidad e iniciativas medioambientales",
-          "desc": "Donde la sostenibilidad se convierte en acción. Iniciativas y narrativas que impulsan la acción climática, la protección del medioambiente y las agendas de sostenibilidad a largo plazo, conectando la estrategia con la ejecución.",
-          "tags": ["COP16 Cali – Plataforma de conocimiento", "COP30 Belém – Red de Ciudades Amazónicas"]
+          "num": "01",
+          "category": "ECOSYSTEM",
+          "title": "Sustainability & Environmental Initiatives",
+          "desc": "Where sustainability meets action. Initiatives and narratives that support climate action, environmental protection and long-term sustainability agendas, connecting strategy with delivery.",
+          "tags": [
+            "COP16 Cali – Knowledge Platform",
+            "COP30 Belém – Amazonian Cities Network"
+          ]
         },
         {
-          "num": "02", "category": "TERRITORIES", "title": "Desarrollo urbano y rural y turismo",
-          "desc": "El lugar da forma a la estrategia. Un trabajo que conecta el futuro urbano, los sistemas rurales, la identidad regional, el turismo y el desarrollo territorial en itinerarios coherentes.",
-          "tags": ["Agenda 2030 de Innovación Urbana de Vitoria-Gasteiz", "Foro Regional de Vivienda del BID – México", "BID – Cumbre de Alcaldes U20 de Brasil durante el G20"]
+          "num": "02",
+          "category": "TERRITORIES",
+          "title": "Urban/Rural Development & Tourism",
+          "desc": "Place shapes strategy. Work that links urban futures, rural systems, regional identity, tourism and territorial development into coherent pathways.",
+          "tags": [
+            "Vitoria-Gasteiz Urban Innovation 2030 Agenda",
+            "IDB Regional Housing Forum – Mexico",
+            "IDB – U20 Brazil Mayors Summit during G20"
+          ]
         },
         {
-          "num": "03", "category": "SEEDS", "title": "Comunicación estratégica y marca",
-          "desc": "Las ideas toman forma y se define el rumbo. Desarrollo narrativas, posicionamiento y mensajes que convierten agendas globales complejas en claridad, propósito e impulso local.",
-          "tags": ["Microsoft Marketing y Operaciones – Sede europea", "Iberia – Experiencia de vinos ARAEX", "Mercedes-Benz Trophy – Villa Conchi Cava"]
+          "num": "03",
+          "category": "SEEDS",
+          "title": "Strategic Communication & Branding",
+          "desc": "Ideas take shape and direction is set. Crafting narratives, positioning and messaging that turn complex global agendas into clarity, purpose and local momentum.",
+          "tags": [
+            "Microsoft Marketing & Operations – Europe HQ",
+            "Iberia Airlines – ARAEX wines experience",
+            "Mercedes-Benz Trophy – Villa Conchi Cava"
+          ]
         },
         {
-          "num": "04", "category": "ROOTS", "title": "Comunidad, alianzas y plataformas",
-          "desc": "Donde la colaboración se consolida. Diseño alianzas y plataformas de encuentro que alinean instituciones, sectores y regiones alrededor de objetivos y acciones compartidos.",
-          "tags": ["Publicación Rutas del Vino del Mundo – ONU Turismo", "Spanish Fine Wines Institute – ICEX", "Seminarios web de la OCDE"]
+          "num": "04",
+          "category": "ROOTS",
+          "title": "Community, Partnerships & Platforms",
+          "desc": "Where collaboration takes hold. Designing partnerships and convening platforms that align institutions, sectors and regions around shared goals and action.",
+          "tags": [
+            "Wine Routes of the World publication – UN Tourism",
+            "Spanish Fine Wines Institute – ICEX",
+            "OECD webinars"
+          ]
         },
         {
-          "num": "05", "category": "BLOOM", "title": "Transformación institucional e innovación",
-          "desc": "El cambio se hace visible. Acompaño a las organizaciones en su transformación, en nuevas formas de trabajo y en la innovación, convirtiendo la estrategia en adopción e impulso.",
-          "tags": ["Estándares laborales del Banco Mundial – Gestión del cambio", "Misión 300 – Comunidad de Práctica COMESA y Banco Mundial"]
+          "num": "05",
+          "category": "BLOOM",
+          "title": "Institutional Transformation & Innovation",
+          "desc": "Change becomes visible. Supporting organizations through transformation, new ways of working and innovation, turning strategy into adoption and momentum.",
+          "tags": [
+            "World Bank workplace standards – Change Management",
+            "Mission 300 – COMESA & World Bank Community of Practice"
+          ]
         },
         {
-          "num": "06", "category": "HARVEST", "title": "Medición del impacto y aprendizaje",
-          "desc": "Donde los resultados se convierten en evidencia. Enfoques de medición, evaluación y conocimiento que recogen resultados, refuerzan la toma de decisiones y mejoran lo que funciona con el tiempo.",
-          "tags": ["Marcos de evaluación y aprendizaje", "Sistemas de gestión basada en resultados", "Plataformas de gestión del conocimiento"]
+          "num": "06",
+          "category": "HARVEST",
+          "title": "Impact Measurement & Learning",
+          "desc": "Where results become evidence. Measurement, evaluation and knowledge approaches that capture outcomes, strengthen decision-making and improve what works over time.",
+          "tags": [
+            "Evaluation & learning frameworks",
+            "Results-based management systems",
+            "Knowledge management platforms"
+          ]
         }
+      ]
+    },
+    "ui": {
+      "mapLoading": "Loading project map",
+      "partnerLogos": "Partner organization logos",
+      "projectFilters": "Filter projects by field",
+      "nav": {
+        "work": "WORK",
+        "map": "MAP",
+        "about": "ABOUT",
+        "contact": "CONTACT"
+      },
+      "projectMap": "International project map",
+      "slideOf": "Slide {current} of {total}",
+      "openMenu": "Open menu",
+      "switchLanguage": "Switch language to {language}",
+      "mainNavigation": "Main navigation",
+      "projectCountOne": "1 project shown",
+      "languageNames": {
+        "en": "English",
+        "es": "Spanish",
+        "eu": "Basque"
+      },
+      "quickStatistics": "Quick statistics",
+      "navigationMenu": "Navigation menu",
+      "languageSelection": "Language selection",
+      "mapUnavailable": "The project map is temporarily unavailable. Please try again later.",
+      "slideIndicators": "Slide indicators",
+      "carouselControls": "Logo carousel controls",
+      "projectCount": "{count} projects shown",
+      "projectList": "Projects currently shown on the map",
+      "closeMenu": "Close menu",
+      "previousSlide": "Previous slide",
+      "heroLabel": "Introduction to Mikel Saez de Vicuña",
+      "allProjects": "ALL PROJECTS",
+      "noProjects": "No projects are available in this field yet.",
+      "categories": {
+        "ECOSYSTEM": "ECOSYSTEM",
+        "TERRITORIES": "TERRITORIES",
+        "SEEDS": "SEEDS",
+        "ROOTS": "ROOTS",
+        "BLOOM": "BLOOM",
+        "HARVEST": "HARVEST"
+      },
+      "viewCategoryProjects": "View {category} projects on the map",
+      "nextSlide": "Next slide",
+      "discoverMore": "Discover more",
+      "mapMarkerLabel": "{title}, {country}. Open project details",
+      "skipToContent": "Skip to main content"
+    },
+    "projects": {
+      "tag": "PROJECTS IN GROWTH",
+      "heading": "Ideas need <em>fertile ground</em><br />to grow",
+      "paragraph": "Every initiative begins as an idea. Some remain concepts; others take root, connect people and grow into real change. I help institutions turn complex ideas into initiatives that connect places, people and policies, reimagining territories through innovation.",
+      "stats": [
+        {
+          "value": 3,
+          "display": "3",
+          "label": "ACTIVE PROJECTS",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 12,
+          "display": "12",
+          "label": "COUNTRIES",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 14,
+          "display": "14",
+          "label": "YEARS ACTIVE",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 4.2,
+          "display": "4.2M",
+          "label": "CONNECTIONS",
+          "decimals": 1,
+          "suffix": "M"
+        }
+      ]
+    },
+    "hero": {
+      "subtitle": "TURNING COMPLEX AGENDAS INTO LIVING INITIATIVES",
+      "heading": "From local roots to <em>global<br />impact</em>",
+      "discoverText": "DISCOVER",
+      "stats": [
+        {
+          "label": "BASED IN",
+          "value": "<em>Basque Country</em>"
+        },
+        {
+          "label": "ACTIVE SINCE",
+          "value": "2014"
+        },
+        {
+          "label": "SEEDS PLANTED",
+          "value": "55+"
+        }
+      ]
+    },
+    "seo": {
+      "title": "Mikel Saez de Vicuña | Strategy, communication and global impact",
+      "description": "Mikel Saez de Vicuña turns complex agendas into collaborative initiatives across strategic communication, sustainability and institutional transformation."
+    }
+  },
+  "es": {
+    "contact": {
+      "heading": "Cultivemos <em>algo<br />significativo</em>",
+      "paragraph": "Abierto a colaborar en iniciativas internacionales, estrategia<br />de comunicación y proyectos de sostenibilidad.",
+      "emailLabel": "EMAIL",
+      "emailAriaLabel": "Enviar un correo electrónico a Mikel",
+      "linkedinLabel": "LINKEDIN",
+      "linkedinAriaLabel": "Visitar el perfil de LinkedIn de Mikel en una pestaña nueva",
+      "footerText": "© 2026 Mikel Saez de Vicuña. Todos los derechos reservados."
+    },
+    "impact": {
+      "tag": "IMPACTO",
+      "heading": "Ideas que <em>echaron raíces</em>",
+      "ariaLabel": "Resumen del impacto",
+      "paragraphs": [
+        "Durante la última década he trabajado en distintos continentes, sectores e instituciones, ayudando a que las ideas se conviertan en iniciativas con impacto real.",
+        "Desde plataformas internacionales y eventos globales hasta programas de sostenibilidad urbana y proyectos de transformación institucional, mi función se ha centrado en conectar estrategia, comunicación y alianzas. Muchas de estas iniciativas han reunido a instituciones públicas, empresas y organizaciones de la sociedad civil para convertir agendas complejas en acción colaborativa."
       ]
     },
     "worldMap": {
@@ -273,20 +343,93 @@
       "heading": "Cultivar ideas que <em>cruzan fronteras</em>",
       "intro": "Selecciona un ámbito para explorar los proyectos y las alianzas que hay detrás de cada ruta.",
       "pins": [
-        { "key": "microsoft-europe", "title": "Microsoft Marketing y Operaciones – Sede europea", "country": "EUROPA", "desc": "Apoyo de marketing y operaciones al equipo de la sede europea, incluidos eventos de coordinación con actores de la OTAN y las instituciones de la UE." },
-        { "key": "iberia-inflight", "title": "Iberia – Experiencia gastronómica y de vinos a bordo", "country": "ESPAÑA", "desc": "Coordinación de comunicación estratégica y marca para una experiencia vinícola pionera en todas las rutas de clase business." },
-        { "key": "mercedes-events", "title": "Mercedes-Benz Fashion Week y Golf Trophy", "country": "ESPAÑA", "desc": "Apoyo de comunicación estratégica y marca para la Fashion Week de Madrid y el Mercedes-Benz Golf Trophy." },
-        { "key": "wine-routes-world", "title": "Rutas del Vino del Mundo – ONU Turismo", "country": "GLOBAL", "desc": "Diseño editorial, curación de contenidos y alianzas internacionales entre instituciones, sectores y regiones." },
-        { "key": "un-tourism-assembly", "title": "Asamblea General de ONU Turismo", "country": "RUSIA", "desc": "Enlace con ONU Turismo y apoyo al proyecto del Spanish Fine Wines Institute." },
-        { "key": "mission-300", "title": "Misión 300 – Iniciativa de Electrificación de África", "country": "ÁFRICA", "desc": "Apoyo a la Comunidad de Práctica, productos de conocimiento, seminarios web, talleres y su plataforma de colaboración." },
-        { "key": "world-bank-change", "title": "Banco Mundial – Gestión del cambio", "country": "ESTADOS UNIDOS", "desc": "Apoyo a equipos de todo el mundo en procesos de transformación, adopción del cambio, mejora de procesos, nuevas formas de trabajo e innovación institucional." },
-        { "key": "vitoria-2030", "title": "Proyecto de Innovación Urbana Vitoria-Gasteiz 2030", "country": "PAÍS VASCO", "desc": "Proyectos académicos centrados en ciudades, identidad local, desarrollo sostenible y estrategias territoriales para la Agenda 2030." },
-        { "key": "idb-housing-forum", "title": "Foro Regional de Vivienda del BID", "country": "MÉXICO", "desc": "Apoyo a un evento de alto nivel centrado en los mercados de vivienda, el desarrollo regional y las estrategias urbanas y territoriales sostenibles." },
-        { "key": "u20-mayors-summit", "title": "Cumbre de Alcaldes U20", "country": "BRASIL", "desc": "Apoyo a la Cumbre de la Red de Alcaldes de América Latina durante la presidencia brasileña del G20, centrada en las ciudades y el desarrollo regional." },
-        { "key": "amazon-cities", "title": "COP16 y COP30 – Red de Ciudades Amazónicas", "country": "COLOMBIA", "desc": "Comunidad de Práctica e iniciativas de comunicación que apoyan la transición climática y las agendas de sostenibilidad de las ciudades amazónicas." },
-        { "key": "vinexpo-asia", "title": "VINEXPO Shanghái y Hong Kong", "country": "ASIA", "desc": "Diseño y construcción de stands feriales, con presencia de marca y campañas de ventas coordinadas para ampliar la cuota de mercado en Asia." },
-        { "key": "unwto-wine-tourism", "title": "4.ª Conferencia Mundial de la OMT sobre Turismo Enológico", "country": "CHILE", "desc": "Taller impartido durante la Conferencia Mundial de la OMT sobre Turismo Enológico en el Valle de Colchagua, Chile." }
+        {
+          "key": "microsoft-europe",
+          "title": "Microsoft Marketing y Operaciones – Sede europea",
+          "country": "EUROPA",
+          "desc": "Apoyo de marketing y operaciones al equipo de la sede europea, incluidos eventos de coordinación con actores de la OTAN y las instituciones de la UE."
+        },
+        {
+          "key": "iberia-inflight",
+          "title": "Iberia – Experiencia gastronómica y de vinos a bordo",
+          "country": "ESPAÑA",
+          "desc": "Coordinación de comunicación estratégica y marca para una experiencia vinícola pionera en todas las rutas de clase business."
+        },
+        {
+          "key": "mercedes-events",
+          "title": "Mercedes-Benz Fashion Week y Golf Trophy",
+          "country": "ESPAÑA",
+          "desc": "Apoyo de comunicación estratégica y marca para la Fashion Week de Madrid y el Mercedes-Benz Golf Trophy."
+        },
+        {
+          "key": "wine-routes-world",
+          "title": "Rutas del Vino del Mundo – ONU Turismo",
+          "country": "GLOBAL",
+          "desc": "Diseño editorial, curación de contenidos y alianzas internacionales entre instituciones, sectores y regiones."
+        },
+        {
+          "key": "un-tourism-assembly",
+          "title": "Asamblea General de ONU Turismo",
+          "country": "RUSIA",
+          "desc": "Enlace con ONU Turismo y apoyo al proyecto del Spanish Fine Wines Institute."
+        },
+        {
+          "key": "mission-300",
+          "title": "Misión 300 – Iniciativa de Electrificación de África",
+          "country": "ÁFRICA",
+          "desc": "Apoyo a la Comunidad de Práctica, productos de conocimiento, seminarios web, talleres y su plataforma de colaboración."
+        },
+        {
+          "key": "world-bank-change",
+          "title": "Banco Mundial – Gestión del cambio",
+          "country": "ESTADOS UNIDOS",
+          "desc": "Apoyo a equipos de todo el mundo en procesos de transformación, adopción del cambio, mejora de procesos, nuevas formas de trabajo e innovación institucional."
+        },
+        {
+          "key": "vitoria-2030",
+          "title": "Proyecto de Innovación Urbana Vitoria-Gasteiz 2030",
+          "country": "PAÍS VASCO",
+          "desc": "Proyectos académicos centrados en ciudades, identidad local, desarrollo sostenible y estrategias territoriales para la Agenda 2030."
+        },
+        {
+          "key": "idb-housing-forum",
+          "title": "Foro Regional de Vivienda del BID",
+          "country": "MÉXICO",
+          "desc": "Apoyo a un evento de alto nivel centrado en los mercados de vivienda, el desarrollo regional y las estrategias urbanas y territoriales sostenibles."
+        },
+        {
+          "key": "u20-mayors-summit",
+          "title": "Cumbre de Alcaldes U20",
+          "country": "BRASIL",
+          "desc": "Apoyo a la Cumbre de la Red de Alcaldes de América Latina durante la presidencia brasileña del G20, centrada en las ciudades y el desarrollo regional."
+        },
+        {
+          "key": "amazon-cities",
+          "title": "COP16 y COP30 – Red de Ciudades Amazónicas",
+          "country": "COLOMBIA",
+          "desc": "Comunidad de Práctica e iniciativas de comunicación que apoyan la transición climática y las agendas de sostenibilidad de las ciudades amazónicas."
+        },
+        {
+          "key": "vinexpo-asia",
+          "title": "VINEXPO Shanghái y Hong Kong",
+          "country": "ASIA",
+          "desc": "Diseño y construcción de stands feriales, con presencia de marca y campañas de ventas coordinadas para ampliar la cuota de mercado en Asia."
+        },
+        {
+          "key": "unwto-wine-tourism",
+          "title": "4.ª Conferencia Mundial de la OMT sobre Turismo Enológico",
+          "country": "CHILE",
+          "desc": "Taller impartido durante la Conferencia Mundial de la OMT sobre Turismo Enológico en el Valle de Colchagua, Chile."
+        }
       ]
+    },
+    "partners": {
+      "tag": "COLABORADORES",
+      "heading": "Organizaciones con las que <em>he trabajado</em>"
+    },
+    "intro": {
+      "heading": "Cultivar <em>ideas</em> que se convierten<br />en impacto",
+      "paragraph": "Reimagino ideas complejas como iniciativas que conectan instituciones, personas y lugares.<br />De las agendas globales a la acción tangible."
     },
     "about": {
       "tag": "SOBRE MÍ",
@@ -301,135 +444,218 @@
       "ctaText": "COLABOREMOS →",
       "ctaAriaLabel": "Contactar con Mikel para colaborar",
       "stats": [
-        { "num": "18+", "label": "PAÍSES" },
-        { "num": "60+", "label": "PROYECTOS LIDERADOS" },
-        { "num": "12", "label": "AÑOS DE ACTIVIDAD" },
-        { "num": "ONU", "label": "COLABORADOR" }
-      ]
-    },
-    "impact": {
-      "tag": "IMPACTO",
-      "heading": "Ideas que <em>echaron raíces</em>",
-      "ariaLabel": "Resumen del impacto",
-      "paragraphs": [
-        "Durante la última década he trabajado en distintos continentes, sectores e instituciones, ayudando a que las ideas se conviertan en iniciativas con impacto real.",
-        "Desde plataformas internacionales y eventos globales hasta programas de sostenibilidad urbana y proyectos de transformación institucional, mi función se ha centrado en conectar estrategia, comunicación y alianzas. Muchas de estas iniciativas han reunido a instituciones públicas, empresas y organizaciones de la sociedad civil para convertir agendas complejas en acción colaborativa."
-      ]
-    },
-    "partners": { "tag": "COLABORADORES", "heading": "Organizaciones con las que <em>he trabajado</em>" },
-    "contact": {
-      "heading": "Cultivemos <em>algo<br />significativo</em>",
-      "paragraph": "Abierto a colaborar en iniciativas internacionales, estrategia<br />de comunicación y proyectos de sostenibilidad.",
-      "emailLabel": "EMAIL",
-      "emailAriaLabel": "Enviar un correo electrónico a Mikel",
-      "linkedinLabel": "LINKEDIN",
-      "linkedinAriaLabel": "Visitar el perfil de LinkedIn de Mikel en una pestaña nueva",
-      "footerText": "© 2026 Mikel Saez de Vicuña. Todos los derechos reservados."
-    }
-  },
-  "eu": {
-    "seo": {
-      "title": "Mikel Saez de Vicuña | Estrategia, komunikazioa eta eragin globala",
-      "description": "Mikel Saez de Vicuñak agenda konplexuak komunikazio estrategikoaren, jasangarritasunaren eta erakunde-eraldaketaren arloko lankidetza-ekimen bihurtzen ditu."
-    },
-    "ui": {
-      "skipToContent": "Joan eduki nagusira",
-      "nav": { "work": "LANA", "map": "MAPA", "about": "NIRI BURUZ", "contact": "KONTAKTUA" },
-      "mainNavigation": "Nabigazio nagusia",
-      "languageSelection": "Hizkuntza hautatzea",
-      "languageNames": { "en": "ingelesa", "es": "gaztelania", "eu": "euskara" },
-      "switchLanguage": "Aldatu hizkuntza honetara: {language}",
-      "openMenu": "Ireki menua",
-      "closeMenu": "Itxi menua",
-      "navigationMenu": "Nabigazio-menua",
-      "heroLabel": "Mikel Saez de Vicuñaren aurkezpena",
-      "discoverMore": "Ikusi gehiago",
-      "quickStatistics": "Datu nagusiak",
-      "viewCategoryProjects": "Ikusi {category} arloko proiektuak mapan",
-      "projectFilters": "Iragazi proiektuak arloaren arabera",
-      "allProjects": "PROIEKTU GUZTIAK",
-      "projectCount": "{count} proiektu erakusten dira",
-      "projectCountOne": "Proiektu 1 erakusten da",
-      "noProjects": "Oraindik ez dago arlo honetako proiekturik.",
-      "mapLoading": "Proiektuen mapa kargatzen",
-      "mapUnavailable": "Proiektuen mapa ez dago erabilgarri une honetan. Saiatu berriro geroago.",
-      "projectMap": "Nazioarteko proiektuen mapa",
-      "mapMarkerLabel": "{title}, {country}. Ireki proiektuaren xehetasunak",
-      "projectList": "Mapan une honetan erakusten diren proiektuak",
-      "partnerLogos": "Erakunde laguntzaileen logotipoak",
-      "carouselControls": "Logotipo-karruselaren kontrolak",
-      "previousSlide": "Aurreko diapositiba",
-      "nextSlide": "Hurrengo diapositiba",
-      "slideIndicators": "Diapositiben adierazleak",
-      "slideOf": "{current}. diapositiba, {total} guztira",
-      "categories": {
-        "ECOSYSTEM": "EKOSISTEMA",
-        "TERRITORIES": "LURRALDEAK",
-        "SEEDS": "HAZIAK",
-        "ROOTS": "SUSTRAIAK",
-        "BLOOM": "LORALDIA",
-        "HARVEST": "UZTA"
-      }
-    },
-    "hero": {
-      "subtitle": "AGENDA KONPLEXUAK EKIMEN BIZI BIHURTZEN",
-      "heading": "Tokiko sustraietatik <em>eragin<br />globalera</em>",
-      "discoverText": "EZAGUTU",
-      "stats": [
-        { "label": "KOKAPENA", "value": "<em>Euskal Herria</em>" },
-        { "label": "JARDUNEAN", "value": "2012TIK" },
-        { "label": "PROIEKTUAK", "value": "55+" }
-      ]
-    },
-    "intro": {
-      "heading": "Eragin bihurtzen diren <em>ideiak</em><br />lantzen",
-      "paragraph": "Ideia konplexuak erakundeak, pertsonak eta lekuak lotzen dituzten ekimen bihurtzen ditut.<br />Agenda globaletatik ekintza zehatzera."
-    },
-    "projects": {
-      "tag": "HAZTEN ARI DIREN PROIEKTUAK",
-      "heading": "Ideiek <em>lur emankorra</em> behar dute<br />hazteko",
-      "paragraph": "Ekimen oro ideia gisa hasten da. Batzuk kontzeptu huts geratzen dira; beste batzuek, ordea, sustraiak bota, pertsonak lotu eta benetako aldaketa eragiten dute. Erakundeei ideia konplexuak lekuak, pertsonak eta politikak lotzen dituzten ekimen bihurtzen laguntzen diet, lurraldeak berrikuntzaren bidez berrirudikatuz.",
-      "stats": [
-        { "value": 3, "display": "3", "label": "PROIEKTU AKTIBO", "decimals": 0, "suffix": "" },
-        { "value": 18, "display": "18", "label": "HERRIALDE", "decimals": 0, "suffix": "" },
-        { "value": 12, "display": "12", "label": "JARDUNEKO URTEAK", "decimals": 0, "suffix": "" },
-        { "value": 4.2, "display": "4,2 M", "label": "HEKTAREA", "decimals": 1, "suffix": " M" }
+        {
+          "num": "18+",
+          "label": "PAÍSES"
+        },
+        {
+          "num": "60+",
+          "label": "PROYECTOS LIDERADOS"
+        },
+        {
+          "num": "12",
+          "label": "AÑOS DE ACTIVIDAD"
+        },
+        {
+          "num": "ONU",
+          "label": "COLABORADOR"
+        }
       ]
     },
     "expertise": {
-      "tag": "ESPEZIALIZAZIOA",
-      "heading": "Ideiak <em>lankidetzak sustraiak botatzen dituen tokian</em> hazten dira",
+      "tag": "ÁREAS DE EXPERIENCIA",
+      "heading": "Las ideas crecen donde <em>arraiga la colaboración</em>",
       "cards": [
         {
-          "num": "01", "category": "ECOSYSTEM", "title": "Jasangarritasuna eta ingurumen-ekimenak",
-          "desc": "Jasangarritasuna ekintzarekin bat datorren gunea. Klima-ekintza, ingurumenaren babesa eta epe luzeko jasangarritasun-agendak bultzatzen dituzten ekimen eta kontakizunak, estrategia eta gauzatzea lotuz.",
-          "tags": ["COP16 Cali – Ezagutza-plataforma", "COP30 Belém – Amazoniako Hirien Sarea"]
+          "num": "01",
+          "category": "ECOSYSTEM",
+          "title": "Sostenibilidad e iniciativas medioambientales",
+          "desc": "Donde la sostenibilidad se convierte en acción. Iniciativas y narrativas que impulsan la acción climática, la protección del medioambiente y las agendas de sostenibilidad a largo plazo, conectando la estrategia con la ejecución.",
+          "tags": [
+            "COP16 Cali – Plataforma de conocimiento",
+            "COP30 Belém – Red de Ciudades Amazónicas"
+          ]
         },
         {
-          "num": "02", "category": "TERRITORIES", "title": "Hiri- eta landa-garapena eta turismoa",
-          "desc": "Lekuak estrategia baldintzatzen du. Hiriaren etorkizuna, landa-sistemak, eskualde-identitatea, turismoa eta lurralde-garapena ibilbide koherenteetan lotzen dituen lana.",
-          "tags": ["Vitoria-Gasteizko Hiri Berrikuntzako 2030 Agenda", "BIDen Eskualdeko Etxebizitza Foroa – Mexiko", "BID – Brasilgo U20 Alkateen Goi Bilera G20an"]
+          "num": "02",
+          "category": "TERRITORIES",
+          "title": "Desarrollo urbano y rural y turismo",
+          "desc": "El lugar da forma a la estrategia. Un trabajo que conecta el futuro urbano, los sistemas rurales, la identidad regional, el turismo y el desarrollo territorial en itinerarios coherentes.",
+          "tags": [
+            "Agenda 2030 de Innovación Urbana de Vitoria-Gasteiz",
+            "Foro Regional de Vivienda del BID – México",
+            "BID – Cumbre de Alcaldes U20 de Brasil durante el G20"
+          ]
         },
         {
-          "num": "03", "category": "SEEDS", "title": "Komunikazio estrategikoa eta marka",
-          "desc": "Ideiek forma hartzen dute eta norabidea ezartzen da. Agenda global konplexuak argitasun, helburu eta tokiko bultzada bihurtzen dituzten kontakizunak, posizionamendua eta mezuak lantzen ditut.",
-          "tags": ["Microsoft Marketina eta Eragiketak – Europako egoitza", "Iberia – ARAEX ardoen esperientzia", "Mercedes-Benz Trophy – Villa Conchi Cava"]
+          "num": "03",
+          "category": "SEEDS",
+          "title": "Comunicación estratégica y marca",
+          "desc": "Las ideas toman forma y se define el rumbo. Desarrollo narrativas, posicionamiento y mensajes que convierten agendas globales complejas en claridad, propósito e impulso local.",
+          "tags": [
+            "Microsoft Marketing y Operaciones – Sede europea",
+            "Iberia – Experiencia de vinos ARAEX",
+            "Mercedes-Benz Trophy – Villa Conchi Cava"
+          ]
         },
         {
-          "num": "04", "category": "ROOTS", "title": "Komunitatea, aliantzak eta plataformak",
-          "desc": "Lankidetza sendotzen den gunea. Erakundeak, sektoreak eta eskualdeak helburu eta ekintza partekatuen inguruan lerrokatzen dituzten aliantzak eta topaguneak diseinatzen ditut.",
-          "tags": ["Munduko Ardoaren Ibilbideak argitalpena – NBE Turismoa", "Spanish Fine Wines Institute – ICEX", "ELGAren web-mintegiak"]
+          "num": "04",
+          "category": "ROOTS",
+          "title": "Comunidad, alianzas y plataformas",
+          "desc": "Donde la colaboración se consolida. Diseño alianzas y plataformas de encuentro que alinean instituciones, sectores y regiones alrededor de objetivos y acciones compartidos.",
+          "tags": [
+            "Publicación Rutas del Vino del Mundo – ONU Turismo",
+            "Spanish Fine Wines Institute – ICEX",
+            "Seminarios web de la OCDE"
+          ]
         },
         {
-          "num": "05", "category": "BLOOM", "title": "Erakunde-eraldaketa eta berrikuntza",
-          "desc": "Aldaketa agerian jartzen da. Erakundeei eraldaketan, lan egiteko modu berrietan eta berrikuntzan laguntzen diet, estrategia ezarpen eta bultzada bihurtuz.",
-          "tags": ["Munduko Bankuaren lantoki-estandarrak – Aldaketaren kudeaketa", "Mission 300 – COMESA eta Munduko Bankuaren Praktika Komunitatea"]
+          "num": "05",
+          "category": "BLOOM",
+          "title": "Transformación institucional e innovación",
+          "desc": "El cambio se hace visible. Acompaño a las organizaciones en su transformación, en nuevas formas de trabajo y en la innovación, convirtiendo la estrategia en adopción e impulso.",
+          "tags": [
+            "Estándares laborales del Banco Mundial – Gestión del cambio",
+            "Misión 300 – Comunidad de Práctica COMESA y Banco Mundial"
+          ]
         },
         {
-          "num": "06", "category": "HARVEST", "title": "Eraginaren neurketa eta ikaskuntza",
-          "desc": "Emaitzak ebidentzia bihurtzen diren gunea. Emaitzak jasotzen, erabakiak sendotzen eta denboran funtzionatzen duena hobetzen duten neurketa-, ebaluazio- eta ezagutza-ikuspegiak.",
-          "tags": ["Ebaluazio- eta ikaskuntza-esparruak", "Emaitzetan oinarritutako kudeaketa-sistemak", "Ezagutzaren kudeaketarako plataformak"]
+          "num": "06",
+          "category": "HARVEST",
+          "title": "Medición del impacto y aprendizaje",
+          "desc": "Donde los resultados se convierten en evidencia. Enfoques de medición, evaluación y conocimiento que recogen resultados, refuerzan la toma de decisiones y mejoran lo que funciona con el tiempo.",
+          "tags": [
+            "Marcos de evaluación y aprendizaje",
+            "Sistemas de gestión basada en resultados",
+            "Plataformas de gestión del conocimiento"
+          ]
         }
+      ]
+    },
+    "ui": {
+      "mapLoading": "Cargando el mapa de proyectos",
+      "partnerLogos": "Logotipos de organizaciones colaboradoras",
+      "projectFilters": "Filtrar proyectos por ámbito",
+      "nav": {
+        "work": "TRABAJO",
+        "map": "MAPA",
+        "about": "SOBRE MÍ",
+        "contact": "CONTACTO"
+      },
+      "projectMap": "Mapa de proyectos internacionales",
+      "slideOf": "Diapositiva {current} de {total}",
+      "openMenu": "Abrir el menú",
+      "switchLanguage": "Cambiar el idioma a {language}",
+      "mainNavigation": "Navegación principal",
+      "projectCountOne": "1 proyecto mostrado",
+      "languageNames": {
+        "en": "inglés",
+        "es": "español",
+        "eu": "euskera"
+      },
+      "quickStatistics": "Datos destacados",
+      "navigationMenu": "Menú de navegación",
+      "languageSelection": "Selección de idioma",
+      "mapUnavailable": "El mapa de proyectos no está disponible temporalmente. Inténtalo de nuevo más tarde.",
+      "slideIndicators": "Indicadores de diapositivas",
+      "carouselControls": "Controles del carrusel de logotipos",
+      "projectCount": "{count} proyectos mostrados",
+      "projectList": "Proyectos mostrados actualmente en el mapa",
+      "closeMenu": "Cerrar el menú",
+      "previousSlide": "Diapositiva anterior",
+      "heroLabel": "Presentación de Mikel Saez de Vicuña",
+      "allProjects": "TODOS LOS PROYECTOS",
+      "noProjects": "Todavía no hay proyectos disponibles en este ámbito.",
+      "categories": {
+        "ECOSYSTEM": "ECOSISTEMA",
+        "TERRITORIES": "TERRITORIOS",
+        "SEEDS": "SEMILLAS",
+        "ROOTS": "RAÍCES",
+        "BLOOM": "FLORACIÓN",
+        "HARVEST": "COSECHA"
+      },
+      "viewCategoryProjects": "Ver los proyectos de {category} en el mapa",
+      "nextSlide": "Diapositiva siguiente",
+      "discoverMore": "Descubrir más",
+      "mapMarkerLabel": "{title}, {country}. Abrir detalles del proyecto",
+      "skipToContent": "Saltar al contenido principal"
+    },
+    "projects": {
+      "tag": "PROYECTOS EN CRECIMIENTO",
+      "heading": "Las ideas necesitan <em>terreno fértil</em><br />para crecer",
+      "paragraph": "Toda iniciativa comienza como una idea. Algunas permanecen como conceptos; otras echan raíces, conectan a las personas y se convierten en un cambio real. Ayudo a las instituciones a transformar ideas complejas en iniciativas que conectan lugares, personas y políticas, reimaginando los territorios mediante la innovación.",
+      "stats": [
+        {
+          "value": 3,
+          "display": "3",
+          "label": "PROYECTOS ACTIVOS",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 18,
+          "display": "18",
+          "label": "PAÍSES",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 12,
+          "display": "12",
+          "label": "AÑOS DE ACTIVIDAD",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 4.2,
+          "display": "4,2 M",
+          "label": "HECTÁREAS",
+          "decimals": 1,
+          "suffix": " M"
+        }
+      ]
+    },
+    "hero": {
+      "subtitle": "CONVERTIR AGENDAS COMPLEJAS EN INICIATIVAS VIVAS",
+      "heading": "De las raíces locales al <em>impacto<br />global</em>",
+      "discoverText": "DESCUBRIR",
+      "stats": [
+        {
+          "label": "CON BASE EN",
+          "value": "<em>País Vasco</em>"
+        },
+        {
+          "label": "ACTIVO DESDE",
+          "value": "2012"
+        },
+        {
+          "label": "PROYECTOS",
+          "value": "55+"
+        }
+      ]
+    },
+    "seo": {
+      "title": "Mikel Saez de Vicuña | Estrategia, comunicación e impacto global",
+      "description": "Mikel Saez de Vicuña convierte agendas complejas en iniciativas colaborativas de comunicación estratégica, sostenibilidad y transformación institucional."
+    }
+  },
+  "eu": {
+    "contact": {
+      "heading": "Landu dezagun <em>zerbait<br />esanguratsua</em>",
+      "paragraph": "Prest nago nazioarteko ekimenetan, komunikazio-estrategian<br />eta jasangarritasun-proiektuetan lankidetzan aritzeko.",
+      "emailLabel": "EMAILA",
+      "emailAriaLabel": "Bidali mezu elektroniko bat Mikeli",
+      "linkedinLabel": "LINKEDIN",
+      "linkedinAriaLabel": "Ireki Mikelen LinkedIn profila fitxa berri batean",
+      "footerText": "© 2026 Mikel Saez de Vicuña. Eskubide guztiak erreserbatuta."
+    },
+    "impact": {
+      "tag": "ERAGINA",
+      "heading": "Sustraiak <em>bota zituzten ideiak</em>",
+      "ariaLabel": "Eraginaren laburpena",
+      "paragraphs": [
+        "Azken hamarkadan hainbat kontinente, sektore eta erakundetan lan egin dut, ideiak benetako eragina duten ekimen bihurtzen lagunduz.",
+        "Nazioarteko plataformetatik eta ekitaldi globaletatik hiri-jasangarritasuneko programetara eta erakunde-eraldaketako proiektuetara, nire lana estrategia, komunikazioa eta aliantzak lotzera bideratu da. Ekimen horietako askok erakunde publikoak, sektore pribatuko eragileak eta gizarte zibileko erakundeak elkartu dituzte agenda konplexuak lankidetza-ekintza bihurtzeko."
       ]
     },
     "worldMap": {
@@ -437,20 +663,93 @@
       "heading": "Mugak <em>zeharkatzen dituzten ideiak</em> lantzen",
       "intro": "Hautatu arlo bat ibilbide bakoitzaren atzean dauden proiektuak eta aliantzak ezagutzeko.",
       "pins": [
-        { "key": "microsoft-europe", "title": "Microsoft Marketina eta Eragiketak – Europako egoitza", "country": "EUROPA", "desc": "Europako egoitza-taldeari marketin eta eragiketa arloko laguntza, NATOko eta EBko erakundeetako interesdunen koordinazio-ekitaldietan." },
-        { "key": "iberia-inflight", "title": "Iberia – Hegaldi barruko ardo- eta gastronomia-esperientzia", "country": "ESPAINIA", "desc": "Komunikazio estrategikoaren eta markaren koordinazioa, negozio-klaseko ibilbide guztietan ardo-esperientzia aitzindaria eskaintzeko." },
-        { "key": "mercedes-events", "title": "Mercedes-Benz Fashion Week eta Golf Trophy", "country": "ESPAINIA", "desc": "Komunikazio estrategikoaren eta markaren arloko laguntza Madrilgo Fashion Weekerako eta Mercedes-Benz Golf Trophyrako." },
-        { "key": "wine-routes-world", "title": "Munduko Ardoaren Ibilbideak – NBE Turismoa", "country": "MUNDU MAILA", "desc": "Argitalpenaren diseinua, edukien hautaketa eta erakunde, sektore eta eskualdeen arteko nazioarteko aliantzak." },
-        { "key": "un-tourism-assembly", "title": "NBE Turismoaren Batzar Nagusia", "country": "ERRUSIA", "desc": "NBE Turismoarekiko lotura eta Spanish Fine Wines Institute proiektuari laguntza." },
-        { "key": "mission-300", "title": "Mission 300 – Afrika Elektrifikatzeko Ekimena", "country": "AFRIKA", "desc": "Praktika Komunitateari, ezagutza-produktuei, web-mintegiei, tailerrei eta lankidetza-plataformari laguntza." },
-        { "key": "world-bank-change", "title": "Munduko Bankua – Aldaketaren kudeaketa", "country": "AEB", "desc": "Mundu osoko taldeei eraldaketan, aldaketaren ezarpenean, prozesuen hobekuntzan, lan egiteko modu berrietan eta erakunde-berrikuntzan laguntza." },
-        { "key": "vitoria-2030", "title": "Vitoria-Gasteiz 2030 Hiri Berrikuntzako Proiektua", "country": "EUSKAL HERRIA", "desc": "Hiriei, tokiko identitateari, garapen jasangarriari eta 2030 Agendako lurralde-estrategiei buruzko proiektu akademikoak." },
-        { "key": "idb-housing-forum", "title": "BIDen Eskualdeko Etxebizitza Foroa", "country": "MEXIKO", "desc": "Etxebizitza-merkatuari, eskualde-garapenari eta hiri- zein lurralde-estrategia jasangarriei buruzko goi-mailako ekitaldiari laguntza." },
-        { "key": "u20-mayors-summit", "title": "U20 Alkateen Goi Bilera", "country": "BRASIL", "desc": "Brasilgo G20ko presidentetzan Latinoamerikako Alkateen Sarearen goi-bilerari laguntza, hiriak eta eskualde-garapena ardatz hartuta." },
-        { "key": "amazon-cities", "title": "COP16 eta COP30 – Amazoniako Hirien Sarea", "country": "KOLONBIA", "desc": "Amazoniako hirien trantsizio klimatikoa eta jasangarritasun-agendak bultzatzen dituzten Praktika Komunitatea eta komunikazio-ekimenak." },
-        { "key": "vinexpo-asia", "title": "VINEXPO Shanghai eta Hong Kong", "country": "ASIA", "desc": "Azoka-standen diseinua eta eraikuntza, Asian merkatu-kuota handitzeko marka-presentzia eta salmenta-kanpaina koordinatuekin." },
-        { "key": "unwto-wine-tourism", "title": "Ardo Turismoari buruzko OMTaren 4. Mundu Konferentzia", "country": "TXILE", "desc": "Ardo Turismoari buruzko OMTaren Mundu Konferentzian emandako tailerra, Txileko Colchagua Haranean." }
+        {
+          "key": "microsoft-europe",
+          "title": "Microsoft Marketina eta Eragiketak – Europako egoitza",
+          "country": "EUROPA",
+          "desc": "Europako egoitza-taldeari marketin eta eragiketa arloko laguntza, NATOko eta EBko erakundeetako interesdunen koordinazio-ekitaldietan."
+        },
+        {
+          "key": "iberia-inflight",
+          "title": "Iberia – Hegaldi barruko ardo- eta gastronomia-esperientzia",
+          "country": "ESPAINIA",
+          "desc": "Komunikazio estrategikoaren eta markaren koordinazioa, negozio-klaseko ibilbide guztietan ardo-esperientzia aitzindaria eskaintzeko."
+        },
+        {
+          "key": "mercedes-events",
+          "title": "Mercedes-Benz Fashion Week eta Golf Trophy",
+          "country": "ESPAINIA",
+          "desc": "Komunikazio estrategikoaren eta markaren arloko laguntza Madrilgo Fashion Weekerako eta Mercedes-Benz Golf Trophyrako."
+        },
+        {
+          "key": "wine-routes-world",
+          "title": "Munduko Ardoaren Ibilbideak – NBE Turismoa",
+          "country": "MUNDU MAILA",
+          "desc": "Argitalpenaren diseinua, edukien hautaketa eta erakunde, sektore eta eskualdeen arteko nazioarteko aliantzak."
+        },
+        {
+          "key": "un-tourism-assembly",
+          "title": "NBE Turismoaren Batzar Nagusia",
+          "country": "ERRUSIA",
+          "desc": "NBE Turismoarekiko lotura eta Spanish Fine Wines Institute proiektuari laguntza."
+        },
+        {
+          "key": "mission-300",
+          "title": "Mission 300 – Afrika Elektrifikatzeko Ekimena",
+          "country": "AFRIKA",
+          "desc": "Praktika Komunitateari, ezagutza-produktuei, web-mintegiei, tailerrei eta lankidetza-plataformari laguntza."
+        },
+        {
+          "key": "world-bank-change",
+          "title": "Munduko Bankua – Aldaketaren kudeaketa",
+          "country": "AEB",
+          "desc": "Mundu osoko taldeei eraldaketan, aldaketaren ezarpenean, prozesuen hobekuntzan, lan egiteko modu berrietan eta erakunde-berrikuntzan laguntza."
+        },
+        {
+          "key": "vitoria-2030",
+          "title": "Vitoria-Gasteiz 2030 Hiri Berrikuntzako Proiektua",
+          "country": "EUSKAL HERRIA",
+          "desc": "Hiriei, tokiko identitateari, garapen jasangarriari eta 2030 Agendako lurralde-estrategiei buruzko proiektu akademikoak."
+        },
+        {
+          "key": "idb-housing-forum",
+          "title": "BIDen Eskualdeko Etxebizitza Foroa",
+          "country": "MEXIKO",
+          "desc": "Etxebizitza-merkatuari, eskualde-garapenari eta hiri- zein lurralde-estrategia jasangarriei buruzko goi-mailako ekitaldiari laguntza."
+        },
+        {
+          "key": "u20-mayors-summit",
+          "title": "U20 Alkateen Goi Bilera",
+          "country": "BRASIL",
+          "desc": "Brasilgo G20ko presidentetzan Latinoamerikako Alkateen Sarearen goi-bilerari laguntza, hiriak eta eskualde-garapena ardatz hartuta."
+        },
+        {
+          "key": "amazon-cities",
+          "title": "COP16 eta COP30 – Amazoniako Hirien Sarea",
+          "country": "KOLONBIA",
+          "desc": "Amazoniako hirien trantsizio klimatikoa eta jasangarritasun-agendak bultzatzen dituzten Praktika Komunitatea eta komunikazio-ekimenak."
+        },
+        {
+          "key": "vinexpo-asia",
+          "title": "VINEXPO Shanghai eta Hong Kong",
+          "country": "ASIA",
+          "desc": "Azoka-standen diseinua eta eraikuntza, Asian merkatu-kuota handitzeko marka-presentzia eta salmenta-kanpaina koordinatuekin."
+        },
+        {
+          "key": "unwto-wine-tourism",
+          "title": "Ardo Turismoari buruzko OMTaren 4. Mundu Konferentzia",
+          "country": "TXILE",
+          "desc": "Ardo Turismoari buruzko OMTaren Mundu Konferentzian emandako tailerra, Txileko Colchagua Haranean."
+        }
       ]
+    },
+    "partners": {
+      "tag": "LAGUNTZAILEAK",
+      "heading": "Lankidetzan aritu naizen <em>erakundeak</em>"
+    },
+    "intro": {
+      "heading": "Eragin bihurtzen diren <em>ideiak</em><br />lantzen",
+      "paragraph": "Ideia konplexuak erakundeak, pertsonak eta lekuak lotzen dituzten ekimen bihurtzen ditut.<br />Agenda globaletatik ekintza zehatzera."
     },
     "about": {
       "tag": "NIRI BURUZ",
@@ -465,30 +764,199 @@
       "ctaText": "ELKARLANEAN ARITU GAITEZEN →",
       "ctaAriaLabel": "Jarri harremanetan Mikelekin lankidetzan aritzeko",
       "stats": [
-        { "num": "18+", "label": "HERRIALDE" },
-        { "num": "60+", "label": "ZUZENDUTAKO PROIEKTUAK" },
-        { "num": "12", "label": "JARDUNEKO URTEAK" },
-        { "num": "NBE", "label": "LAGUNTZAILEA" }
+        {
+          "num": "18+",
+          "label": "HERRIALDE"
+        },
+        {
+          "num": "60+",
+          "label": "ZUZENDUTAKO PROIEKTUAK"
+        },
+        {
+          "num": "12",
+          "label": "JARDUNEKO URTEAK"
+        },
+        {
+          "num": "NBE",
+          "label": "LAGUNTZAILEA"
+        }
       ]
     },
-    "impact": {
-      "tag": "ERAGINA",
-      "heading": "Sustraiak <em>bota zituzten ideiak</em>",
-      "ariaLabel": "Eraginaren laburpena",
-      "paragraphs": [
-        "Azken hamarkadan hainbat kontinente, sektore eta erakundetan lan egin dut, ideiak benetako eragina duten ekimen bihurtzen lagunduz.",
-        "Nazioarteko plataformetatik eta ekitaldi globaletatik hiri-jasangarritasuneko programetara eta erakunde-eraldaketako proiektuetara, nire lana estrategia, komunikazioa eta aliantzak lotzera bideratu da. Ekimen horietako askok erakunde publikoak, sektore pribatuko eragileak eta gizarte zibileko erakundeak elkartu dituzte agenda konplexuak lankidetza-ekintza bihurtzeko."
+    "expertise": {
+      "tag": "ESPEZIALIZAZIOA",
+      "heading": "Ideiak <em>lankidetzak sustraiak botatzen dituen tokian</em> hazten dira",
+      "cards": [
+        {
+          "num": "01",
+          "category": "ECOSYSTEM",
+          "title": "Jasangarritasuna eta ingurumen-ekimenak",
+          "desc": "Jasangarritasuna ekintzarekin bat datorren gunea. Klima-ekintza, ingurumenaren babesa eta epe luzeko jasangarritasun-agendak bultzatzen dituzten ekimen eta kontakizunak, estrategia eta gauzatzea lotuz.",
+          "tags": [
+            "COP16 Cali – Ezagutza-plataforma",
+            "COP30 Belém – Amazoniako Hirien Sarea"
+          ]
+        },
+        {
+          "num": "02",
+          "category": "TERRITORIES",
+          "title": "Hiri- eta landa-garapena eta turismoa",
+          "desc": "Lekuak estrategia baldintzatzen du. Hiriaren etorkizuna, landa-sistemak, eskualde-identitatea, turismoa eta lurralde-garapena ibilbide koherenteetan lotzen dituen lana.",
+          "tags": [
+            "Vitoria-Gasteizko Hiri Berrikuntzako 2030 Agenda",
+            "BIDen Eskualdeko Etxebizitza Foroa – Mexiko",
+            "BID – Brasilgo U20 Alkateen Goi Bilera G20an"
+          ]
+        },
+        {
+          "num": "03",
+          "category": "SEEDS",
+          "title": "Komunikazio estrategikoa eta marka",
+          "desc": "Ideiek forma hartzen dute eta norabidea ezartzen da. Agenda global konplexuak argitasun, helburu eta tokiko bultzada bihurtzen dituzten kontakizunak, posizionamendua eta mezuak lantzen ditut.",
+          "tags": [
+            "Microsoft Marketina eta Eragiketak – Europako egoitza",
+            "Iberia – ARAEX ardoen esperientzia",
+            "Mercedes-Benz Trophy – Villa Conchi Cava"
+          ]
+        },
+        {
+          "num": "04",
+          "category": "ROOTS",
+          "title": "Komunitatea, aliantzak eta plataformak",
+          "desc": "Lankidetza sendotzen den gunea. Erakundeak, sektoreak eta eskualdeak helburu eta ekintza partekatuen inguruan lerrokatzen dituzten aliantzak eta topaguneak diseinatzen ditut.",
+          "tags": [
+            "Munduko Ardoaren Ibilbideak argitalpena – NBE Turismoa",
+            "Spanish Fine Wines Institute – ICEX",
+            "ELGAren web-mintegiak"
+          ]
+        },
+        {
+          "num": "05",
+          "category": "BLOOM",
+          "title": "Erakunde-eraldaketa eta berrikuntza",
+          "desc": "Aldaketa agerian jartzen da. Erakundeei eraldaketan, lan egiteko modu berrietan eta berrikuntzan laguntzen diet, estrategia ezarpen eta bultzada bihurtuz.",
+          "tags": [
+            "Munduko Bankuaren lantoki-estandarrak – Aldaketaren kudeaketa",
+            "Mission 300 – COMESA eta Munduko Bankuaren Praktika Komunitatea"
+          ]
+        },
+        {
+          "num": "06",
+          "category": "HARVEST",
+          "title": "Eraginaren neurketa eta ikaskuntza",
+          "desc": "Emaitzak ebidentzia bihurtzen diren gunea. Emaitzak jasotzen, erabakiak sendotzen eta denboran funtzionatzen duena hobetzen duten neurketa-, ebaluazio- eta ezagutza-ikuspegiak.",
+          "tags": [
+            "Ebaluazio- eta ikaskuntza-esparruak",
+            "Emaitzetan oinarritutako kudeaketa-sistemak",
+            "Ezagutzaren kudeaketarako plataformak"
+          ]
+        }
       ]
     },
-    "partners": { "tag": "LAGUNTZAILEAK", "heading": "Lankidetzan aritu naizen <em>erakundeak</em>" },
-    "contact": {
-      "heading": "Landu dezagun <em>zerbait<br />esanguratsua</em>",
-      "paragraph": "Prest nago nazioarteko ekimenetan, komunikazio-estrategian<br />eta jasangarritasun-proiektuetan lankidetzan aritzeko.",
-      "emailLabel": "EMAILA",
-      "emailAriaLabel": "Bidali mezu elektroniko bat Mikeli",
-      "linkedinLabel": "LINKEDIN",
-      "linkedinAriaLabel": "Ireki Mikelen LinkedIn profila fitxa berri batean",
-      "footerText": "© 2026 Mikel Saez de Vicuña. Eskubide guztiak erreserbatuta."
+    "ui": {
+      "mapLoading": "Proiektuen mapa kargatzen",
+      "partnerLogos": "Erakunde laguntzaileen logotipoak",
+      "projectFilters": "Iragazi proiektuak arloaren arabera",
+      "nav": {
+        "work": "LANA",
+        "map": "MAPA",
+        "about": "NIRI BURUZ",
+        "contact": "KONTAKTUA"
+      },
+      "projectMap": "Nazioarteko proiektuen mapa",
+      "slideOf": "{current}. diapositiba, {total} guztira",
+      "openMenu": "Ireki menua",
+      "switchLanguage": "Aldatu hizkuntza honetara: {language}",
+      "mainNavigation": "Nabigazio nagusia",
+      "projectCountOne": "Proiektu 1 erakusten da",
+      "languageNames": {
+        "en": "ingelesa",
+        "es": "gaztelania",
+        "eu": "euskara"
+      },
+      "quickStatistics": "Datu nagusiak",
+      "navigationMenu": "Nabigazio-menua",
+      "languageSelection": "Hizkuntza hautatzea",
+      "mapUnavailable": "Proiektuen mapa ez dago erabilgarri une honetan. Saiatu berriro geroago.",
+      "slideIndicators": "Diapositiben adierazleak",
+      "carouselControls": "Logotipo-karruselaren kontrolak",
+      "projectCount": "{count} proiektu erakusten dira",
+      "projectList": "Mapan une honetan erakusten diren proiektuak",
+      "closeMenu": "Itxi menua",
+      "previousSlide": "Aurreko diapositiba",
+      "heroLabel": "Mikel Saez de Vicuñaren aurkezpena",
+      "allProjects": "PROIEKTU GUZTIAK",
+      "noProjects": "Oraindik ez dago arlo honetako proiekturik.",
+      "categories": {
+        "ECOSYSTEM": "EKOSISTEMA",
+        "TERRITORIES": "LURRALDEAK",
+        "SEEDS": "HAZIAK",
+        "ROOTS": "SUSTRAIAK",
+        "BLOOM": "LORALDIA",
+        "HARVEST": "UZTA"
+      },
+      "viewCategoryProjects": "Ikusi {category} arloko proiektuak mapan",
+      "nextSlide": "Hurrengo diapositiba",
+      "discoverMore": "Ikusi gehiago",
+      "mapMarkerLabel": "{title}, {country}. Ireki proiektuaren xehetasunak",
+      "skipToContent": "Joan eduki nagusira"
+    },
+    "projects": {
+      "tag": "HAZTEN ARI DIREN PROIEKTUAK",
+      "heading": "Ideiek <em>lur emankorra</em> behar dute<br />hazteko",
+      "paragraph": "Ekimen oro ideia gisa hasten da. Batzuk kontzeptu huts geratzen dira; beste batzuek, ordea, sustraiak bota, pertsonak lotu eta benetako aldaketa eragiten dute. Erakundeei ideia konplexuak lekuak, pertsonak eta politikak lotzen dituzten ekimen bihurtzen laguntzen diet, lurraldeak berrikuntzaren bidez berrirudikatuz.",
+      "stats": [
+        {
+          "value": 3,
+          "display": "3",
+          "label": "PROIEKTU AKTIBO",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 18,
+          "display": "18",
+          "label": "HERRIALDE",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 12,
+          "display": "12",
+          "label": "JARDUNEKO URTEAK",
+          "decimals": 0,
+          "suffix": ""
+        },
+        {
+          "value": 4.2,
+          "display": "4,2 M",
+          "label": "HEKTAREA",
+          "decimals": 1,
+          "suffix": " M"
+        }
+      ]
+    },
+    "hero": {
+      "subtitle": "AGENDA KONPLEXUAK EKIMEN BIZI BIHURTZEN",
+      "heading": "Tokiko sustraietatik <em>eragin<br />globalera</em>",
+      "discoverText": "EZAGUTU",
+      "stats": [
+        {
+          "label": "KOKAPENA",
+          "value": "<em>Euskal Herria</em>"
+        },
+        {
+          "label": "JARDUNEAN",
+          "value": "2012TIK"
+        },
+        {
+          "label": "PROIEKTUAK",
+          "value": "55+"
+        }
+      ]
+    },
+    "seo": {
+      "title": "Mikel Saez de Vicuña | Estrategia, komunikazioa eta eragin globala",
+      "description": "Mikel Saez de Vicuñak agenda konplexuak komunikazio estrategikoaren, jasangarritasunaren eta erakunde-eraldaketaren arloko lankidetza-ekimen bihurtzen ditu."
     }
   }
 }
