@@ -31,7 +31,7 @@
 .about__photo-frame {
   position: relative;
   width: 100%;
-  mix-blend-mode: screen;
+  mix-blend-mode: normal;
 }
 
 /* Gold offset border — editorial flourish */
@@ -70,24 +70,9 @@
   display: block;
 }
 
-.about__photo--dark {
-  /* Turn the white paper into the dark section backdrop while preserving the
-     original portrait geometry and restoring the flags' hues after inversion. */
-  filter: invert(1) hue-rotate(180deg) saturate(0.92) brightness(1.06) contrast(1.12);
-  transition: filter var(--transition-slow);
-}
-
-.about__photo--subject {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  -webkit-mask: url('/img/about-portrait-subject-mask.png') center / 100% 100% no-repeat;
-  mask: url('/img/about-portrait-subject-mask.png') center / 100% 100% no-repeat;
-}
-
-.about__photo-stage:hover .about__photo--dark {
-  filter: invert(1) hue-rotate(180deg) saturate(1) brightness(1.12) contrast(1.08);
+.about__photo--client {
+  /* Preserve the exact colors and tonal treatment in the client-approved art. */
+  filter: none;
 }
 
 /* --- Text content ------------------------------------------------------------ */

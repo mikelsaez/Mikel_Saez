@@ -25,15 +25,20 @@ test('all CMS-managed image references resolve to local public files', async () 
   }))
 })
 
-test('about portrait keeps the original subject over the reversible dark background', async () => {
-  const subjectMask = await stat(path.join(publicDir, 'img/about-portrait-subject-mask.png'))
+test('about portrait uses the client-approved artwork without color processing', async () => {
+  const clientArtworkPath = path.join(publicDir, 'img/about-portrait-client.png')
+  const clientArtwork = await readFile(clientArtworkPath)
+  const clientArtworkFile = await stat(clientArtworkPath)
 
-  assert.ok(subjectMask.size > 0 && subjectMask.size < 1024 * 1024)
-  assert.match(aboutStyles, /filter:\s*invert\(1\)\s+hue-rotate\(180deg\)/)
-  assert.match(aboutStyles, /mix-blend-mode:\s*screen/)
-  assert.match(aboutStyles, /mask:\s*url\('\/img\/about-portrait-subject-mask\.png'\)/)
-  assert.match(aboutSource, /about__photo--subject/)
-  assert.match(aboutSource, /aria-hidden="true"/)
+  assert.equal(shared.aboutImage, '/img/about-portrait-client.png')
+  assert.ok(clientArtworkFile.size > 0 && clientArtworkFile.size < 1024 * 1024)
+  assert.equal(clientArtwork.readUInt32BE(16), 360)
+  assert.equal(clientArtwork.readUInt32BE(20), 360)
+  assert.match(aboutStyles, /mix-blend-mode:\s*normal/)
+  assert.match(aboutStyles, /\.about__photo--client\s*{[^}]*filter:\s*none/s)
+  assert.match(aboutSource, /about__photo about__photo--client/)
+  assert.doesNotMatch(aboutSource, /about__photo--subject/)
+  assert.doesNotMatch(aboutStyles, /about-portrait-subject-mask/)
 })
 
 test('shared contact links and project coordinates are valid', () => {

@@ -39,19 +39,12 @@ export default function AboutSection() {
           <div className="about__photo-stage">
             <div className="about__photo-frame about__photo-layer">
               <img
-                className="about__photo about__photo--dark"
+                className="about__photo about__photo--client"
                 src={content.image}
                 alt={content.imageAlt}
                 loading="lazy"
               />
             </div>
-            <img
-              className="about__photo about__photo--subject about__photo-layer"
-              src={content.image}
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-            />
           </div>
         </div>
 
