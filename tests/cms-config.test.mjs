@@ -75,6 +75,14 @@ test('Decap single-file localization is enabled for English, Spanish and Basque'
   })
 })
 
+test('Decap uses the reliable single-pane locale editor', () => {
+  const localizedCollection = config.collections.find(({ name }) => name === 'localized_content')
+
+  assert.match(localizedCollection.description, /locale selector to edit English, Spanish and Basque/)
+  assert.match(adminSource, /localStorage\.setItem\('cms\.i18n-visible', 'false'\)/)
+  assert.match(adminSource, /button\[title="Toggle i18n"\]/)
+})
+
 test('all shared data remains editable through the shared-settings collection', () => {
   const sharedFile = collectionFile('shared_settings', 'shared')
   assert.equal(sharedFile.file, 'src/data/shared.json')

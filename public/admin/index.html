@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Saez de Vicuña — Content Manager</title>
+    <style>
+      /*
+       * Decap CMS 3.16.2 renders a locale picker in its comparison pane without
+       * a working change handler. The primary pane supports every configured
+       * locale, so keep that reliable editor and hide the broken split toggle.
+       */
+      button[title="Toggle i18n"] {
+        display: none !important;
+      }
+    </style>
     <!-- Force Decap CMS to look for config.yml in the absolute /admin/ path -->
     <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
     <script>
@@ -21,6 +31,8 @@
 
       // The local file-system backend does not support Editorial Workflow.
       // Override it only on localhost; production keeps the configured workflow.
+      localStorage.setItem('cms.i18n-visible', 'false');
+
       if (isLocal) {
         window.initCMS({ config: { publish_mode: 'simple' } });
       } else {

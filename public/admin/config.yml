@@ -23,7 +23,7 @@ i18n:
 collections:
   - name: "localized_content"
     label: "Website translations"
-    description: "Edit English, Spanish and Basque copy side by side. Every language must be complete before publishing."
+    description: "Use the locale selector to edit English, Spanish and Basque copy. Every language must be complete before publishing."
     i18n: true
     editor:
       preview: false
