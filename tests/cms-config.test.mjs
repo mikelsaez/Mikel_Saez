@@ -83,6 +83,26 @@ test('Decap uses the reliable single-pane locale editor', () => {
   assert.match(adminSource, /button\[title="Toggle i18n"\]/)
 })
 
+test('hero PROJECTS tag and value are discoverable and editable in every locale', () => {
+  const localizedFile = collectionFile('localized_content', 'content')
+  const hero = localizedFile.fields.find(({ name }) => name === 'hero')
+  const stats = hero.fields.find(({ name }) => name === 'stats')
+
+  assert.equal(stats.widget, 'list')
+  assert.equal(stats.i18n, true)
+  assert.equal(stats.allow_add, false)
+  assert.equal(stats.allow_remove, false)
+  assert.equal(stats.summary, '{{fields.label}} — {{fields.value}}')
+  assert.match(stats.hint, /PROJECTS/)
+  assert.deepEqual(stats.fields.map(({ name }) => name), ['label', 'value'])
+
+  for (const locale of config.i18n.locales) {
+    assert.equal(content[locale].hero.stats.length, 3)
+    assert.equal(typeof content[locale].hero.stats[2].label, 'string')
+    assert.equal(typeof content[locale].hero.stats[2].value, 'string')
+  }
+})
+
 test('all shared data remains editable through the shared-settings collection', () => {
   const sharedFile = collectionFile('shared_settings', 'shared')
   assert.equal(sharedFile.file, 'src/data/shared.json')

@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = path.join(root, 'public')
 const shared = JSON.parse(await readFile(path.join(root, 'src/data/shared.json'), 'utf8'))
+const aboutStyles = await readFile(path.join(root, 'src/components/AboutSection.css'), 'utf8')
 
 test('all CMS-managed image references resolve to local public files', async () => {
   const imagePaths = [
@@ -21,6 +22,11 @@ test('all CMS-managed image references resolve to local public files', async () 
     assert.ok(file.isFile(), `${imagePath} does not resolve to a file`)
     assert.ok(file.size > 0, `${imagePath} is empty`)
   }))
+})
+
+test('about portrait uses a reversible dark-background treatment', () => {
+  assert.match(aboutStyles, /filter:\s*invert\(1\)\s+hue-rotate\(180deg\)/)
+  assert.match(aboutStyles, /mix-blend-mode:\s*screen/)
 })
 
 test('shared contact links and project coordinates are valid', () => {

@@ -114,15 +114,18 @@ collections:
               - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
               - { label: "Heading", name: "heading", widget: "string", i18n: true, hint: "Only <em> and <br /> markup is allowed." }
               - { label: "Discover text", name: "discoverText", widget: "string", i18n: true }
-              - label: "Statistics"
+              - label: "Quick statistics (including PROJECTS)"
                 name: "stats"
                 widget: "list"
                 i18n: true
                 allow_add: false
                 allow_remove: false
+                collapsed: true
+                summary: "{{fields.label}} — {{fields.value}}"
+                hint: "Open the third item to change the PROJECTS tag or its 55+ value. Both fields are editable independently in English, Spanish and Basque."
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Tag / label", name: "label", widget: "string", hint: "The uppercase tag shown above the value, for example PROJECTS." }
+                  - { label: "Displayed value", name: "value", widget: "string", hint: "The value shown below the tag, for example 55+. Only <em> markup is allowed." }
 
           - label: "Intro section"
             name: "intro"

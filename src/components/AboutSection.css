@@ -26,6 +26,7 @@
   display: inline-block;
   width: 100%;
   max-width: 420px;
+  mix-blend-mode: screen;
 }
 
 /* Gold offset border — editorial flourish */
@@ -61,13 +62,15 @@
   width: 100%;
   max-width: 420px;
   object-fit: contain;
-  filter: sepia(0.1) brightness(0.88) contrast(1.05);
+  /* Turn the white paper into the dark section backdrop while preserving the
+     original portrait geometry and restoring the flags' hues after inversion. */
+  filter: invert(1) hue-rotate(180deg) saturate(0.92) brightness(1.06) contrast(1.12);
   display: block;
   transition: filter var(--transition-slow);
 }
 
 .about__photo-frame:hover .about__photo {
-  filter: sepia(0) brightness(0.95) contrast(1.05);
+  filter: invert(1) hue-rotate(180deg) saturate(1) brightness(1.12) contrast(1.08);
 }
 
 /* --- Text content ------------------------------------------------------------ */
