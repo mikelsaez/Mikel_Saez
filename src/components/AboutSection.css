@@ -21,11 +21,16 @@
   top: 100px;
 }
 
-.about__photo-frame {
+.about__photo-stage {
   position: relative;
   display: inline-block;
   width: 100%;
   max-width: 420px;
+}
+
+.about__photo-frame {
+  position: relative;
+  width: 100%;
   mix-blend-mode: screen;
 }
 
@@ -42,7 +47,7 @@
   transition: opacity var(--transition-med);
 }
 
-.about__photo-frame:hover::before {
+.about__photo-stage:hover .about__photo-frame::before {
   opacity: 0.55;
 }
 
@@ -62,14 +67,26 @@
   width: 100%;
   max-width: 420px;
   object-fit: contain;
+  display: block;
+}
+
+.about__photo--dark {
   /* Turn the white paper into the dark section backdrop while preserving the
      original portrait geometry and restoring the flags' hues after inversion. */
   filter: invert(1) hue-rotate(180deg) saturate(0.92) brightness(1.06) contrast(1.12);
-  display: block;
   transition: filter var(--transition-slow);
 }
 
-.about__photo-frame:hover .about__photo {
+.about__photo--subject {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-mask: url('/img/about-portrait-subject-mask.png') center / 100% 100% no-repeat;
+  mask: url('/img/about-portrait-subject-mask.png') center / 100% 100% no-repeat;
+}
+
+.about__photo-stage:hover .about__photo--dark {
   filter: invert(1) hue-rotate(180deg) saturate(1) brightness(1.12) contrast(1.08);
 }
 
@@ -218,6 +235,7 @@
     justify-content: center;
   }
 
+  .about__photo-stage,
   .about__photo-frame {
     max-width: 360px;
   }
@@ -247,6 +265,7 @@
     display: none;
   }
 
+  .about__photo-stage,
   .about__photo-frame,
   .about__photo {
     max-width: 100%;

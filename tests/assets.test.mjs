@@ -8,6 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = path.join(root, 'public')
 const shared = JSON.parse(await readFile(path.join(root, 'src/data/shared.json'), 'utf8'))
 const aboutStyles = await readFile(path.join(root, 'src/components/AboutSection.css'), 'utf8')
+const aboutSource = await readFile(path.join(root, 'src/components/AboutSection.jsx'), 'utf8')
 
 test('all CMS-managed image references resolve to local public files', async () => {
   const imagePaths = [
@@ -24,9 +25,15 @@ test('all CMS-managed image references resolve to local public files', async () 
   }))
 })
 
-test('about portrait uses a reversible dark-background treatment', () => {
+test('about portrait keeps the original subject over the reversible dark background', async () => {
+  const subjectMask = await stat(path.join(publicDir, 'img/about-portrait-subject-mask.png'))
+
+  assert.ok(subjectMask.size > 0 && subjectMask.size < 1024 * 1024)
   assert.match(aboutStyles, /filter:\s*invert\(1\)\s+hue-rotate\(180deg\)/)
   assert.match(aboutStyles, /mix-blend-mode:\s*screen/)
+  assert.match(aboutStyles, /mask:\s*url\('\/img\/about-portrait-subject-mask\.png'\)/)
+  assert.match(aboutSource, /about__photo--subject/)
+  assert.match(aboutSource, /aria-hidden="true"/)
 })
 
 test('shared contact links and project coordinates are valid', () => {

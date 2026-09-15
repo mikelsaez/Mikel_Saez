@@ -21,7 +21,7 @@ export default function AboutSection() {
           scrollTrigger: { trigger: el, start: 'top 75%' }
         }
       )
-      gsap.fromTo(el.querySelector('.about__photo-frame'),
+      gsap.fromTo(el.querySelectorAll('.about__photo-layer'),
         { opacity: 0, x: -36 },
         {
           opacity: 1, x: 0, duration: 1.3, ease: 'power3.out',
@@ -36,11 +36,20 @@ export default function AboutSection() {
     <section className="about" id="about" ref={ref}>
       <div className="about__inner">
         <div className="about__photo-col">
-          <div className="about__photo-frame">
+          <div className="about__photo-stage">
+            <div className="about__photo-frame about__photo-layer">
+              <img
+                className="about__photo about__photo--dark"
+                src={content.image}
+                alt={content.imageAlt}
+                loading="lazy"
+              />
+            </div>
             <img
-              className="about__photo"
+              className="about__photo about__photo--subject about__photo-layer"
               src={content.image}
-              alt={content.imageAlt}
+              alt=""
+              aria-hidden="true"
               loading="lazy"
             />
           </div>
