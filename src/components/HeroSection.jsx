@@ -70,7 +70,12 @@ export default function HeroSection() {
   }
 
   const renderLanguageSwitcher = (className) => (
-    <div className={className} role="group" aria-label={ui.languageSelection}>
+    <div
+      className={`${className} notranslate`}
+      role="group"
+      aria-label={ui.languageSelection}
+      translate="no"
+    >
       {LOCALES.map(({ code, shortLabel }, index) => (
         <span key={code}>
           <button

@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
-import { getLocaleFromPathname, getLocalePath, normalizeLocale } from '../src/i18n/locales.js'
+import { getLocaleFromPathname, getLocalePath, LOCALES, normalizeLocale } from '../src/i18n/locales.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const content = JSON.parse(await readFile(path.join(root, 'src/data/content.json'), 'utf8'))
@@ -117,6 +117,22 @@ test('locale path helpers normalize supported routes', () => {
   assert.equal(getLocaleFromPathname('/eu/'), 'eu')
   assert.equal(getLocaleFromPathname('/unknown/'), null)
   assert.equal(getLocalePath('es', '#contact'), '/es/#contact')
+})
+
+test('language switcher keeps fixed EN, ES and EU codes', async () => {
+  assert.deepEqual(
+    LOCALES.map(({ code, shortLabel }) => ({ code, shortLabel })),
+    [
+      { code: 'en', shortLabel: 'EN' },
+      { code: 'es', shortLabel: 'ES' },
+      { code: 'eu', shortLabel: 'EU' },
+    ],
+  )
+
+  const heroSource = await readFile(path.join(root, 'src/components/HeroSection.jsx'), 'utf8')
+  assert.ok(heroSource.includes('{shortLabel}'), 'Visible language labels must use the fixed locale codes')
+  assert.ok(heroSource.includes('translate="no"'), 'Language switcher must opt out of automatic translation')
+  assert.ok(heroSource.includes('notranslate'), 'Language switcher must include the Google translation guard')
 })
 
 test('legacy machine translation is removed', async () => {
