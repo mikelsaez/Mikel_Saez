@@ -429,23 +429,23 @@
     },
     "intro": {
       "heading": "Cultivar <em>ideas</em> que se convierten<br />en impacto",
-      "paragraph": "Reimagino ideas complejas como iniciativas que conectan instituciones, personas y lugares.<br />De las agendas globales a la acción tangible."
+      "paragraph": "Reimagino ideas complejas con iniciativas que conectan instituciones, personas y lugares.<br />De las agendas globales a la acción tangible."
     },
     "about": {
       "tag": "SOBRE MÍ",
       "heading": "De las raíces locales al <em>impacto global</em>",
       "imageAlt": "Retrato de Mikel Saez de Vicuña",
       "paragraphs": [
-        "El País Vasco posee un profundo sentido del lugar. Las montañas, los bosques y la costa no son solo paisaje, sino parte de la vida cotidiana y de la identidad. Esa conexión temprana con el territorio definió mi forma de ver el mundo: las raíces locales importan, pero las ideas viajan.",
+        "Euskadi posee un profundo sentido del lugar. Las montañas, los bosques y la costa no son solo paisaje, sino parte de la vida cotidiana y de la identidad. Esa conexión temprana con el territorio definió mi forma de ver el mundo: las raíces locales importan, pero las ideas viajan.",
         "La curiosidad por ese mundo más amplio me llevó a estudiar comunicación y relaciones internacionales y a explorar cómo interactúan las narrativas, las instituciones y las culturas a través de las fronteras.",
-        "Mi trayectoria comenzó en el sector privado, coordinando iniciativas y alianzas internacionales en Europa y en mercados globales. Con el tiempo, mi trabajo se acercó a la sostenibilidad, las ciudades y la cooperación internacional, dando lugar a colaboraciones con organizaciones como el Banco Interamericano de Desarrollo y, posteriormente, el Grupo Banco Mundial.",
-        "Hoy ayudo a las instituciones a traducir agendas complejas en iniciativas que las personas puedan comprender, apoyar y hacer crecer."
+        "Mi trayectoria comenzó en el sector privado, coordinando iniciativas y alianzas en Europa y en mercados globales. Con el tiempo, mi trabajo se acercó a la sostenibilidad, las ciudades y la cooperación internacional, dando lugar a colaboraciones con organizaciones como el Banco Interamericano de Desarrollo y, posteriormente, en el Banco Mundial.",
+        "Hoy ayudo a organizaciones a traducir agendas complejas en iniciativas que las personas puedan comprender, apoyar y hacer crecer."
       ],
       "ctaText": "COLABOREMOS →",
       "ctaAriaLabel": "Contactar con Mikel para colaborar",
       "stats": [
         {
-          "num": "18+",
+          "num": "14+",
           "label": "PAÍSES"
         },
         {
@@ -453,7 +453,7 @@
           "label": "PROYECTOS LIDERADOS"
         },
         {
-          "num": "12",
+          "num": "14",
           "label": "AÑOS DE ACTIVIDAD"
         },
         {
@@ -609,14 +609,14 @@
         {
           "value": 4.2,
           "display": "4,2 M",
-          "label": "HECTÁREAS",
+          "label": "CONEXIONES",
           "decimals": 1,
           "suffix": " M"
         }
       ]
     },
     "hero": {
-      "subtitle": "CONVERTIR AGENDAS COMPLEJAS EN INICIATIVAS VIVAS",
+      "subtitle": "CONVIRTIENDO IDEAS COMPLEJAS EN INICIATIVAS VIVAS",
       "heading": "De las raíces locales al <em>impacto<br />global</em>",
       "discoverText": "DESCUBRIR",
       "stats": [
@@ -626,10 +626,10 @@
         },
         {
           "label": "ACTIVO DESDE",
-          "value": "2012"
+          "value": "2014"
         },
         {
-          "label": "PROYECTOS",
+          "label": "SEMILLAS",
           "value": "55+"
         }
       ]
@@ -749,14 +749,14 @@
     },
     "intro": {
       "heading": "Eragin bihurtzen diren <em>ideiak</em><br />lantzen",
-      "paragraph": "Ideia konplexuak erakundeak, pertsonak eta lekuak lotzen dituzten ekimen bihurtzen ditut.<br />Agenda globaletatik ekintza zehatzera."
+      "paragraph": "Erakundeak, pertsonak eta lekuak lotzen dituzten ekimenak bezalako ideia komplexuak berrirudikatzen ditut. <br />Agenda globaletatik ekintza ukigarrietara"
     },
     "about": {
       "tag": "NIRI BURUZ",
       "heading": "Tokiko sustraietatik <em>eragin globalera</em>",
       "imageAlt": "Mikel Saez de Vicuñaren erretratua",
       "paragraphs": [
-        "Euskal Herriak lekuarekiko lotura sendoa du. Mendiak, basoak eta kostaldea ez dira paisaia hutsa; eguneroko bizitzaren eta nortasunaren parte dira. Lurraldearekiko lehen lotura hark mundua ikusteko modua moldatu zuen: tokiko sustraiek garrantzia dute, baina ideiek bidaiatu egiten dute.",
+        "Euskal Herriak lekuarekiko lotura sendoa du. Mendiak, basoak eta kostaldea ez dira paisaia hutsa; eguneroko bizitzaren eta nortasunaren parte dira. Lurraldearekiko lehen lotura hark mundua ikusteko modua moldatu zidan: tokiko sustraiek garrantzia dute, baina ideiek bidaiatu egiten dute.",
         "Mundu zabalago harekiko jakin-minak komunikazioa eta nazioarteko harremanak ikastera eraman ninduen, kontakizunek, erakundeek eta kulturek mugaz gaindi nola elkarreragiten duten aztertuz.",
         "Nire ibilbidea sektore pribatuan hasi zen, Europan eta merkatu globaletan nazioarteko ekimenak eta aliantzak koordinatzen. Denborarekin, nire lana jasangarritasunera, hirietara eta nazioarteko lankidetzara hurbildu zen; horri esker, Garapenerako Amerika Arteko Bankua eta, geroago, Munduko Banku Taldea bezalako erakundeekin aritu naiz lankidetzan.",
         "Gaur egun, erakundeei agenda konplexuak pertsonek ulertu, babestu eta hazarazi ditzaketen ekimen bihurtzen laguntzen diet."
@@ -901,9 +901,9 @@
       "skipToContent": "Joan eduki nagusira"
     },
     "projects": {
-      "tag": "HAZTEN ARI DIREN PROIEKTUAK",
-      "heading": "Ideiek <em>lur emankorra</em> behar dute<br />hazteko",
-      "paragraph": "Ekimen oro ideia gisa hasten da. Batzuk kontzeptu huts geratzen dira; beste batzuek, ordea, sustraiak bota, pertsonak lotu eta benetako aldaketa eragiten dute. Erakundeei ideia konplexuak lekuak, pertsonak eta politikak lotzen dituzten ekimen bihurtzen laguntzen diet, lurraldeak berrikuntzaren bidez berrirudikatuz.",
+      "tag": "HAZKUNDEAN DAUDEN PROIEKTUAK.",
+      "heading": "Ideiek <em>lur emankorra</em> behar dute<br />loratzeko.",
+      "paragraph": "Ekimen oro ideia gisa hasten da. Batzuk kontzeptu huts geratzen dira; beste batzuek, ordea, sustraiak bota, pertsonak lotu eta benetako aldaketa eragiten dute. Lurraldeak berrikuntzaren bidez berrirudikatuz erakundeei laguntzen diet, ideia komplexuetatik lekuak, pertsonak eta polítikak lotzen dituzten ekiminetará eraldatuz.",
       "stats": [
         {
           "value": 3,
@@ -946,7 +946,7 @@
         },
         {
           "label": "JARDUNEAN",
-          "value": "2012TIK"
+          "value": "2014TIK"
         },
         {
           "label": "PROIEKTUAK",
