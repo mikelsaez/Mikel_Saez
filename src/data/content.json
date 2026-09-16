@@ -749,14 +749,14 @@
     },
     "intro": {
       "heading": "Eragin bihurtzen diren <em>ideiak</em><br />lantzen",
-      "paragraph": "Erakundeak, pertsonak eta lekuak lotzen dituzten ekimenak bezalako ideia komplexuak berrirudikatzen ditut. <br />Agenda globaletatik ekintza zehatzera."
+      "paragraph": "Erakundeak, pertsonak eta lekuak lotzen dituzten ekimenak bezalako ideia komplexuak berrirudikatzen ditut. <br />Agenda globaletatik ekintza ukigarrietara"
     },
     "about": {
       "tag": "NIRI BURUZ",
       "heading": "Tokiko sustraietatik <em>eragin globalera</em>",
       "imageAlt": "Mikel Saez de Vicuñaren erretratua",
       "paragraphs": [
-        "Euskal Herriak lekuarekiko lotura sendoa du. Mendiak, basoak eta kostaldea ez dira paisaia hutsa; eguneroko bizitzaren eta nortasunaren parte dira. Lurraldearekiko lehen lotura hark mundua ikusteko modua moldatu zuen: tokiko sustraiek garrantzia dute, baina ideiek bidaiatu egiten dute.",
+        "Euskal Herriak lekuarekiko lotura sendoa du. Mendiak, basoak eta kostaldea ez dira paisaia hutsa; eguneroko bizitzaren eta nortasunaren parte dira. Lurraldearekiko lehen lotura hark mundua ikusteko modua moldatu zidan: tokiko sustraiek garrantzia dute, baina ideiek bidaiatu egiten dute.",
         "Mundu zabalago harekiko jakin-minak komunikazioa eta nazioarteko harremanak ikastera eraman ninduen, kontakizunek, erakundeek eta kulturek mugaz gaindi nola elkarreragiten duten aztertuz.",
         "Nire ibilbidea sektore pribatuan hasi zen, Europan eta merkatu globaletan nazioarteko ekimenak eta aliantzak koordinatzen. Denborarekin, nire lana jasangarritasunera, hirietara eta nazioarteko lankidetzara hurbildu zen; horri esker, Garapenerako Amerika Arteko Bankua eta, geroago, Munduko Banku Taldea bezalako erakundeekin aritu naiz lankidetzan.",
         "Gaur egun, erakundeei agenda konplexuak pertsonek ulertu, babestu eta hazarazi ditzaketen ekimen bihurtzen laguntzen diet."
@@ -901,9 +901,9 @@
       "skipToContent": "Joan eduki nagusira"
     },
     "projects": {
-      "tag": "HAZTEN ARI DIREN PROIEKTUAK",
-      "heading": "Ideiek <em>lur emankorra</em> behar dute<br />hazteko",
-      "paragraph": "Ekimen oro ideia gisa hasten da. Batzuk kontzeptu huts geratzen dira; beste batzuek, ordea, sustraiak bota, pertsonak lotu eta benetako aldaketa eragiten dute. Erakundeei ideia konplexuak lekuak, pertsonak eta politikak lotzen dituzten ekimen bihurtzen laguntzen diet, lurraldeak berrikuntzaren bidez berrirudikatuz.",
+      "tag": "HAZKUNDEAN DAUDEN PROIEKTUAK.",
+      "heading": "Ideiek <em>lur emankorra</em> behar dute<br />loratzeko.",
+      "paragraph": "Ekimen oro ideia gisa hasten da. Batzuk kontzeptu huts geratzen dira; beste batzuek, ordea, sustraiak bota, pertsonak lotu eta benetako aldaketa eragiten dute. Lurraldeak berrikuntzaren bidez berrirudikatuz erakundeei laguntzen diet, ideia komplexuetatik lekuak, pertsonak eta polítikak lotzen dituzten ekiminetará eraldatuz.",
       "stats": [
         {
           "value": 3,
