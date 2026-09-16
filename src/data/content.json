@@ -749,7 +749,7 @@
     },
     "intro": {
       "heading": "Eragin bihurtzen diren <em>ideiak</em><br />lantzen",
-      "paragraph": "Ideia konplexuak erakundeak, pertsonak eta lekuak lotzen dituzten ekimen bihurtzen ditut.<br />Agenda globaletatik ekintza zehatzera."
+      "paragraph": "Erakundeak, pertsonak eta lekuak lotzen dituzten ekimenak bezalako ideia komplexuak berrirudikatzen ditut. <br />Agenda globaletatik ekintza zehatzera."
     },
     "about": {
       "tag": "NIRI BURUZ",
@@ -946,7 +946,7 @@
         },
         {
           "label": "JARDUNEAN",
-          "value": "2012TIK"
+          "value": "2014TIK"
         },
         {
           "label": "PROIEKTUAK",
