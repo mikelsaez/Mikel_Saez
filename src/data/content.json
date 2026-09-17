@@ -790,7 +790,7 @@
           "num": "01",
           "category": "ECOSYSTEM",
           "title": "Jasangarritasuna eta ingurumen-ekimenak",
-          "desc": "Jasangarritasuna ekintzarekin bat datorren gunea. Klima-ekintza, ingurumenaren babesa eta epe luzeko jasangarritasun-agendak bultzatzen dituzten ekimen eta kontakizunak, estrategia eta gauzatzea lotuz.",
+          "desc": "Jasangarritasuna ekintzarekin bat datorren gunea. Klima ekintza, ingurumenaren babesa eta epe luzeko jasangarritasun-agendak bultzatzen dituzten ekimen eta kontakizunak, estrategia eta gauzatzea lotuz.",
           "tags": [
             "COP16 Cali – Ezagutza-plataforma",
             "COP30 Belém – Amazoniako Hirien Sarea"
@@ -799,8 +799,8 @@
         {
           "num": "02",
           "category": "TERRITORIES",
-          "title": "Hiri- eta landa-garapena eta turismoa",
-          "desc": "Lekuak estrategia baldintzatzen du. Hiriaren etorkizuna, landa-sistemak, eskualde-identitatea, turismoa eta lurralde-garapena ibilbide koherenteetan lotzen dituen lana.",
+          "title": "Hiri eta landa garapena eta turismoa",
+          "desc": "Lekuak estrategia baldintzatzen du. Hiriaren etorkizuna, landa-sistemak, eskualde identitatea, turismoa eta lurralde garapena ibilbide koherenteetan lotzen dituen lana.",
           "tags": [
             "Vitoria-Gasteizko Hiri Berrikuntzako 2030 Agenda",
             "BIDen Eskualdeko Etxebizitza Foroa – Mexiko",
@@ -832,10 +832,10 @@
         {
           "num": "05",
           "category": "BLOOM",
-          "title": "Erakunde-eraldaketa eta berrikuntza",
+          "title": "Erakunde eraldaketa eta berrikuntza",
           "desc": "Aldaketa agerian jartzen da. Erakundeei eraldaketan, lan egiteko modu berrietan eta berrikuntzan laguntzen diet, estrategia ezarpen eta bultzada bihurtuz.",
           "tags": [
-            "Munduko Bankuaren lantoki-estandarrak – Aldaketaren kudeaketa",
+            "Munduko Bankuaren lantoki estandarrak – Aldaketaren kudeaketa",
             "Mission 300 – COMESA eta Munduko Bankuaren Praktika Komunitatea"
           ]
         },
@@ -843,9 +843,9 @@
           "num": "06",
           "category": "HARVEST",
           "title": "Eraginaren neurketa eta ikaskuntza",
-          "desc": "Emaitzak ebidentzia bihurtzen diren gunea. Emaitzak jasotzen, erabakiak sendotzen eta denboran funtzionatzen duena hobetzen duten neurketa-, ebaluazio- eta ezagutza-ikuspegiak.",
+          "desc": "Emaitzak ebidentzia bihurtzen diren gunea. Emaitzak jasotzen, erabakiak sendotzen eta denboran funtzionatzen duena hobetzen duten neurketa, ebaluazio eta ezagutza ikuspegiak.",
           "tags": [
-            "Ebaluazio- eta ikaskuntza-esparruak",
+            "Ebaluazio eta ikaskuntza esparruak",
             "Emaitzetan oinarritutako kudeaketa-sistemak",
             "Ezagutzaren kudeaketarako plataformak"
           ]
