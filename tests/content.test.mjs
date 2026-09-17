@@ -4,6 +4,7 @@ import path from 'node:path'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
 import { getLocaleFromPathname, getLocalePath, LOCALES, normalizeLocale } from '../src/i18n/locales.js'
+import { splitProjectLabel } from '../src/utils/expertise.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const content = JSON.parse(await readFile(path.join(root, 'src/data/content.json'), 'utf8'))
@@ -133,6 +134,25 @@ test('language switcher keeps fixed EN, ES and EU codes', async () => {
   assert.ok(heroSource.includes('{shortLabel}'), 'Visible language labels must use the fixed locale codes')
   assert.ok(heroSource.includes('translate="no"'), 'Language switcher must opt out of automatic translation')
   assert.ok(heroSource.includes('notranslate'), 'Language switcher must include the Google translation guard')
+})
+
+test('expertise examples use an editorial layout without decorative dashes or bullets', async () => {
+  assert.deepEqual(splitProjectLabel('COP16 Cali – Knowledge Platform'), {
+    name: 'COP16 Cali',
+    context: 'Knowledge Platform',
+  })
+  assert.deepEqual(splitProjectLabel('OECD webinars'), {
+    name: 'OECD webinars',
+    context: '',
+  })
+
+  const expertiseSource = await readFile(path.join(root, 'src/components/ExpertiseSection.jsx'), 'utf8')
+  const expertiseStyles = await readFile(path.join(root, 'src/components/ExpertiseSection.css'), 'utf8')
+
+  assert.match(expertiseSource, /<ul className="expertise__card-projects">/)
+  assert.doesNotMatch(expertiseSource, />—\s*\{/)
+  assert.match(expertiseStyles, /\.expertise__card-projects\s*{[^}]*list-style:\s*none/s)
+  assert.match(expertiseStyles, /\.expertise__card-projects li \+ li\s*{[^}]*border-top:/s)
 })
 
 test('legacy machine translation is removed', async () => {

@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import './ExpertiseSection.css'
 import RichText from './RichText'
 import useLocale from '../i18n/useLocale'
+import { splitProjectLabel } from '../utils/expertise'
 
 const ICONS = {
   'ECOSYSTEM': (
@@ -115,8 +116,17 @@ export default function ExpertiseSection({ selectedCategory, onSelectCategory })
             <span className="expertise__card-tag">{ui.categories[card.category]}</span>
             <h3 className="expertise__card-title">{card.title}</h3>
             <p className="expertise__card-desc">{card.desc}</p>
-            <ul className="expertise__card-tags">
-              {card.tags.map((t) => <li key={t}>— {t}</li>)}
+            <ul className="expertise__card-projects">
+              {card.tags.map((project) => {
+                const { name, context } = splitProjectLabel(project)
+
+                return (
+                  <li key={project}>
+                    <span className="expertise__project-name">{name}</span>
+                    {context && <span className="expertise__project-context">{context}</span>}
+                  </li>
+                )
+              })}
             </ul>
             <span className="expertise__card-arrow" aria-hidden="true">→</span>
             <button
