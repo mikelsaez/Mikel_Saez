@@ -98,17 +98,60 @@
     }
   ],
   "partnerLogos": [
-    { "image": "/img/logo1 new.png", "alt": "Inter-American Development Bank", "className": "logo--enlarge" },
-    { "image": "/img/logo2 new.png", "alt": "UN Tourism", "className": "" },
-    { "image": "/img/logo3 new.png", "alt": "World Bank Group", "className": "logo--enlarge" },
-    { "image": "/img/logo4 new.png", "alt": "UN-Habitat", "className": "" },
-    { "image": "/img/logo5 new.png", "alt": "COMESA", "className": "logo--shrink" },
-    { "image": "/img/logo6 new.png", "alt": "OECD", "className": "logo--shrink" },
-    { "image": "/img/logo7 new.png", "alt": "Vitoria-Gasteiz Green Capital", "className": "" },
-    { "image": "/img/logo8 new.png", "alt": "Basque Government", "className": "logo--shrink" },
-    { "image": "/img/logo9 new.png", "alt": "Spanish Network for Sustainable Development", "className": "" },
-    { "image": "/img/logo10 new.png", "alt": "Iberia", "className": "logo--enlarge-xl" },
-    { "image": "/img/logo11 new.png", "alt": "Microsoft", "className": "" },
-    { "image": "/img/logo12 new.png", "alt": "ICEX Spain Trade and Investment", "className": "logo--enlarge-xxl" }
+    {
+      "image": "/img/logo1 new.png",
+      "alt": "Inter-American Development Bank",
+      "className": "logo--enlarge"
+    },
+    {
+      "image": "/img/logo2 new.png",
+      "alt": "UN Tourism",
+      "className": ""
+    },
+    {
+      "image": "/img/logo3 new.png",
+      "alt": "World Bank Group",
+      "className": "logo--enlarge"
+    },
+    {
+      "image": "/img/logo5 new.png",
+      "alt": "COMESA",
+      "className": "logo--shrink"
+    },
+    {
+      "image": "/img/logo6 new.png",
+      "alt": "OECD",
+      "className": "logo--shrink"
+    },
+    {
+      "image": "/img/logo7 new.png",
+      "alt": "Vitoria-Gasteiz Green Capital",
+      "className": ""
+    },
+    {
+      "image": "/img/logo8 new.png",
+      "alt": "Basque Government",
+      "className": "logo--shrink"
+    },
+    {
+      "image": "/img/logo9 new.png",
+      "alt": "Spanish Network for Sustainable Development",
+      "className": ""
+    },
+    {
+      "image": "/img/logo10 new.png",
+      "alt": "Iberia",
+      "className": "logo--enlarge-xl"
+    },
+    {
+      "image": "/img/logo11 new.png",
+      "alt": "Microsoft",
+      "className": ""
+    },
+    {
+      "image": "/img/logo12 new.png",
+      "alt": "ICEX Spain Trade and Investment",
+      "className": "logo--enlarge-xxl"
+    }
   ]
 }
