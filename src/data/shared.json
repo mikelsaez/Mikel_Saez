@@ -114,11 +114,6 @@
       "className": "logo--enlarge"
     },
     {
-      "image": "/img/logo5 new.png",
-      "alt": "COMESA",
-      "className": "logo--shrink"
-    },
-    {
       "image": "/img/logo6 new.png",
       "alt": "OECD",
       "className": "logo--shrink"
@@ -127,6 +122,11 @@
       "image": "/img/logo7 new.png",
       "alt": "Vitoria-Gasteiz Green Capital",
       "className": ""
+    },
+    {
+      "image": "/img/logo5 new.png",
+      "alt": "COMESA",
+      "className": "logo--shrink"
     },
     {
       "image": "/img/logo8 new.png",
