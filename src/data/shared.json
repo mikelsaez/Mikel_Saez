@@ -119,19 +119,14 @@
       "className": "logo--shrink"
     },
     {
-      "image": "/img/logo7 new.png",
-      "alt": "Vitoria-Gasteiz Green Capital",
+      "image": "/img/ehu_logo_white_small.png",
+      "alt": "EHU - UPV",
       "className": ""
     },
     {
-      "image": "/img/logo5 new.png",
-      "alt": "COMESA",
-      "className": "logo--shrink"
-    },
-    {
-      "image": "/img/logo8 new.png",
-      "alt": "Basque Government",
-      "className": "logo--shrink"
+      "image": "/img/logo7 new.png",
+      "alt": "Vitoria-Gasteiz Green Capital",
+      "className": ""
     },
     {
       "image": "/img/logo9 new.png",
@@ -154,9 +149,9 @@
       "className": "logo--enlarge-xxl"
     },
     {
-      "image": "/img/ehu_logo_white_small.png",
-      "alt": "EHU - UPV",
-      "className": ""
+      "image": "/img/logo5 new.png",
+      "alt": "COMESA",
+      "className": "logo--shrink"
     }
   ]
 }
