@@ -152,6 +152,11 @@
       "image": "/img/logo12 new.png",
       "alt": "ICEX Spain Trade and Investment",
       "className": "logo--enlarge-xxl"
+    },
+    {
+      "image": "/img/ehu_logo_white_small.png",
+      "alt": "EHU - UPV",
+      "className": ""
     }
   ]
 }
